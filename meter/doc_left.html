@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>GaugeMeter.js - jQuery Plugin</title>
+    <meta
+      name="description"
+      content="Easy to use gauge meter JavaScript plugin using jQuery"
+    />
+    <meta name="author" content="Mictronics" />
+    <script src="jQuery v3.7.1.js"></script>
+    <!-- font2 ----------------------------  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     
+    <style>
+       
+      body {
+        background-color: #110D22;
+      }
+      .GaugeMeter {
+        position: Relative;
+        text-align: Center;
+        overflow: Hidden;
+        cursor: Default;
+        background-color: #110D22; 
+        margin-top: 10px;
+        margin-right: 20px;  
+
+        width: 300px;
+        height: 100px; 
+      }
+      .GaugeMeter.no-scroll {
+        overflow: hidden;
+      }
+
+      .gauge-point {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        display: none;
+      }
+       
+
+      .GaugeMeter SPAN,
+      .GaugeMeter B {
+        margin: 0 23%;
+        width: 54%;  
+        font-size: 18px !important;
+        font-weight: bold;
+        font-family:'chakra petch';
+
+        position: Absolute;
+        text-align: Center;
+        display: Inline-Block;
+        color: RGBa(0, 0, 0, 0.8);  
+        overflow: Hidden;
+        white-space: NoWrap;
+        text-overflow: Ellipsis;
+        z-index: 1;
+      }
+      .GaugeMeter[data-style='Semi'] B {
+        margin: 0 10%;
+        width: 80%; 
+      }
+
+      .GaugeMeter S,
+      .GaugeMeter U {
+        text-decoration: None;
+        font-size: 0.6em;
+        font-weight: 200;
+        opacity: 0.6;
+      }
+
+      .GaugeMeter B {
+        color: Black;
+        font-weight: 200;
+        font-size: 0.85em;
+        opacity: 0.8;
+      }
+
+       
+      PRE {
+        background: RGBa(0, 0, 0, 0.05);
+        padding: 15px;
+        border-radius: 10px;
+        position: Relative;
+        width: 350px;
+        float: Left;
+        font-weight: 100;
+        letter-spacing: -1px;
+        margin: 0 10px 10px 30px;
+      }
+
+      HR {
+        clear: Both;
+        margin-top: 230px;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 0;
+        height: 1px;
+        background: #21b4f9;
+      }
+
+      DIV.GaugeMeter {
+        float: Left;
+      }
+ 
+ 
+    </style>
+    <script
+      Xsrc="jquery-3.7.1.min.js"
+      src="http://code.jquery.com/jquery-3.7.1.min.js"
+    ></script>
+    <script src="GaugeMeter.js"></script>
+  </head>
+  <body>
+    <header id="Header"> 
+      <div class="Preview">  
+        <div
+          class="GaugeMeter no-scroll"  
+          id="PreviewGaugeMeter_2" 
+          data-percent="90"
+          data-append=""
+          data-size="60"
+          data-theme="DarkGreen-LightGreen"
+          data-back="rgba(255,255,255,0.5)"
+          data-animate_gauge_colors="true"
+          data-animate_text_colors="true"
+          data-width="9"
+          data-label=""
+          data-style="Arch"
+          data-label_color="#FFF"
+          style="margin-left: 10px;"></div>
+        <div
+          class="GaugeMeter"
+          id="PreviewGaugeMeter_2"
+          data-percent="80"
+          data-append=""
+          data-size="60"
+          data-theme="DarkGreen-LightGreen"
+          data-back="rgba(255,255,255,0.5)"
+          data-animate_gauge_colors="true"
+          data-animate_text_colors="true"
+          data-width="9"
+          data-label=""
+          data-style="Arch"
+          data-label_color="#FFF"
+        ></div>
+        <div
+          class="GaugeMeter"
+          id="PreviewGaugeMeter_2"
+          data-percent="70"
+          data-append=""
+          data-size="60"
+          data-theme="DarkGreen-LightGreen"
+          data-back="rgba(255,255,255,0.5)"
+          data-animate_gauge_colors="true"
+          data-animate_text_colors="true"
+          data-width="9"
+          data-label=""  
+          data-style="Arch"
+          data-label_color="#FFF"
+        ></div>
+        <div
+          class="GaugeMeter"
+          id="PreviewGaugeMeter_2"
+          data-percent="60"
+          data-append=""
+          data-size="60"
+          data-theme="DarkGreen-LightGreen"
+          data-back="rgba(255,255,255,0.5)"
+          data-animate_gauge_colors="true"
+          data-animate_text_colors="true"
+          data-width="9"
+          data-label=""
+          data-style="Arch"
+          data-label_color="#FFF"
+        ></div> 
+      </div> 
+
+    <script>
+      $(document).ready(function () {
+        //GaugeMeter
+        $('.GaugeMeter').gaugeMeter();
+        $('#GaugeMeter_103').gaugeMeter({ percent: 15 });
+        $(".GaugeMeter").gaugeMeter({
+        theme: 'Pink',
+        color: '#FF34EB',
+        backgroundColor: '#fff'
+      });
+      $(".GaugeMeter").gaugeMeter({
+        theme: 'Purple',
+        color: '#C322FB',
+        backgroundColor: '#fff'
+      });
+
+        //Format Code
+        $('pre.Code').html(function (index, html) {
+          return html.replace(/^(.*)$/gm, "<span class='Line'>$1</span>");
+        });
+
+        //Sticky Table Header
+        var tables = $('table.StickyHeader');
+        tables.each(function (i) {
+          var table = tables[i];
+          var theadClone = $(table).find('thead').clone(true);
+          var stickyHeader = $('<div></div>').addClass('StickyHeader Hide');
+          stickyHeader
+            .append($('<table></table'))
+            .find('table')
+            .append(theadClone);
+          $(table).after(stickyHeader);
+
+          var tableHeight = $(table).height();
+          var tableWidth =
+            $(table).width() +
+            Number($(table).css('padding-left').replace(/px/gi, '')) +
+            Number($(table).css('padding-right').replace(/px/gi, '')) +
+            Number($(table).css('border-left-width').replace(/px/gi, '')) +
+            Number($(table).css('border-right-width').replace(/px/gi, ''));
+
+          var headerCells = $(table).find('thead th');
+          var headerCellHeight = $(headerCells[0]).height();
+
+          var no_fixed_support = false;
+          if (stickyHeader.css('position') === 'Absolute') {
+            no_fixed_support = true;
+          }
+
+          var stickyHeaderCells = stickyHeader.find('th');
+          stickyHeader.css('width', '100%');
+          var cellWidth = $(headerCells[0]).width() + 1;
+          $(stickyHeaderCells[0]).attr(
+            'style',
+            'width:' + cellWidth + 'px !important'
+          );
+
+          var cutoffTop = $(table).offset().top;
+          var cutoffBottom = tableHeight + cutoffTop - headerCellHeight;
+
+          $(window).scroll(function () {
+            var currentPosition = $(window).scrollTop();
+            if (currentPosition > cutoffTop && currentPosition < cutoffBottom) {
+              stickyHeader.removeClass('Hide');
+              if (no_fixed_support) {
+                stickyHeader.css('top', currentPosition + 'px');
+              }
+            } else {
+              stickyHeader.addClass('Hide');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

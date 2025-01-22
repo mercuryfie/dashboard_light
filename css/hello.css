@@ -1,0 +1,32 @@
+/* Frame 79 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 96px 0px;
+gap: 20px;
+
+position: absolute;
+width: 1020px;
+height: 647px;
+left: 450px;
+top: 1574px;
+
+
+/* Frame 62 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 96px 0px;
+gap: 77px;
+
+position: absolute;
+width: 1280px;
+height: 859px;
+left: 320px;
+top: 2256px;
+

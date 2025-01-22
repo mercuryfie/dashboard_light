@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font2 ----------------------------  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     
+    <style>
+      /* body {
+        background-color: black;
+      } */
+        .box {
+            width:320px; 
+            height: 140px;  
+            margin-left: 20px; 
+        } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <canvas id="myChart"></canvas>
+      </div> 
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');   
+      
+        new Chart(ctx, {
+          type: 'bar', 
+          data: {
+            labels: ['전체','조제','탕전','마킹', '포장'],
+            datasets: [{
+            label: '전체',
+            data: [100,100,100,100,100], 
+            borderWidth: 1,
+            borderColor:'#ececec',
+            fill:true,
+            backgroundColor: [
+              'rgba(236,236,236,0.3)',
+              'rgba(236,236,236,0.3)',
+              'rgba(236,236,236,0.3)',
+              'rgba(236,236,236,0.3)', 
+            ],   }, 
+            {
+            label: '진척도',
+            data: [60,80,60, 40, 40], 
+            borderWidth: 1,
+            borderColor:'#ececec',
+            fill:true,
+            backgroundColor: [
+              'rgba(106,242,136,0.7)',
+              'rgba(106,242,136,0.8)',
+              'rgba(106,242,136,0.8)',
+              'rgba(106,242,136,0.8)',  
+            ],   }, 
+          ]
+          },
+            options: {
+            responsive: true,
+            indexAxis: 'y',
+            // Elements options apply to all of the options unless overridden in a dataset
+            // In this case, we are setting the border of each horizontal bar to be 2px wide
+            elements: {
+              bar: {
+                borderWidth: 5,
+              }
+            },
+            plugins: {
+                    title: {
+                        display: false,
+                        text: '전체 작업 시간', 
+                        color:'#ececec'
+                         
+                    },
+                    legend: {
+                        position: 'right',
+                        display:false,
+                        labels: {
+                            color:'#ececec'
+                        },
+                        data: {
+                            color:'white', 
+                        },
+                        title: {
+                        display: false,
+                        text: 'Chart.js Horizontal Bar Chart'
+                      }
+                    }
+                    },
+            
+            scales: {
+              // x: { 
+              //   ticks: {
+              //     color:'#ececec',
+                  
+              //   }, 
+              // },
+              y: {
+                beginAtZero: false,
+                max:450,
+                ticks: {
+                  color:'#ececec'
+                }, 
+              }
+            }
+            
+          }
+        }); 
+ 
+      </script>
+</body>
+</html>

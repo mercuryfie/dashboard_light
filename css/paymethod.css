@@ -1,0 +1,44 @@
+#screen{z-index: 10000;background: rgba(0, 0, 0, 0.5);position: fixed;left: 0;top: 0;width: 100%;height: 100%;}
+#modaldiv{z-index: 10010;position: fixed;top: 0;width:100%;height:0;}
+#modal2{z-index: 10020;position: relative;margin:auto;background:#fff;overflow:hidden;}
+
+#modallist{height:490px;padding:10px;overflow-y:scroll;}
+#modallist dl{width:100%;border-bottom:1px solid #ccc;}
+#modallist dl dt, #modallist dl dd{display:inline-block;margin:3%;width:20%;height:50px;vertical-align:top;}
+#modallist dl dt{border:1px solid #ccc;}
+#modallist dl dd.info{width:40%;padding-top:10px;}
+#modallist dl dd a{display:inline-block;float:right;color:#fff;padding:10px 10px;border-radius:5px;margin:10px 0 0 10px;}
+#modalcard dl.regist{border:none;}
+#modalcard dl.regist dd{width:100%;height:60px;text-align:center;letter-spacing:2px;font-size:18px;color:#fff;padding:20px;cursor:pointer;}
+#modalcard dl.regist{position:absolute;margin-top:490px;width:100%;border:none;}
+#modal2{overflow:hidden;}
+#modalcard{width:auto;}
+.modal__header{z-index:99;position:relative;}
+.modal2__body{padding:10px;z-index:98;position:relative;}
+.modal2__body dl{width:100%;border-bottom:1px solid #ccc;}
+.modal2__body dl dt, .modal2__body dl dd{display:inline-block;margin:3%;width:20%;height:50px;vertical-align:top;}
+.modal2__body dl dt{border:1px solid #ccc;}
+.modal2__body dl dd a{display:inline-block;float:right;color:#fff;padding:10px;border-radius:5px;margin:10px 0 0 10px;}
+.modal2__body dl.cardinfo{padding-bottom:20px;}
+.modal2__body dl.cardinfo dt{border:none;width:100%;height:20px;font-size:15px;font-weight:bold;}
+.modal2__body dl.cardinfo dd{width:100%;}
+.modal2__body dl.cardinfo dd p{margin-bottom:10px;}
+.modal2__body dl.cardinfo dd input{float:left;width:55px;font-size:20px;letter-spacing:2px;padding:5px 10px;line-height:100%;}
+.modal2__body dl.cardinfo dd input.on{background:#f4f4f4;}
+.modal2__body dl.cardinfo dd span{float:left;display:inline-block;width:15px;height:25px;font-size:20px;text-align:center;line-height:160%;}
+.modal2__body dl.cardinfo dd span.dash{border:none;line-height:140%;margin:0 5px;}
+.modal2__body dl.cardinfo p.noti{display:block;padding:10px;font-size:12px;}
+#keypad{position:absolute;width:auto;margin-top:305px;background:#66b39e;z-index:100;}
+#keypad tbody tr td{padding:25px 10px;text-align:center;font-size:25px;font-weight:bold;color:#fff;}
+.modal2__body dl.cardinfo dd.exdate{margin:0;height:70px;}
+.modal2__body dl.cardinfo dd.exdate div{display:inline-block;width:46%;margin:3% 0 0 3%;border:1px solid #ccc;border-radius:5px;padding:5px 10px;}
+.modal2__body dl.cardinfo dd.exdate div.on{border:1px solid #000;}
+.modal2__body dl.cardinfo dd.info{height:58px;}
+.modal2__body dl.cardinfo dd.info div{display:inline-block;width:95%;margin:3% 0 0 0;border:1px solid #ccc;border-radius:5px;padding:5px 10px;}
+.modal2__body dl.cardinfo dd.info div.on{border:1px solid #000;}
+.modal2__body dl.cardinfo dd.info div input{width:90%;}
+#modal2 dl.regist{position:absolute;margin-top:490px;width:100%;border:none;}
+#modal2 dl.regist dd{width:100%;height:60px;text-align:center;letter-spacing:2px;font-size:18px;color:#fff;padding:20px;cursor:pointer;}
+#modal2 dl.regist dd.gray{background:#ddd;}
+#modal2 p.agree {padding:10px;font-size:15px;font-weight:bold;}
+#modal2 p.agree span{width:20px;height:20px;margin-right:10px;}

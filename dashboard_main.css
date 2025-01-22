@@ -1,0 +1,739 @@
+* {
+    margin: 0;
+    padding: 0;
+    color:white;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color:inherit;
+    text-decoration: none;
+}
+#wrap { 
+    width:1920px;
+    margin: 0 auto;
+}
+body {
+    background-color: #110D22;
+    /* font-family: "Noto Sans Korean"; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+header {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.hbox {
+    border: 1px solid #ececec81;
+    color:white;
+    width:400px;
+    height: 80px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex; 
+}
+.hbox1 { 
+    color:white;
+    align-items: center;
+    justify-content: center; 
+}
+.hbox2 {
+    width:800px;
+    align-items: center;
+    justify-content: center; 
+}
+.hbox3 { 
+    background-color: #110D22; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hbox3>p { 
+    margin-left: 20px;
+}
+
+.hbox3>p:nth-child(2)
+ {
+    font-size:32px; 
+    font-family: "Chakra Petch";
+}
+.hbox3>p:nth-child(3)
+ {
+    font-size:32px;  
+}
+/* main box  --------------------------------- */
+
+
+main {
+    display: flex;
+    justify-content: center; 
+    margin-left: -10px;
+}
+.mbox { 
+    color:white; 
+    width:400px;
+    height: 600px; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;  
+}
+
+.mbox1-1{
+    width:400px;
+    height: 190px; 
+    border:1px solid #ececec81;
+    border-radius: 5px;
+    margin-top: 0px;
+    overflow: hidden;
+    position: relative;
+}
+.mbox1-1>p {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mbox1-1-ul {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:140px;
+    left:125px;
+
+}
+.mbox1-1-ul>li {
+    font-weight: bold;
+    margin-right: 62px;
+}
+.mbox1-1-1 {
+    display: flex;
+    justify-content: center;
+}
+
+/* 탕전 주문 현황 */
+.mbox1-1-1>object {
+    width: 220px;
+    height: 100px;
+    overflow: hidden; 
+    margin-left: 50px; 
+}
+.mbox1-1-1>ul {
+    margin-top: -30px; 
+}
+.mbox1-1-1>ul>li {
+    text-align: center;
+}
+.mbox1-1-1>ul>li:first-child {
+    padding: 0 10px;
+     background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248)); 
+    border-radius: 5px;
+}
+
+/* main box -area1-2 --------------------------------- */
+
+.mbox1-2{
+    width:400px;
+    height: 200px; 
+    border:1px solid #ececec81;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative; 
+}
+.mbox1-2>p {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+} 
+ 
+.mbox1-2-1 .pagebox {
+    position: absolute;  
+    left:50%;
+    transform: translateX(-50%); 
+}
+
+.mbox1-2-1 { 
+    display: flex;
+    justify-content: center;
+}
+.status {
+    width: 200px;
+    height: 100px;
+    border:1px solid transparent;
+    display: flex; 
+    position: relative;
+    margin-top: 50px;
+    margin-left: 20px;
+}   
+.status-2>li {
+
+    font-size: 14px; 
+}
+.statuscircle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+    margin:10px 0;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+ .on {
+    background-color: #6AF288;
+}
+.off{
+    background-color: #FD5C5C;
+}
+.standby {
+    background-color: #ececec;
+}
+
+/* 탕전기 동작 현황 */
+.mbox1-2-1 {
+    width: 400px;
+    height: 200px;  
+    margin-bottom: 10px;
+    position: absolute;
+    top:0px;
+    left:0;
+    border-radius: 5px;
+}
+.mbox1-2-1> object { 
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    margin-top: 50px; 
+    margin-left: 0px;
+}
+
+/* 각 공정현황 */
+
+.mbox1-2-2 {
+    overflow: hidden;
+    position: absolute;
+    top:210px;
+    lefT:0;
+    width: 400px;
+    height: 188px; 
+    border-radius: 5px;
+    border:1px solid #ececec81;
+
+}
+.mbox1-2-2>p { 
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.mbox1-2-2>object {
+    width: 400px;
+    height: 100px;
+    overflow: hidden; 
+    position: absolute;
+    top:60px;
+    left:20px;
+}
+.mbox1-2-2>ul {
+    display: flex; 
+    position: absolute;
+    top:120px;
+    left:50px;
+
+}
+.mbox1-2-2>ul>li {
+    margin-right: 52px;
+    font-weight: bold;
+}
+/* main box -area2 --------------------------------- */
+
+.mbox2  {
+    width: 800px;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+} 
+.mbox2-1, .mbox2-2 {
+    width:790px;
+    border:1px solid #ececec81;
+    border-radius: 5px;
+}
+.mbox2-1 {
+
+    display: flex;
+    width: 800px;
+    height: 190px;
+    justify-content: space-evenly;
+    position: absolute;
+    top:0; 
+    overflow: hidden;  
+}
+
+.status-parcel {
+    position: absolute;
+    top:20px;
+    right: 40px;
+    display: flex;
+} 
+.status-2-2>li {
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.parcel1 {
+    background-color: #ececec;
+}
+.parcel2 {
+    background-color: #6AF288;
+}
+.parcel3 {
+    background-color: #C322FB;
+} 
+
+/* main box -radar chart --------------------------------- */
+.mbox2-2 {
+    position: absolute;
+    top:200px;
+    left:0;
+    width: 800px;
+    height: 400px; 
+    overflow: hidden; 
+}
+.mbox2-2>p {
+    margin-top: 0px;
+    margin-left: 380px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.mbox2-2>p:nth-child(1) {
+    margin-top: 20px;
+    margin-left: 380px;
+    font-weight: bold;
+    font-size: 18px; 
+}
+.mbox2-2>p:nth-child(2) {  
+    margin-top: -10px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.mbox2-2>p:nth-child(4) { 
+    margin-top:-60px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;  
+} 
+ 
+.mbox2-2-3 {
+    width: 320px;
+    height: 220px;
+    overflow: hidden;
+}
+
+/* 전체 진척도 */
+.mbox2-2-3>object {
+    width: 380px;
+}
+.mbox2-2-1 {
+    position: relative;
+}
+.mbox2-2-1>ul {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.mbox2-2-1>ul>li{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.timecard {
+    position: absolute;
+    top:0;
+    left:100px;
+}
+.timecard>p {
+    width: 80px;
+    height: 25px;
+    background-color: #ececec50;
+    text-align: center;
+    margin-bottom: 7px;
+    font-weight: 500;
+    line-height: 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'chakra petch';
+    display: inline-block;
+}
+.timecard>span {
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: 'chakra petch';
+} 
+
+/* radar chart */
+.mbox2-2>object {
+    width: 380px;
+    height: 420px;
+    position: absolute;
+    top:30px;
+    left:420px; 
+}
+.mbox2-1-1 {
+    position: absolute; 
+    top:0;
+    left:0;
+    width:50%;
+    overflow: hidden; 
+    
+}
+.mbox2-1-1> p {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 탕전 주문현황 */
+.mbox2-1-1>object { 
+    margin-top: 0px;
+    width: 150%;
+    display: inline-block;    
+}
+.mbox2-1-1-ul {
+    display: flex;
+    position: absolute;
+    top:130px; 
+}
+.mbox2-1-1-ul>li {
+    margin-left: 35px;
+    margin-right: 17px;
+    text-align: center;
+}
+
+
+.mbox2-1-2 {
+    position: absolute; 
+    top:0;
+    left:45%;
+    width:55%;
+    overflow: hidden; 
+    
+     
+}
+.mbox2-1-2> p {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 예비조제주문현황 */
+.mbox2-1-2>object { 
+    margin-top: 0px;
+    width: 150%;
+    display: inline-block;      
+     
+} 
+.mbox2-1-2-ul {
+    display: flex;  
+    justify-content: center;
+    position: absolute;
+    top:130px; 
+}
+
+.mbox2-1-2-ul>li{ 
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.mbox2-1-2-ul>li:nth-child(1),.mbox2-1-2-ul>li:nth-child(2),.mbox2-1-2-ul>li:nth-child(3) {
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.mbox2-1-2-ul>li:nth-child(4) {
+    margin-left: 5px;
+    margin-right: 15px;
+} 
+
+
+/* main box -area3 --------------------------------- */
+.mboxb {
+    border: 1px solid #ececec81;  
+    color:white;
+    width:400px;
+    height: 193px;
+    margin-bottom:10px;
+    border-radius: 5px;
+    position: relative;
+}  
+
+.mboxb-1-t ,.weeklyul {
+    width: 200px;
+    height: 50px; 
+    position: absolute;
+    top:0px;
+    left:40px;
+    overflow: hidden;
+
+}
+.mboxb-1-t>li {
+    text-align: left;  
+    font-weight: bold;
+    font-size: 18px; 
+    display: block;
+    position: absolute;
+    top:20px;
+    left:0px; 
+}
+.mboxb-1-t>li:nth-child(2) {
+    position: absolute;
+    top:50px;
+    left:-10px;
+}
+.counterul {
+    width: 100px;
+    height: 45px;
+    position: absolute;
+    top:10px;
+    left:240px; 
+    overflow: hidden;
+}
+.counterul>li>h1 {
+    font-family: 'chakra petch';
+    text-align: center;
+}
+
+.mboxb>p {
+    text-align: left;  
+    font-weight: bold;
+    font-size: 18px; 
+    display: block;
+    position: absolute;
+    top:20px;
+    left:20px;
+}
+.mboxb>p:nth-child(2) {
+    text-align: left;  
+    font-weight: bold;
+    font-size: 18px; 
+    display: block;
+    position: absolute;
+    top:40px;
+    left:20px;
+}
+ 
+.mboxb-1>h1 {
+    font-family: 'chakra petch';
+    margin-left: 200px;
+    position: absolute;
+    top:10px;
+    left:60px;
+
+}
+.mboxb-1-1 {
+    width: 380px;
+    height: 180px; 
+    overflow: hidden;   
+    position: relative; 
+}
+.pagebox {
+    position: absolute;
+    bottom:15px;
+    display: flex;
+}
+.pages {
+    width: 20px;
+    height: 5px;
+    border-radius: 3px;
+    border: 1px solid #ececec; 
+    margin-right: 10px;
+}
+.pages:nth-child(1) {
+    background-color: #fff;
+}
+
+/* 주간그래프 */
+.mboxb-1-1>object {
+    width: 320px;  
+    height: 180px; 
+    object-fit: cover;   
+    position: absolute;
+    top:10px;
+    left:20px;
+}
+
+/* 택배 마감 시간 */
+.mboxb-2>object {
+    margin-top: 30px;
+}
+
+/* 택배발송현황 */
+.mboxb-3-1 {
+    overflow: hidden; 
+    position: relative;
+}
+.mboxb-3-1>object {
+    width: 370px;
+    height: 100px;  
+    margin-left: 20px; 
+    
+}
+.mboxb-3-1>ul {
+    position: absolute;
+    top:75px;
+    left:50px;
+    display: flex;  
+}
+.mboxb-3-1>ul>li{
+    margin-right: 48px;
+    font-weight: bold;
+}
+
+
+/* footer box --------------------------------- */
+.fbox-con {
+    display: flex;
+    justify-content: center;
+}
+
+
+ 
+.fbox {
+    border: 1px solid #ececec81;
+    color:white;
+    width:805px;
+    height: 290px;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.fbox>p {
+    position: absolute;
+    top:20px;
+    left:20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* logo10 area--------------------------------- */
+.fbox1-1 {
+    margin: 0 auto; 
+    width: 760px;
+    height: 250px;
+    display: flex; 
+}
+
+/* 전체 물량 대비 현재 작업량 area--------------------------------- */
+.fbox1-1>object {
+    width: 520px;
+    height: 320px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.fcbox1, .fcbox2 {
+    display: flex; 
+    width: 100px; 
+    align-items: center;
+}
+.fcbox1>p, .fcbox2>p {
+    font-size: 16px;
+    line-height: 22px;
+}
+.fcircle1 {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #6AF288;
+    display: inline-block;
+    margin-right: 10px;
+}
+.fcircle2 {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #FF34EB;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.cbox {
+    margin-top: 20px;
+} 
+.fboxx>ul {
+    margin-left: 20px; 
+    margin-top: 20px;
+}
+.fbox1-1>ul>li {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.fbox1-1>ul>li:first-child {
+    text-align: center;
+    padding: 0 10px;
+     background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248)); 
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* logo11 area--------------------------------- */
+
+.fbox2-1 {
+    margin: 0 auto; 
+    width: 760px;
+    height: 250px;
+    display: flex; 
+    
+}
+.fbox2-1>object {
+    width: 520px;
+    height: 320px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.fcbox1, .fcbox2 {
+    display: flex; 
+    width: 100px; 
+    align-items: center;
+    
+}
+.fcbox1>p, .fcbox2>p {
+    font-size: 16px;
+    line-height: 22px;
+    
+}
+.fcircle1 {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ececec;
+    display: inline-block;
+    margin-right: 10px;
+}
+.fcircle3 {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #C322FB;
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+
+.fbox2-1>ul {
+    margin-left: 20px;
+    
+}
+.fbox2-1>ul>li {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.fbox2-1>ul>li:first-child {
+    text-align: center;
+    padding: 0 10px;
+     background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248)); 
+    border-radius: 5px;
+    font-weight: bold;
+}

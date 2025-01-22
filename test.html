@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery v3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+  // 숫자를 향상시키는 애니메이션
+  $('#counter').each(function() {
+    var $this = $(this);
+    var targetNumber = 1000; // 목표 숫자
+    var duration = 2000; // 애니메이션 지속 시간 (ms)
+    
+    $({ countNum: $this.text() }).animate(
+      { countNum: targetNumber },
+      {
+        duration: duration,
+        easing: 'swing', // 애니메이션 방식
+        step: function() {
+          // 애니메이션 진행 중에 숫자를 갱신
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+          // 애니메이션 완료 후 숫자 정확히 설정
+          $this.text(targetNumber);
+        }
+      }
+    );
+  });
+});
+    </script>
+    <script></script>
+</head>
+<body>
+    <div id="counter">0</div>
+
+</body>
+</html>

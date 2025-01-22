@@ -1,0 +1,192 @@
+.GaugeMeter {
+    position: Relative;
+    text-align: Center;
+    overflow: Hidden;
+    cursor: Default;
+  }
+
+  .GaugeMeter SPAN,
+  .GaugeMeter B {
+    margin: 0 23%;
+    width: 54%;
+    position: Absolute;
+    text-align: Center;
+    display: Inline-Block;
+    color: RGBa(0, 0, 0, 0.5);
+    font-weight: 100;
+    font-family: 'Open Sans', Arial;
+    overflow: Hidden;
+    white-space: NoWrap;
+    text-overflow: Ellipsis;
+  }
+  .GaugeMeter[data-style='Semi'] B {
+    margin: 0 10px;
+    width: 20%;
+  }
+
+  .GaugeMeter S,
+  .GaugeMeter U {
+    text-decoration: None;
+    font-size: 0.26em;
+    font-weight: 200;
+    opacity: 0.6;
+  }
+
+  .GaugeMeter B {
+    color: Black;
+    font-weight: 200;
+    font-size: 0.85em;
+    opacity: 0.8;
+  }
+
+  BODY {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  PRE {
+    background: RGBa(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    position: Relative;
+    width: 350px;
+    float: Left;
+    font-weight: 100;
+    letter-spacing: -1px;
+    margin: 0 10px 10px 30px;
+  }
+
+  HR {
+    clear: Both;
+    margin-top: 230px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #21b4f9;
+  }
+
+  DIV.GaugeMeter {
+    float: Left;
+  }
+
+  H1 {
+    font: Normal Bold 24px/24px 'Open Sans', Arial;
+    color: white;
+    margin-left: 10px;
+  }
+
+  H1 B {
+    font-weight: 100;
+  }
+
+  H2 {
+    font: Normal 700 20px/20px 'Open Sans', Arial;
+    color: white;
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  H3 {
+    font: Normal 600 16px/16px 'Open Sans', Arial;
+    color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  H3 B {
+    font-weight: 100;
+  }
+
+  P {
+    font: Normal 100 15px/15px Arial;
+    color: white;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  UL {
+    color: white;
+    list-style-type: Square;
+    padding-left: 0;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+
+  UL.Cols2 {
+    -webkit-column-count: 3;
+    -webkit-column-gap: 0.5em;
+    -moz-column-count: 3;
+    -moz-column-gap: 0.5em;
+    column-count: 3;
+    column-gap: 0.5em;
+  }
+
+  UL LI {
+    margin-left: 30px;
+    -webkit-column-break-inside: Avoid;
+    -moz-column-break-inside: Avoid;
+  }
+
+  LI P {
+    margin: 3px 0 !important;
+  }
+
+  PRE.Code {
+    letter-spacing: 0;
+    width: Auto;
+    width: calc(100vw - 70px);
+    color: white;
+    float: None;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    border-left: 4px Solid #2c94e0;
+    border-radius: 1px 10px 10px 1px;
+    padding: 0 10px 0 0;
+    background-image: Linear-Gradient(
+      Transparent 50%,
+      RGBa(255, 255, 255, 0.6) 50%
+    );
+    background-size: 40px 40px;
+    counter-reset: Line-Numbering;
+    word-break: Break-Word;
+  }
+  PRE.Code .Line::before {
+    content: Counter(Line-Numbering);
+    counter-increment: Line-Numbering;
+    min-width: 3em;
+    padding-right: 1em;
+    margin-right: 1em;
+    display: Inline-Block;
+    text-align: Right;
+    color: RGBa(44, 148, 224, 0.7);
+    border-right: 1px Solid #2c94e0;
+    background: RGBa(44, 148, 224, 0.04);
+    -webkit-touch-callout: None;
+    -webkit-user-select: None;
+    -khtml-user-select: None;
+    -moz-user-select: None;
+    -ms-user-select: None;
+    user-select: None;
+  }
+
+  #Header {
+    min-height: 360px;
+  }
+
+  .Preview {
+    width: 400px;
+    z-index: 100;
+    top: 0;
+    margin: 0; 
+    text-align: Center;
+    background: #110D22;
+    background: #110D22;
+    background: Linear-Gradient(45deg, #110D22, #110D22);
+    background-blend-mode: Lighten;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+    -moz-animation: BluePrint 60s Infinite;
+    -webkit-animation: BluePrint 60s Infinite;
+    animation: BluePrint 60s Infinite;
+  } 
