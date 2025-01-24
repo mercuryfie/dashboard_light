@@ -22,43 +22,34 @@
 
  
     <script
-    Xsrc="jquery-3.7.1.min.js"
+    Xsrc="./js/jQuery v3.7.1.js"
     src="http://code.jquery.com/jquery-3.7.1.min.js"
     ></script>
-    <script src="meter/GaugeMeter.js"></script>
+    <script src="./js/GaugeMeter.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- <script src="flipcard/jquery.flipper-responsive.js"></script>  -->
 
-    <!-- CDN for flip card clock dark mode ----------------------------  -->
-    <!-- <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
+    <!-- CDN for flip card clock dark mode ----------------------------  --> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@600&family=Saira+Extra+Condensed:wght@500&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.2/iconfont/material-icons.min.css'>
     <!-- <link rel="stylesheet" href="./style.css"> -->
+    <!-- <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
     
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script>
-    <!-- <script  src="./script.js"></script> -->
-    <script src="./flipcard_dark.js"></script>
-    <link rel="stylesheet" href="./flipcard_dark.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script> 
 
     <!-- css ----------------------------  -->
-     <link rel="stylesheet" href="./dashboard_main.css">
+     <link rel="stylesheet" href="./css/db_mode1.css">
 
      <!-- animation js ----------------------------  -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="./animation.js"></script>
- 
-    <!-- <script>
-     
-    $(document).ready(function () {
-         
-        $('#myFlipper').flipper('init'); 
-    }); 
+      <script src="./js/animation.js"></script>
+       
 
     </script> -->
     <script type="text/javascript">
@@ -105,18 +96,18 @@
                     </ul>
                     <div class="mbox1-1-1">
                         <object data="./meter/temp.html" type=""></object>
-                        <ul>
+                        <!-- <ul>
                             <li class="active">조제</li>
                             <li>탕전</li>
                             <li>마킹</li>
                             <li>포장</li>
-                        </ul>
+                        </ul> -->
                         
                     </div>
                 </div>
                 <div class="mbox1-2">
                     <!-- <p>logo1-2</p> -->
-                    <p>탕전기 동작 현황</p>
+                    <p>조제기 동작 현황</p>
                     <div class="mbox1-2-1">
                         <div class="status">
                             <div class="status-1"> 
@@ -130,29 +121,12 @@
                                 <li>대기</li> 
                             </ul> 
                         </div>  
-                        <object data="./meter/pot-now.html" type=""></object>
+                        <object data="./meter/pot_now_mode1.html" type=""></object>
                         <div class="pagebox">
                             <div class="pages"></div>
                             <div class="pages"></div>
                         </div>
-                    </div>
-                     
-                    <div class="mbox1-2-2"> 
-                        <p>각 공정 현황</p>
-                        <object data="./meter/now-progress.html" type=""></object>
-                        <ul>
-                            <li>조제</li>
-                            <li>탕전</li>
-                            <li>마킹</li>
-                            <li>포장</li>
-                        </ul>
-                        <!-- <ul class="pagebox">
-                            <li class="pages activep"></li>
-                            <li class="pages"></li> 
-                        </ul>  -->
-
-                         
-                    </div>
+                    </div> 
                 </div>
             </div>
             <div class="mbox mbox2">
@@ -180,43 +154,35 @@
                         </ul>
                     </div>
                 </div>
-                <div class="mbox mbox2-2">
-                    <!-- <p>logo 2-2  </p> -->
-                    <p>전체 작업 현황</p>
-                    <p>전체 진척도</p>
-                    <div class="mbox2-2-3">
-                        <object data="./meter/how-long.html" type=""></object>  
-                    </div> 
-
-                    <p>작업 시간 평균</p>
-                    <object data="./meter/rader-chart.html" type=""></object>
-
+                <div class="mbox mbox2-2"> 
+                    <p>택배 발송 현황</p>
                     <div class="mbox2-2-1">
-                        <ul>
-                            <li>조제</li>
-                            <li>탕전</li>
-                            <li>마킹</li>
-                            <li>포장</li>
-                        </ul>
-                        <div class="timecard">
-                            <p>5</p><span>min</span><br>
-                            <p>150</p><span>min</span><br>
-                            <p>5</p><span>min</span><br>
-                            <p>5</p><span>min</span><br>  
-                        </div>
-                    </div>
-                    <div class="status-parcel">
-                        <div class="status-2-1"> 
-                            <div class="statuscircle parcel1"></div>
-                            <div class="statuscircle parcel2"></div>
-                            <div class="statuscircle parcel3"></div>
-                        </div>
-                        <ul class="status-2-2">
+                        <object data="./meter/parcel_progress_mode1.html" type=""></object> 
+                        <ul class="mbox2-2-1-ul1 parcel-ul">
                             <li>전체</li>
                             <li>로젠</li>
+                            <li>한진</li>
+                            <li>기타</li>
+                        </ul>
+                        <ul class="mbox2-2-1-ul2 parcel-ul">
+                            <li>(400/400)</li>
+                            <li>(200/400)</li>
+                            <li>(100/400)</li>
+                            <li>(100/400)</li>
+                        </ul>
+                        <ul class="mbox2-2-1-ul3 parcel-ul">
+                            <li>전체</li>
+                            <li>로젠</li>
+                            <li>한진</li>
                             <li>기타</li> 
                         </ul>
-                    </div> 
+                        <ul class="mbox2-2-1-ul4 parcel-ul">
+                            <li>(400/400)</li>
+                            <li>(200/400)</li>
+                            <li>(100/400)</li>
+                            <li>(100/400)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class=" mbox3">
@@ -247,67 +213,21 @@
                         <div class="mboxb-1-1">
                             <object data="./meter/weekly_data.html" type=""></object> 
                         </div> 
-                        <div class="pagebox">
+                        <div class="pagebox_right">
                             <div class="pages"></div>
                             <div class="pages"></div>
                         </div>
-                    </div>
-                    <!-- <ul>
-                        <li>
-                            <div class="mboxb mboxb-1">  
-                                <ul class="mboxb-1-t">
-                                    <li>탕전 주문 건수</li>
-                                    <li>예비 조제 주문 건수</li>
-                                </ul>
-                                <h1>400</h1>
-                                <div class="mboxb-1-1">
-                                    <object data="./meter/weekly_data.html" type=""></object> 
-                                </div> 
-                                <div class="pagebox">
-                                    <div class="pages"></div>
-                                    <div class="pages"></div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="mboxb-1">  
-                                <p>예비 조제 주문 건수</p>
-                                <h1>200</h1>
-                                <div class="mboxb-1-1"> 
-                                    <object data="./meter/weekly_data_preorder.html" type=""></object>
-                                </div> 
-                                <div class="pagebox">
-                                    <div class="pages"></div>
-                                    <div class="pages"></div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul> -->
-                     
-                     
+                    </div> 
                 </div>
 
 
                 <div class="mboxb mboxb-2">
                     <!-- <p>logo8</p> -->
-                    <p>택배 마감까지 남은 시간</p> 
-                        <object data="./flipcard_dark.html" type="text/html"></object>  
+                    <p>택배 마감 시간</p> 
+                        <object data="./meter/flipcard_dark.html" type="text/html"></object>  
                 </div>
 
-
-                <div class="mboxb mboxb-3">
-                    <!-- <p>logo9 </p> -->
-                    <p>택배 발송 현황</p>
-                    <div class="mboxb-3-1">
-                        <object data="./meter/parcel-progress.html" type=""></object> 
-                        <ul>
-                            <li>전체</li>
-                            <li>로젠</li>
-                            <li>한진</li>
-                            <li>기타</li>
-                        </ul>
-                    </div>
-                </div>
+ 
             </div>
         </main>
         <section>
@@ -316,7 +236,7 @@
                     <!-- <p>logo10</p> -->
                     <p>전체 물량 대비 현재 작업량</p>
                     <div class="fbox1-1 fboxx">
-                        <object data="./meter/other-data.html" type=""></object>
+                        <object data="./meter/other_data.html" type=""></object>
                         <div class="cbox">
                             <div class="fcbox fcbox1">
                                 <div class="fcircle1"></div><p>전체 물량</p> 
@@ -324,30 +244,23 @@
                             <div class="fcbox fcbox2">
                                 <div class="fcircle2"></div><p>현재 작업량</p>
                             </div>
-                        </div>
-                        <ul>
-                            <li>조제</li>
-                            <li>마킹</li>
-                            <li>포장</li> 
-                        </ul>
+                        </div> 
                     </div>
                 </div>
                 <div class="fbox fbox2">
                     <!-- <p>logo11</p> -->
-                    <p>전체 물량 대비 현재 작업량</p>
+                    <p>조제 평균 시간</p>
                     <div class="fbox2-1 fboxx">
-                        <object data="./meter/pot-data.html" type=""></object>
+                        <p>(단위:min, 조제기 번호)</p>
+                        <object data="./meter/lc_mode1.html" type=""></object>
                         <div class="cbox">
                             <div class="fcbox fcbox1">
-                                <div class="fcircle1"></div><p>전체 물량</p> 
+                                <div class="fcircle1"></div><p>평균 소요 시간</p> 
                             </div>
                             <div class="fcbox fcbox2">
-                                <div class="fcircle3"></div><p>현재 작업량</p>
+                                <div class="fcircle3"></div><p>조제대별 소요 시간</p>
                             </div>
-                        </div>
-                        <ul>
-                            <li>탕전</li> 
-                        </ul>
+                        </div> 
                     </div>
                 </div>
             </div>

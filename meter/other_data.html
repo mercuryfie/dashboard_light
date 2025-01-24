@@ -13,13 +13,13 @@
         .box {
             width:480px;  
         } 
-        
     </style>
 </head>
 <body>
     <div class="box">
         <canvas id="myChart"></canvas>
-      </div>  
+      </div> 
+      
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script>
@@ -34,11 +34,10 @@
             labels: ['대기', '로젠', '한진', '기타'],
             datasets: [{
             label: '# of this week',
-            data: [400,300,300,300],
-            tension:0.4,
+            data: [400,300,350,300],
             borderWidth: 5,
             borderColor:'rgba(236,236,236,0.5)',
-            
+            tension:0.4,
             // 기존 데이터셋 설정
             fill: '-1',
             backgroundColor: 'rgba(0, 123, 255, 0.2)',
@@ -53,14 +52,15 @@
             },
             {
             label: '# of last week',
-            data: [400,300,300,300],
-            tension:0.4,
+            data: [400,100,50,50],
             borderWidth: 5,
-            borderColor: '#C322FB', //purple
-            pointBorderColor: 'white',
+            borderColor: '#FF34EB', //hotpink
+            tension:0.4,
+            
+            pointBorderColor: 'pink',
             pointRadius: 5,
             pointBorderWidth: 2,
-            pointBackgroundColor: '#C322FB' //purple
+            pointBackgroundColor: '#FF34EB' //hotpink
             }]
           },
             options: {
@@ -100,21 +100,7 @@
                 color: '#5c5c5c' // x축 그리드 색상 변경
               }
               }
-            },
-            // animations: {
-            //   y: {
-            //     easing: 'easeInOutElastic',
-            //     from: (ctx) => {
-            //       if (ctx.type === 'data') {
-            //         if (ctx.mode === 'default' && !ctx.dropped) {
-            //           ctx.dropped = true;
-            //           return 0;
-            //         }
-            //       }
-            //     }
-            //   },
-              
-            // }, 
+            }
             
           }
         }); 

@@ -9,7 +9,7 @@
       content="Easy to use gauge meter JavaScript plugin using jQuery"
     />
     <meta name="author" content="Mictronics" />
-    <script src="jQuery v3.7.1.js"></script>
+    <script src="../js/jQuery v3.7.1.js"></script>
     <!-- font2 ----------------------------  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,9 @@
      
     <style>
        
-      body {
+      /* body {
         background-color: #110D22;
-      }
+      } */
 
       .Preview {
         display: flex;
@@ -29,7 +29,7 @@
         text-align: Center;
         overflow: Hidden;
         cursor: Default;
-        background-color: #110D22;  
+        /* background-color: #110D22;   */
         margin-right: 20px;    
         margin-left: 10px;
       }
@@ -38,7 +38,7 @@
         text-align: Center;
         overflow: Hidden;
         cursor: Default;
-        background-color: #110D22;  
+        /* background-color: #110D22;   */
         margin-right: 20px;     
         margin-left: 10px;
       }
@@ -50,7 +50,7 @@
       .GaugeMeter B {
         margin: 0 23%; 
         width: 54%;   
-        font-size: 16px !important; 
+        font-size: 18px !important; 
         font-family:'chakra petch';
         font-weight: bold; 
 
@@ -71,7 +71,7 @@
       .GaugeMeter2 B {
         margin: 0 23%;
         width: 54%;  
-        font-size: 14px !important;
+        font-size: 18px !important;
         font-family:'chakra petch';
         position: Absolute;
         text-align: Center;
@@ -136,7 +136,7 @@
       Xsrc="jquery-3.7.1.min.js"
       src="http://code.jquery.com/jquery-3.7.1.min.js"
     ></script>
-    <script src="GaugeMeter.js"></script>
+    <script src="../js/GaugeMeter.js"></script>
   </head>
   <body>
     <header id="Header"> 
@@ -147,13 +147,13 @@
           data-percent="26" 
           data-size="60"
           data-theme="pink"
-          data-back="rgba(255,255,255,0.5)"
+          data-back="rgba(174,174,174,0.5)"
           data-animate_gauge_colors="true"
           data-animate_text_colors="true"
           data-width="9"
           data-label=""
           data-style="Arch"
-          data-label_color="#FFF" 
+          data-label_color="#fff" 
           data-append="°" 
           ></div>
         <div
@@ -162,7 +162,7 @@
           data-percent="58" 
           data-size="60"
           data-theme="cyonblue"
-          data-back="rgba(255,255,255,0.5)"
+          data-back="rgba(174,174,174,0.5)"
           data-animate_gauge_colors="true"
           data-animate_text_colors="true"
           data-width="9"
@@ -194,12 +194,12 @@
         $('#GaugeMeter_103').gaugeMeter({ percent: 15 });
         $(".GaugeMeter2").gaugeMeter({
         theme: 'cyonblue',
-        color: '#4FFDFF',
+        color: '#41F3F5',
         backgroundColor: '#fff'
         });
         $(".GaugeMeter2").gaugeMeter({
           theme: 'cyonblue',
-          color: '#4FFDFF',
+          color: '#41F3F5',
           backgroundColor: '#fff'
         }); 
  

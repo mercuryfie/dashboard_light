@@ -11,57 +11,59 @@
      
     <style>
         .box {
-            width:280px;  
+            width:480px;  
         } 
+        
     </style>
 </head>
 <body>
     <div class="box">
         <canvas id="myChart"></canvas>
-      </div> 
-      
+      </div>  
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script>
         const ctx = document.getElementById('myChart');
         function getRandomData() {
-          return Array.from({length: 6}, () => Math.floor(Math.random() * (600 - 300 + 1)) + 300);
+          return Array.from({length: 5}, () => (Math.random() * 2 + 2.5).toFixed(1));
         }
       
         const chart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: ['월', '화', '수', '목', '금', '토'],
+            labels: ['1', '2', '3', '4', '5',],
             datasets: [{
-            label: '# of this week',
-            data: [464, 300, 400, 500, 600, 300],
+            label: '# of last week',
+            data: [3.5,3.5,3.5,3.5,3.5,],
             tension:0.4,
-            borderWidth: 5,
-            borderColor:'#6AF288',
+            borderWidth: 2,
+            borderColor:'rgba(174,174,174,0.99)',
             
-            // 기존 데이터셋 설정
-            fill: '-1',
-            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            // 기존 데이터셋 설정 
 
-            pointBorderColor: 'white',
-            pointWidth:5,
-            pointRadius: 5,
-            pointBorderWidth: 2,
-            pointBackgroundColor: '#6AF288'
+            pointBorderColor: '#9c9c9c',
+            pointWidth:1,
+            pointRadius: 1,
+            pointBorderWidth: 1,
+            pointBackgroundColor: 'black',
+            fill: 'start',
+            backgroundColor: 'rgba(236, 236, 236, 0.1)', 
             },
             {
-            label: '# of last week',
-            data: [596, 512, 417, 389, 348, 342],
+            label: '# this week',
+            data: [2.5,3.5,4.5,4.5,2.5],
             tension:0.4,
             borderWidth: 5,
-            borderColor: '#ccc',
-            pointBorderColor: 'white',
+            borderColor: '#C322FB', //purple
+            pointBorderColor: 'pink',
             pointRadius: 5,
             pointBorderWidth: 2,
-            pointBackgroundColor: '#ccc'
+            pointBackgroundColor: '#C322FB', //purple
+            fill: 'start',
+            backgroundColor: 'rgba(130, 53, 250, 0.2)', 
             }]
           },
-          options: {
+            options: {
             responsive: true,
             plugins: {
                     title: {
@@ -90,37 +92,38 @@
               },
               y: {
                 beginAtZero: false,
-                max:700,
+                min:2,
+                max:5,
                 ticks: {
-                  color:'#ececec'
+                  color:'#ececec',
+                  stepSize: 1 // 간격을 1로 설정
                 },
                 grid: {
                 color: '#5c5c5c' // x축 그리드 색상 변경
               }
-              },
-               
+              }
             },
-            animations: {
-              y: {
-                easing: 'easeInOutElastic',
-                from: (ctx) => {
-                  if (ctx.type === 'data') {
-                    if (ctx.mode === 'default' && !ctx.dropped) {
-                      ctx.dropped = true;
-                      return 0;
-                    }
-                  }
-                }
-              },
+            // animations: {
+            //   y: {
+            //     easing: 'easeInOutElastic',
+            //     from: (ctx) => {
+            //       if (ctx.type === 'data') {
+            //         if (ctx.mode === 'default' && !ctx.dropped) {
+            //           ctx.dropped = true;
+            //           return 0;
+            //         }
+            //       }
+            //     }
+            //   },
               
-            }, 
-             
+            // }, 
+            
           }
-        });
- 
-        
-      setInterval(() => {
-        chart.data.datasets[0].data = getRandomData();
+        }); 
+
+        setInterval(() => {
+        // chart.data.datasets[0].data = getRandomData();
+        chart.data.datasets[1].data = getRandomData();
         chart.update();
       }, 3000);
  

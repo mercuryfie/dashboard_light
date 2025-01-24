@@ -18,19 +18,16 @@
     <style>
       body {
         background-color: #110D22; 
-        color:white; 
-      }
-      .preview {
-        width: 380px;
- 
+        color:white;
       }
       .GaugeMeter {
         position: Relative;
         text-align: Center;
         overflow: Hidden;
         cursor: Default;
-        background-color: #110D22;  
-        margin-right: 10px; 
+        background-color: #110D22; 
+        margin-top: 10px;
+        margin-right: 20px;
          
       }
       
@@ -58,11 +55,7 @@
         text-overflow: Ellipsis;
         z-index: 1;
         color:white;
-      }
-      .GaugeMeter[data-style='Semi'] B {
-        margin: 0 10%;
-        width: 80%; 
-      }
+      } 
 
       .GaugeMeter S,
       .GaugeMeter U {
@@ -72,7 +65,7 @@
         opacity: 0.6;
       } 
         
-
+ 
       DIV.GaugeMeter {
         float: Left;
       }
@@ -94,13 +87,13 @@
         data-label=""
         data-size="70"
         data-style="Arch"
-        data-width="8"
+        data-width="10"
         data-showvalue="true"
         data-min="0"
         data-total="100"
         data-stripe="3"
         data-used="80"
-        data-theme="White"
+        data-theme="purple"
         data-append="%"
       ></div>
       <div
@@ -109,7 +102,7 @@
       data-label=""
       data-size="70"
       data-style="Arch"
-      data-width="8"
+      data-width="10"
       data-showvalue="true"
       data-min="0"
       data-total="100"
@@ -123,13 +116,13 @@
       data-label=""
       data-size="70"
       data-style="Arch"
-      data-width="8"
-      data-append="%"
+      data-width="10"
       data-showvalue="true"
       data-min="0"
       data-total="100"
       data-stripe="3"
       data-used="60"
+      data-append="%"
     ></div>
     <div
       class="GaugeMeter"
@@ -137,12 +130,12 @@
       data-label=""
       data-size="70"
       data-style="Arch"
-      data-width="8"
+      data-width="10"
       data-showvalue="true"
       data-min="0"
       data-total="100"
       data-stripe="3"
-      data-used="50"
+      data-used="60"
       data-append="%"
     ></div>
          
@@ -153,11 +146,21 @@
         //GaugeMeter 
 
         $('.GaugeMeter').gaugeMeter();
-        $('#GaugeMeter_103').gaugeMeter({ percent: 15 });
+        $('#GaugeMeter_104').gaugeMeter({ percent: 15 });
         $(".GaugeMeter").gaugeMeter({
-        theme: 'green',
-        color: '#6AF288',
-        backgroundColor: '#fff'
+        theme: 'cyonblue',
+        color: '#62E9EB',
+        backgroundColor: '#fff' 
+        
+      }); 
+
+      $('.GaugeMeter2').gaugeMeter();
+        $('#GaugeMeter_104').gaugeMeter({ percent: 15 });
+        $(".GaugeMeter2").gaugeMeter({
+        theme: 'purple',
+        color: '#C322FB',
+        backgroundColor: '#fff' 
+        
       }); 
  
       });

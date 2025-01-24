@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        * {
+        box-sizing: border-box;
+        }
+
+        .wrapper {
+            width: 220px;   
+            height: 120px; 
+            display: flex;
+            flex-flow: column;
+        }
+
+        .statusbox { 
+            width: 10px; 
+            height: 10px; 
+            border-radius: 50%;
+            border: 1px solid transparent;
+        } 
+        .standbymode {
+            background-color: #ececec;
+        }
+
+        .onmode {
+            background-color: #6AF288;
+        }
+        .offmode {
+            background-color: #FD5C5C;
+        }
+
+        .wrapper {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows:  25px 25px; 
+        }
+    </style>
+</head>
+<body> 
+    <div class="wrapper">
+        <div class="statusbox onmode"></div>
+        <div class="statusbox onmode"></div>
+        <div class="statusbox offmode"></div>
+        <div class="statusbox onmode"></div>
+        <div class="statusbox standbymode"></div> 
+
+        <!-- <div class="box">
+            <div class="statusbox onmode"></div>
+            <div class="statusbox onmode"></div>
+            <div class="statusbox onmode"></div>
+            <div class="statusbox onmode"></div>
+            <div class="statusbox onmode"></div>  
+        </div>
+        <div class="box">
+            <div class="statusbox onmode"></div>
+            <div class="statusbox onmode"></div>
+            <div class="statusbox standbymode"></div>
+            <div class="statusbox standbymode"></div>
+            <div class="statusbox standbymode"></div>
+        </div>
+        <div class="box">
+            <div class="statusbox onmode"></div>
+            <div class="statusbox onmode"></div>
+            <div class="statusbox offmode"></div>
+            <div class="statusbox offmode"></div> 
+            <div class="statusbox onmode"></div>   
+        </div>  -->
+    </div> 
+</body>
+</html>

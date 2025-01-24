@@ -13,54 +13,54 @@
         .box {
             width:480px;  
         } 
+        
     </style>
 </head>
 <body>
     <div class="box">
         <canvas id="myChart"></canvas>
-      </div> 
-      
+      </div>  
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script>
         const ctx = document.getElementById('myChart');
         function getRandomData() {
-          return Array.from({length: 4}, () => Math.floor(Math.random() * (300 - 100 + 1)) + 100);
+          return Array.from({length: 20}, () => Math.floor(Math.random() * (170 - 120 + 1) + 120));
         }
       
         const chart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: ['대기', '로젠', '한진', '기타'],
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
             datasets: [{
-            label: '# of this week',
-            data: [400,300,350,300],
-            borderWidth: 5,
-            borderColor:'rgba(236,236,236,0.5)',
+            label: '# of last week',
+            data: [150,150,150,150,150,150,150,150,150,150,  150,150,150,150,150,150,150,150,150,150],
             tension:0.4,
-            // 기존 데이터셋 설정
-            fill: '-1',
-            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            borderWidth: 2,
+            borderColor:'rgba(174,174,174,0.99)',
+            
+            // 기존 데이터셋 설정 
 
-            pointBorderColor: 'white',
-            pointWidth:5,
-            pointRadius: 5,
-            pointBorderWidth: 2,
-            pointBackgroundColor: 'rgba(236,236,236,0.5)',
-            fill: '1',
+            pointBorderColor: '#9c9c9c',
+            pointWidth:1,
+            pointRadius: 1,
+            pointBorderWidth: 1,
+            pointBackgroundColor: 'black',
+            fill: 'start',
             backgroundColor: 'rgba(236, 236, 236, 0.1)', 
             },
             {
-            label: '# of last week',
-            data: [400,100,50,50],
-            borderWidth: 5,
-            borderColor: '#FF34EB', //hotpink
+            label: '# this week',
+            data: [120,130,140,120,120,150,150,150,150,150,  120,130,140,120,120,150,150,150,150,150],
             tension:0.4,
-            
-            pointBorderColor: 'white',
+            borderWidth: 5,
+            borderColor: '#C322FB', //purple
+            pointBorderColor: 'pink',
             pointRadius: 5,
             pointBorderWidth: 2,
-            pointBackgroundColor: '#FF34EB' //hotpink
+            pointBackgroundColor: '#C322FB', //purple
+            fill: 'start',
+            backgroundColor: 'rgba(130, 53, 250, 0.2)', 
             }]
           },
             options: {
@@ -92,15 +92,31 @@
               },
               y: {
                 beginAtZero: false,
-                max:450,
+                min:100,
+                max:180,
                 ticks: {
-                  color:'#ececec'
+                  color:'#ececec',
+                  stepSize: 50 // 간격을 1로 설정
                 },
                 grid: {
                 color: '#5c5c5c' // x축 그리드 색상 변경
               }
               }
-            }
+            },
+            // animations: {
+            //   y: {
+            //     easing: 'easeInOutElastic',
+            //     from: (ctx) => {
+            //       if (ctx.type === 'data') {
+            //         if (ctx.mode === 'default' && !ctx.dropped) {
+            //           ctx.dropped = true;
+            //           return 0;
+            //         }
+            //       }
+            //     }
+            //   },
+              
+            // }, 
             
           }
         }); 
