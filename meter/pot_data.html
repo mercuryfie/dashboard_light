@@ -31,17 +31,13 @@
         const chart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: ['대기', '로젠', '한진', '기타'],
+            labels: ['대기', '로젠', '한진', '기타', ],
             datasets: [{
             label: '# of last week',
             data: [400,300,300,300],
             tension:0.4,
             borderWidth: 5,
-            borderColor:'rgba(174,174,174,0.99)',
-            
-            // 기존 데이터셋 설정
-            fill: '2',
-            backgroundColor: 'rgba(0, 123, 255, 0.5)',
+            borderColor:'rgba(236,236,236,0.5)',
 
             pointBorderColor: 'white',
             pointWidth:5,
@@ -86,7 +82,7 @@
             scales: {
               x: { 
                 ticks: {
-                  color:'#5c5c5c'
+                  color:'#ececec'
                 },
                 grid: {
                 color: '#5c5c5c', // x축 그리드 색상 변경 
@@ -96,7 +92,7 @@
                 beginAtZero: false,
                 max:450,
                 ticks: {
-                  color:'#5c5c5c'
+                  color:'#ececec'
                 },
                 grid: {
                 color: '#5c5c5c' // x축 그리드 색상 변경

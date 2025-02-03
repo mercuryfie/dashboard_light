@@ -52,7 +52,8 @@ header {
     align-items: center;
 }
 .hbox3>p { 
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 20px; 
 }
 
 .hbox3>p:nth-child(2)
@@ -711,7 +712,7 @@ main {
 .fcbox1, .fcbox2 {
     display: flex; 
     width: 100px; 
-    align-items: center;
+    align-items: center; 
     
 }
 .fcbox1>p, .fcbox2>p {
@@ -719,6 +720,10 @@ main {
     line-height: 22px;
     
 }
+.fcircle1, .fcircle2, .fcircle3 {
+    margin-top: -10px;
+}
+
 .fcircle1 {
     width: 10px;
     height: 10px;
