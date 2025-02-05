@@ -57,3 +57,45 @@ $(function () {
   mysecond = $(".clock .flipper:nth-child(3) div:not(.new) .text");
   setTime();
 });
+
+
+// css to js
+function flipAnimation(flipper) {
+  const top = flipper.querySelector('.top');
+  const bottom = flipper.querySelector('.bottom');
+  let progress = 0;
+  const duration = 880; // 0.88s in milliseconds
+  const startTime = performance.now();
+
+  function animate(currentTime) {
+    const elapsedTime = currentTime - startTime;
+    progress = Math.min(elapsedTime / duration, 1);
+
+    // Top element animation
+    const rotateX = -180 * progress;
+    const translateY = -10 * progress;
+    top.style.transform = `rotateX(${rotateX}deg) translateY(${translateY}px)`;
+    top.style.transformOrigin = 'bottom center';
+
+    // Bottom element animation (opacity)
+    if (progress < 0.5) {
+      bottom.style.opacity = '0';
+    } else {
+      bottom.style.opacity = '1';
+    }
+
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      flipper.classList.remove('flipping');
+    }
+  }
+
+  flipper.classList.add('flipping');
+  requestAnimationFrame(animate);
+}
+
+// 애니메이션 실행 예시
+document.querySelectorAll('.flipper').forEach(flipper => {
+  flipper.addEventListener('click', () => flipAnimation(flipper));
+});

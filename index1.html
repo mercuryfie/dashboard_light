@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font1 ----------------------------  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- font3 ----------------------------  -->
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&display=swap" rel="stylesheet">
+
+    <script src="./js/GaugeMeter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- CDN for flip card clock dark mode ----------------------------  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@600&family=Saira+Extra+Condensed:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.2/iconfont/material-icons.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script>
+    <!-- css ----------------------------  -->
+    <link rel="stylesheet" href="./css/db_main.css">
+    <!-- animation js ----------------------------  -->
+    <script src="./js/animation.js"></script>
+
+</head>
+
+<body> 
+    <div id="wrap"> 
+        <header>
+            <div class="hbox hbox1">
+                <p>logo</p>
+            </div>
+            <div class="hbox hbox2">
+                <p>EMERGENCY MESSAGE</p>
+            </div>
+            <div class="hbox hbox3">
+                <p>2025/01/01 THU</p>
+                <p>09:00</p>
+                <p>🌞</p>
+            </div>
+        </header>
+        <style>
+            .mbox {
+                display: flex;
+            }
+
+            .GaugeMeter span,
+            .GaugeMeter2 span {
+                display: none;
+            }
+
+            .GaugeMeterproc {}
+        </style>
+        <main> 
+            <div class="mbox mbox1">
+                <!-- <p>logo5</p> -->
+                <div class="mbox1-1">
+                    <p>작업실 온 / 습도</p> <br> 
+                    <ul class="tempul">
+                        <li class="active">조제</li>
+                        <li>탕전</li>
+                        <li>마킹</li>
+                        <li>포장</li>
+                    </ul>
+                    <div class="Preview tempbox">  
+                        <div
+                          class="GaugeMeter no-scroll gmtemp"  
+                          id="GaugeMeter_101" 
+                          data-percent="26" 
+                          data-size="60"
+                            
+                          data-back="rgba(174,174,174,0.5)"
+                          data-animate_gauge_colors="true"
+                          data-animate_text_colors="true"
+                          data-width="9"
+                          data-label="온도"
+                          data-style="Arch"
+                          data-label_color="#fff" 
+                          data-append="" 
+                          ></div>
+                        <div
+                          class="GaugeMeter2 gmhum"
+                          id="GaugeMeter_102"
+                          data-percent="58" 
+                          data-size="60"
+                          data-theme="cyonblue"
+                          data-back="rgba(174,174,174,0.5)"
+                          data-animate_gauge_colors="true"
+                          data-animate_text_colors="true"
+                          data-width="9"
+                          data-label="습도"
+                          data-style="Arch"
+                          data-label_color="#FFF"
+                          data-append=""
+                          
+                        ></div> 
+                        <script>
+                            $(document).ready(function () {
+                                //GaugeMeter
+                                $("#GaugeMeter_101").gaugeMeter({
+                                    theme: 'pink',
+                                    color: '#FF5894', 
+                                });
+
+                                $("#GaugeMeter_102").gaugeMeter({
+                                    theme: 'cyonblue',
+                                    color: '#41F3F5', 
+                                });
+                            });
+                        </script> 
+                      </div>  
+                         
+                         
+                </div>
+                <div class="mbox1-2">
+                    <!-- <p>logo1-2</p> -->
+                    <p>탕전기 동작 현황</p>
+                    <div class="mbox1-2-1">
+                        <div class="status">
+                            <div class="status-1">
+                                <div class="statuscircle on"></div>
+                                <div class="statuscircle off"></div>
+                                <div class="statuscircle standby"></div>
+                            </div>
+                            <ul class="status-2">
+                                <li>ON</li>
+                                <li>OFF</li>
+                                <li>대기</li>
+                            </ul>
+                        </div>
+                        <!--<object data="./meter/pot-now.html" type=""></object>-->
+                        <div class="pagebox">
+                            <div class="pages"></div>
+                            <div class="pages"></div>
+                        </div>
+                    </div>
+
+                <div class="mbox1-3">
+                    <p>각 공정 현황</p> 
+                    
+                </div>
+
+                    <script>
+                        $(document).ready(function () {
+                            //GaugeMeterproc
+
+                            $(".GaugeMeterproc").gaugeMeter({
+                                theme: 'green',
+                                color: '#6AF288',
+                                backgroundColor: '#fff'
+                            });
+                        });
+                    </script>
+                    <ul>
+                        <li>조제</li>
+                        <li>탕전</li>
+                        <li>마킹</li>
+                        <li>포장</li>
+                    </ul>
+                    <!-- <ul class="pagebox">
+                            <li class="pages activep"></li>
+                            <li class="pages"></li>
+                        </ul>  -->
+
+
+                </div>
+             
+    </div>
+    <div class="mbox mbox2">
+        <!-- <p>logo6</p> -->
+        <div class="mbox mbox2-1">
+            <div class="mbox2-1-1">
+                <p>탕전 주문 현황</p>
+                <!--<object data="./meter/doc_left.html" type=""></object>-->
+                <ul class="mbox2-1-1-ul">
+                    <li>탕제</li>
+                    <li>첩약</li>
+                    <li>자보</li>
+                    <li>기타</li>
+                </ul>
+            </div>
+            <div class="mbox2-1-2">
+                <p>예비 조제 주문 현황</p>
+                <!--<object data="./meter/doc_right.html" type=""></object>-->
+                <ul class="mbox2-1-2-ul">
+                    <li>공진단</li>
+                    <li>경옥고</li>
+                    <li>다이어트</li>
+                    <li>약속/탕약</li>
+                    <li>기타</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mbox mbox2-2">
+            <!-- <p>logo 2-2  </p> -->
+            <p>전체 작업 현황</p>
+            <p>전체 진척도</p>
+            <div class="mbox2-2-3">
+                <!--<object data="./meter/how-long.html" type=""></object>-->
+            </div>
+
+            <p>작업 시간 평균</p>
+            <!--<object data="./meter/rader-chart.html" type=""></object>-->
+
+            <div class="mbox2-2-1">
+                <ul>
+                    <li>조제</li>
+                    <li>탕전</li>
+                    <li>마킹</li>
+                    <li>포장</li>
+                </ul>
+                <div class="timecard">
+                    <p>5</p><span>min</span><br>
+                    <p>150</p><span>min</span><br>
+                    <p>5</p><span>min</span><br>
+                    <p>5</p><span>min</span><br>
+                </div>
+            </div>
+            <div class="status-parcel">
+                <div class="status-2-1">
+                    <div class="statuscircle parcel1"></div>
+                    <div class="statuscircle parcel2"></div>
+                    <div class="statuscircle parcel3"></div>
+                </div>
+                <ul class="status-2-2">
+                    <li>전체</li>
+                    <li>로젠</li>
+                    <li>기타</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mbox mbox3">
+        <div class="mbox3-1">
+            <div class="mboxb mboxb-1">
+                <!-- <p>logo777</p> -->
+                <!-- <ul >
+                            <li>탕전 주문 건수</li>
+                            <li>예비 조제 주문 건수</li>
+                        </ul>
+                        <ul>
+                            <li>탕전 주문 건수</li>
+                            <li>예비 조제 주문 건수</li>
+                        </ul> -->
+                <!-- <div class="mboxb-1-t">
+                            <p>탕전 주문 건수</p>
+                        <p>예비 조제 주문 건수</p>
+                        </div> -->
+                <ul class="mboxb-1-t weeklyul">
+                    <li>탕전 주문 건수</li>
+                    <li>예비 조제 주문 건수</li>
+                </ul>
+                <!-- <h1 id="counter">200</h1> -->
+                <ul class="counterul">
+                    <li>
+                        <h1 id="counter">200</h1>
+                    </li>
+                    <li>
+                        <h1 id="counter2">200</h1>
+                    </li>
+                </ul>
+                <div class="mboxb-1-1">
+                    <!--<object data="./meter/weekly_data.html" type=""></object>-->
+                </div>
+                <div class="pagebox">
+                    <div class="pages"></div>
+                    <div class="pages"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="mboxb mboxb-2">
+            <!-- <p>logo8</p> -->
+            <p>택배 마감 시간</p>
+            <!--<object data="./meter/flipcard_dark.html" type="text/html"></object>-->
+        </div>
+
+
+        <div class="mboxb mboxb-3">
+            <!-- <p>logo9 </p> -->
+            <p>택배 발송 현황</p>
+            <div class="mboxb-3-1">
+                <!--<object data="./meter/parcel-progress.html" type=""></object>-->
+                <ul>
+                    <li>전체</li>
+                    <li>로젠</li>
+                    <li>한진</li>
+                    <li>기타</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </main>
+    <section>
+        <div class="fbox-con">
+            <div class="fbox fbox1">
+                <!-- <p>logo10</p> -->
+                <p>전체 물량 대비 현재 작업량</p>
+                <div class="fbox1-1 fboxx">
+                    <!--<object data="./meter/other_data.html" type=""></object>-->
+                    <div class="cbox">
+                        <div class="fcbox fcbox1">
+                            <div class="fcircle1"></div>
+                            <p>전체 물량</p>
+                        </div>
+                        <div class="fcbox fcbox2">
+                            <div class="fcircle2"></div>
+                            <p>현재 작업량</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>조제</li>
+                        <li>마킹</li>
+                        <li>포장</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fbox fbox2">
+                <!-- <p>logo11</p> -->
+                <p>전체 물량 대비 현재 작업량</p>
+                <div class="fbox2-1 fboxx">
+                    <!--<object data="./meter/pot_data.html" type=""></object>-->
+                    <div class="cbox">
+                        <div class="fcbox fcbox1">
+                            <div class="fcircle1"></div>
+                            <p>전체 물량</p>
+                        </div>
+                        <div class="fcbox fcbox2">
+                            <div class="fcircle3"></div>
+                            <p>현재 작업량</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>탕전</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+</body>
+
+</html>

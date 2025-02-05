@@ -80,10 +80,9 @@
   </head>
   <body>
     <header id="Header"> 
-      <div class="Preview"> 
+      <div class="parbox"> 
         <div
-        class="GaugeMeter"
-        id="GaugeMeter_104"
+        class="GaugeMeter5" 
         data-label=""
         data-size="70"
         data-style="Arch"
@@ -97,8 +96,7 @@
         data-append="%"
       ></div>
       <div
-      class="GaugeMeter"
-      id="GaugeMeter_104"
+      class="GaugeMeter6" 
       data-label=""
       data-size="70"
       data-style="Arch"
@@ -111,8 +109,7 @@
       data-append="%"
     ></div>
     <div
-      class="GaugeMeter"
-      id="GaugeMeter_104"
+      class="GaugeMeter6" 
       data-label=""
       data-size="70"
       data-style="Arch"
@@ -125,8 +122,7 @@
       data-append="%"
     ></div>
     <div
-      class="GaugeMeter"
-      id="GaugeMeter_104"
+      class="GaugeMeter6" 
       data-label=""
       data-size="70"
       data-style="Arch"
@@ -142,24 +138,14 @@
       </div> 
 
     <script>
-      $(document).ready(function () {
-        //GaugeMeter 
-
-        $('.GaugeMeter').gaugeMeter();
-        $('#GaugeMeter_104').gaugeMeter({ percent: 15 });
-        $(".GaugeMeter").gaugeMeter({
+      $(document).ready(function () { 
+        $(".GaugeMeter5").gaugeMeter({
         theme: 'cyonblue',
-        color: '#62E9EB',
-        backgroundColor: '#fff' 
-        
-      }); 
-
-      $('.GaugeMeter2').gaugeMeter();
-        $('#GaugeMeter_104').gaugeMeter({ percent: 15 });
-        $(".GaugeMeter2").gaugeMeter({
+        color: '#62E9EB', 
+      });  
+        $(".GaugeMeter").gaugeMeter({
         theme: 'purple',
-        color: '#C322FB',
-        backgroundColor: '#fff' 
+        color: '#C322FB', 
         
       }); 
  

@@ -13,7 +13,7 @@
       /* body {
         background-color: black;
       } */
-        .box {
+        .barbox {
             width:320px; 
             height: 140px;  
             margin-left: 20px; 
@@ -21,14 +21,14 @@
     </style>
 </head>
 <body>
-    <div class="box">
-        <canvas id="myChart"></canvas>
+    <div class="barbox">
+        <canvas id="barChart"></canvas>
       </div> 
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script>
-        const ctx = document.getElementById('myChart');   
+        const ctx = document.getElementById('barChart');   
       
         new Chart(ctx, {
           type: 'bar', 

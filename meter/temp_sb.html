@@ -17,58 +17,43 @@
      
     <style>
        
-      body {
+      /* body {
         background-color: #110D22;
-      }
+      } */
 
-      .Preview {
-        display: flex; 
-      }
       .tempbox {
-        width: 200px;
-        height: 80px;
         display: flex;
-        position: relative;
-        justify-content: center;  
-
-      }
-      .GaugeMeter { 
-        margin-right: 20px;    
-        margin-left: 10px; 
-
       }
       .gmtemp {
         position: Relative;
         text-align: Center;
         overflow: Hidden;
         cursor: Default;
-        /* background-color: #110D22;   */ 
+        /* background-color: #110D22;   */
+        margin-right: 20px;    
+        margin-left: 10px;
       }
-      .gmhum {
+      .gmtemp {
         position: Relative;
         text-align: Center;
         overflow: Hidden;
         cursor: Default;
-        /* background-color: #110D22;   */ 
+        /* background-color: #110D22;   */
+        margin-right: 20px;     
+        margin-left: 10px;
       }
       .gmtemp.no-scroll {
         overflow: hidden;
       }  
-         
-      .gmtemp B, .gmhum B {
-
-        position: absolute;
-        bottom:-30px;
-        left:0px;  
-      }
+        
       .gmtemp SPAN,
       .gmtemp B,
       .gmhum SPAN,
-      .gmhum B  {
+      .gmhum B {
         margin: 0 23%; 
         width: 54%;   
         font-size: 18px !important; 
-        font-family:'Chakra Petch';
+        font-family:'chakra petch';
         font-weight: bold; 
 
         position: Absolute;
@@ -77,8 +62,48 @@
         color: RGBa(0, 0, 0, 0.8);   
         overflow: Hidden;
         white-space: NoWrap; 
-        z-index: 1; 
-      } 
+        z-index: 1;
+      }
+
+      .gmtemp .data-label {
+        margin-top: 100px;
+      }
+
+      /* .gmhum SPAN,
+      .gmhum B {
+        margin: 0 23%;
+        width: 54%;  
+        font-size: 18px !important;
+        font-family:'chakra petch';
+        position: Absolute;
+        text-align: Center;
+        display: Inline-Block;
+        color: RGBa(0, 0, 0, 0.8); 
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold; 
+        overflow: Hidden;
+        white-space: NoWrap; 
+        z-index: 1;
+      } */
+      .gmtemp[data-style='Semi'] B {
+        margin: 0 10%;
+        width: 80%; 
+      }
+
+      .gmtemp S,
+      .gmtemp U {
+        text-decoration: None;
+        font-size: 0.6em;
+        font-weight: 200;
+        opacity: 0.6;
+      }
+
+      .gmtemp B {
+        color: Black;
+        font-weight: 200;
+        font-size: 0.85em;
+        opacity: 0.8;
+      }
 
        
       /* PRE {
@@ -101,9 +126,9 @@
         border: 0;
         height: 1px;
         background: #21b4f9;
-      }
+      } */
 
-      DIV.GaugeMeter {
+      /* DIV.GaugeMeter {
         float: Left;
       } */
  
@@ -120,22 +145,22 @@
       <div class="Preview tempbox">  
         <div
           class="GaugeMeter no-scroll gmtemp"  
-          id="GaugeMeter_101" 
+          id="PreviewGaugeMeter_2" 
           data-percent="26" 
           data-size="60"
-            
+          data-theme="pink"
           data-back="rgba(174,174,174,0.5)"
           data-animate_gauge_colors="true"
           data-animate_text_colors="true"
           data-width="9"
-          data-label="온도"
+          data-label=""
           data-style="Arch"
           data-label_color="#fff" 
-          data-append="" 
+          data-append="°" 
           ></div>
         <div
-          class="GaugeMeter2  gmhum"
-          id="GaugeMeter_102"
+          class="GaugeMeter2 gmhum"
+          id="PreviewGaugeMeter_2"
           data-percent="58" 
           data-size="60"
           data-theme="cyonblue"
@@ -143,29 +168,31 @@
           data-animate_gauge_colors="true"
           data-animate_text_colors="true"
           data-width="9"
-          data-label="습도"
+          data-label=""
           data-style="Arch"
           data-label_color="#FFF"
           data-append=""
           
         ></div> 
       </div> 
-      </header>
+
     <script>
       $(document).ready(function () {
         //GaugeMeter  
-        // $('.GaugeMeter').gaugeMeter();
-        $('#GaugeMeter_101').gaugeMeter({ percent: 15 });
+        $('.GaugeMeter').gaugeMeter();
+        $('#GaugeMeter_103').gaugeMeter({ percent: 15 });
         $(".GaugeMeter").gaugeMeter({
         theme: 'pink',
-        color: '#fff', 
+        color: '#FF5894',
+        backgroundColor: '#fff'
         }); 
 
-        // $('.GaugeMeter2').gaugeMeter();
-        $('#GaugeMeter_102').gaugeMeter({ percent: 15 });
-        $(".gmhum").gaugeMeter({
+        $('.GaugeMeter2').gaugeMeter();
+        $('#GaugeMeter_103').gaugeMeter({ percent: 15 });
+        $(".GaugeMeter2").gaugeMeter({
         theme: 'cyonblue',
-        color: '#41F3F5', 
+        color: '#41F3F5',
+        backgroundColor: '#fff'
         }); 
  
    

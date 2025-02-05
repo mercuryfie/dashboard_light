@@ -19,28 +19,33 @@
       body {
         background-color: #110D22; 
         color:white; 
-      }
-      .preview {
-        width: 380px;
- 
+      } 
+      .npbox {
+        display: flex;
+        position: Relative;
       }
       .GaugeMeter {
         position: Relative;
         text-align: Center;
         overflow: Hidden;
-        cursor: Default;
-        background-color: #110D22;  
-        margin-right: 10px; 
-         
+        cursor: Default; 
+        margin-right: 10px;  
       }
       
-      .GaugeMeter .data-percent {
-        font-size: 5em; /* 원하는 크기로 조정 */
+      /* .GaugeMeter .data-percent {
+        font-size: 18px;  
         }
         .GaugeMeter .label {
-        font-size: 0.2em; /* 원하는 크기로 조정 */
-        }
+        font-size: 18px;  
+      } */
        
+      .gmnp b { 
+        position: absolute;
+        bottom:-40px;
+        left:0px;  
+        margin: 0 22%; 
+        overflow: hidden; 
+      }
 
       .GaugeMeter SPAN,
       .GaugeMeter B {
@@ -57,25 +62,8 @@
         white-space: NoWrap;
         text-overflow: Ellipsis;
         z-index: 1;
-        color:white;
-      }
-      .GaugeMeter[data-style='Semi'] B {
-        margin: 0 10%;
-        width: 80%; 
-      }
-
-      .GaugeMeter S,
-      .GaugeMeter U {
-        text-decoration: None;
-        font-size: 0.6em;
-        font-weight: 200;
-        opacity: 0.6;
-      } 
-        
-
-      DIV.GaugeMeter {
-        float: Left;
-      }
+        color:white !important;
+      }  
  
  
     </style>
@@ -87,11 +75,11 @@
   </head>
   <body>
     <header id="Header"> 
-      <div class="Preview"> 
+      <div class="Preview npbox"> 
         <div
-        class="GaugeMeter"
-        id="GaugeMeter_104"
-        data-label=""
+        class="GaugeMeter3"
+        id="GaugeMeter_103"
+        data-label="조제"
         data-size="70"
         data-style="Arch"
         data-width="8"
@@ -101,12 +89,12 @@
         data-stripe="3"
         data-used="80"
         data-theme="White"
-        data-append="%"
+        data-append=""
       ></div>
       <div
-      class="GaugeMeter"
+      class="GaugeMeter3"
       id="GaugeMeter_104"
-      data-label=""
+      data-label="탕전"
       data-size="70"
       data-style="Arch"
       data-width="8"
@@ -114,17 +102,15 @@
       data-min="0"
       data-total="100"
       data-stripe="3"
-      data-used="75"
-      data-append="%"
+      data-used="75" 
     ></div>
     <div
-      class="GaugeMeter"
-      id="GaugeMeter_104"
-      data-label=""
+      class="GaugeMeter3"
+      id="GaugeMeter_105"
+      data-label="마킹"
       data-size="70"
       data-style="Arch"
-      data-width="8"
-      data-append="%"
+      data-width="8" 
       data-showvalue="true"
       data-min="0"
       data-total="100"
@@ -132,9 +118,9 @@
       data-used="60"
     ></div>
     <div
-      class="GaugeMeter"
-      id="GaugeMeter_104"
-      data-label=""
+      class="GaugeMeter3"
+      id="GaugeMeter_106"
+      data-label="포장"
       data-size="70"
       data-style="Arch"
       data-width="8"
@@ -142,18 +128,14 @@
       data-min="0"
       data-total="100"
       data-stripe="3"
-      data-used="50"
-      data-append="%"
+      data-used="50" 
     ></div>
          
       </div> 
 
     <script>
-      $(document).ready(function () {
-        //GaugeMeter 
-
-        $('.GaugeMeter').gaugeMeter();
-        $('#GaugeMeter_103').gaugeMeter({ percent: 15 });
+      $(document).ready(function () { 
+        $('#GaugeMeter_104').gaugeMeter({ percent: 15 });
         $(".GaugeMeter").gaugeMeter({
         theme: 'green',
         color: '#6AF288',

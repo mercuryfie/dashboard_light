@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font2 ----------------------------  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     
+    <style>
+        .box {
+          margin: 0;padding: 0;
+            width:380px;  
+            height: 320px;
+            color:#ecececb8;
+            color:#c522fb58;
+            color:#6af28781; 
+        } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <canvas id="myChart"></canvas>
+    </div> 
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+        function getRandomData() {
+          return Array.from({length: 5}, () => Math.floor(Math.random() * (100 - 50 + 1)) + 50);
+        }
+      
+        const chart = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: ['전체', '조제', '탕전', '마킹','포장'],
+            datasets: [
+              
+            {
+            label: '# of last week',
+            data: [100, 100, 100, 100, 100], 
+            borderWidth: 2,
+            borderColor: '#ececec',  
+            pointBorderColor: 'white',
+            pointRadius: 5,
+            pointBorderWidth: 2,
+            pointBackgroundColor: 'navy',
+            fill: '1',
+            backgroundColor: 'rgba(236, 236, 236, 0.1)', 
+            
+            },
+            {
+            label: '# of this week',
+            data: [100, 80, 80, 60, 60],  
+            borderWidth: 5,
+            borderColor:'#6AF288', //green 
+
+            pointBorderColor: 'white',
+            pointWidth:5,
+            pointRadius: 5,
+            pointBorderWidth: 2,
+            pointBackgroundColor: '#6AF288',
+
+            fill: '2',
+            backgroundColor: 'rgba(106,242,136, 0.3)', 
+            },
+            {
+            label: '# of last week',
+            data: [80, 60, 60, 50, 30], 
+            borderWidth: 5,
+            borderColor: '#C322FB', //purple
+            pointBorderColor: 'white',
+            pointRadius: 5,
+            pointBorderWidth: 2,
+            pointBackgroundColor: '#C322FB', //purple
+
+            fill: true,
+            backgroundColor: 'rgba(195, 34, 251, 0.3)', 
+            }
+          ]
+          },
+            options: {
+            responsive: true,
+            plugins: {
+                    title: {
+                        display: true, 
+                         
+                    },
+                    legend: {
+                        display:false,
+                        labels: {
+                            color:'red'
+                        },
+                        data: {
+                            color:'white'
+                        }
+                    }
+                    },
+            
+            scales: {
+              r: {
+                ticks: {
+                  color:'#ececec',
+                  backdropColor: 'transparent', 
+                  z:1,
+                  max:400,
+                  // stepSize: 100,
+                  padding:50,  
+                  font: {
+                    size:12
+                  }
+                }, 
+                pointLabels: {
+                padding: 20 // 포인트 레이블을 바깥쪽으로 이동
+              },
+                grid: {
+                color: '#5c5c5c',   
+              },
+                angleLines: {
+                  color:'#5c5c5c'},
+                pointLabels: {
+                  color:'#ececec',
+                  font: {
+                    size:14
+                  }
+                  
+                },
+                suggestedMin: 0,
+                suggestedMax: 120 // y축의 최대값을 100으로 설정
+                },
+                // y: {
+                //   max:500,
+                //   ticks: {
+                //     color:'#ececec'
+                //   }
+                // }
+              // x: { 
+              //   ticks: {
+              //     color:'#ececec'
+              //   },
+              //   grid: {
+              //   color: '#5c5c5c', // x축 그리드 색상 변경 
+                
+              // }
+              // },
+              // y: {
+              //   beginAtZero: false,
+              //   max:100,
+              //   ticks: {
+              //     color:'#ececec'
+              //   },
+              //   grid: {
+              //   color: '#5c5c5c' // x축 그리드 색상 변경
+              // }
+              // }
+            }
+            
+          }
+        }); 
+
+        setInterval(() => {
+        // chart.data.datasets[0].data = getRandomData();
+        chart.data.datasets[1].data = getRandomData();
+        chart.data.datasets[2].data = getRandomData();
+        chart.update();
+      }, 3000);
+ 
+      </script>
+</body>
+</html>

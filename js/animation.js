@@ -1,40 +1,28 @@
 $(document).ready(function () { 
-    // $('.mboxb-1').css('border','1px solid blue'); 
-    var $ul = $('.mboxb-1-t');
-    var liHeight = $ul.find('mboxb-1-t>li:first').outerHeight();
-    var currentIndex = 0;
-
+    $('.counterul').css('border','1px solid blue'); 
+    var $ul = $('.counterul');
+    var liHeight = $ul.find('counterul>li:first').outerHeight();
+    var currentIndex = 0; 
 
     //탕전 주문 건수 -------------------------------------
     setInterval(function() {
-        var $ul = $('.mboxb-1-t');
-        var $li = $ul.find('li');
-        
-        // 첫 번째 li를 슬라이드업
-        $li.first().show(1000, function() {
-        // 슬라이드업이 끝난 후, 맨 뒤로 이동
-        $(this).appendTo($ul);
-        
-        // 다음 li를 슬라이드 다운
-        $ul.find('li').last().slideDown(2000);
+        var $weeklyul = $('.weeklyul');
+        var $li = $weeklyul.find('li'); 
+        $li.first().show(1000, function() { 
+          $(this).appendTo($weeklyul); 
+          $weeklyul.find('li').last().slideDown(2000);
         });
-    }, 3000); // 3초마다 실행
+    }, 3000);  
 
     //400,200 -------------------------------------
     setInterval(function() {
       var $counterul = $('.counterul');
-      var $counterli = $counterul.find('li'); 
-      
-      // 첫 번째 li를 슬라이드업
-      $counterli.first().show(1000, function() {
-      // 슬라이드업이 끝난 후, 맨 뒤로 이동
-      $(this).appendTo($counterul);
-      
-      // 다음 li를 슬라이드 다운
-      $counterul.find('li').last().slideDown(2000);
-      });
-      }, 3000); // 3초마다 실행
-
+      var $counterli = $counterul.find('li');  
+      $counterli.first().show(1000, function() { 
+        $(this).appendTo($counterul); 
+        $counterul.find('li').last().slideDown(2000);
+        });
+      }, 3000); 
 
 
     //count 증가 -------------------------------------
