@@ -12,15 +12,15 @@ ul {
 } 
 body {
     background-color: #110D22; 
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 300;
+    font-weight: 200;
 }
 html {
     margin: 0 auto;
     width: 90vw;
     height: 100vh;
-    max-height: 1080px;
-    border: 1px solid red;
+    max-height: 1080px;  
     overflow: hidden;
 }
 
@@ -42,8 +42,7 @@ html {
 #wrap {  
     width: 1920px;
     height: 1080px;
-    margin: 0 auto; 
-    border: 1px solid teal;
+    margin: 0 auto;  
 
 }
  
@@ -290,7 +289,7 @@ main {
 }
 .standbymode {
     background-color: #ececec;
-}
+} 
 
 .onmode {
     background-color: #6AF288;
@@ -315,14 +314,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     top:0px;
     left:0;
     border-radius: 5px;
-}
-.mbox1-2-1> object { 
-    width: 250px;
-    height: 150px;
-    overflow: hidden;
-    margin-top: 50px; 
-    margin-left: 0px;
-}
+} 
 
 /* 각 공정현황 */ 
 /* mbox1-3: 세번째 각공정 상자 */
@@ -401,7 +393,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     width: 800px;
     display: flex;
     flex-flow: column;
-    position: relative;  
+    position: relative;   
 } 
 .mbox2-1, .mbox2-2 {
     width:790px;
@@ -549,12 +541,10 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     margin-left: 20px;
     font-weight: bold;
     font-size: 18px;
-} 
+}  
 
 
-
-
-/* radarbox */ 
+ 
 /* main box -radar chart --------------------------------- */
 .mbox2-2 {
     position: absolute;
@@ -563,8 +553,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     width: 800px;
     height: 400px; 
     overflow: hidden;  
-    display: flex; 
-    border:1px solid red; 
+    display: flex;  
 }
 .mbox2-2>p {
     font-weight: bold;
@@ -627,6 +616,13 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     top:20px;
     left:380px; 
 } 
+/* radarbox */ 
+.radarbox { 
+    position: absolute;
+    top:50px;
+    left:400px;
+
+}
 
 /* 전체 진척도 */  
 .barbox { 
@@ -634,6 +630,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     width: 300px;
     height: 180px; 
     margin-top: 0px;
+
 }  
 /* 작업시간평균 */ 
 .cardbox {  
@@ -748,6 +745,12 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
 .mbox3-1 {
     position: relative;
 }
+.weekbox {
+    margin-top: 40px;
+    margin-left: 40px;
+    width:260px;  
+
+} 
 /* weekly의 pagebox */
 .mbox3-1 .pagebox {
     position: absolute;
@@ -779,7 +782,153 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
 
 /* 주간그래프 */
 /* 택배 마감 시간, flipcard*/
-
+ 
+.clock {
+    margin-top: 20px;
+    margin-left: 40px; 
+    display: grid;
+    width:220px; 
+    height: var(--clockheight);
+    border-radius: 5px; 
+    padding: 0 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 12px;
+    min-width: 100px;  
+    border-radius: var(--radius); 
+    background-image: linear-gradient(
+      rgb(14, 14, 15) 0%,
+      rgb(26, 25, 28) 20%,
+      rgb(44, 44, 52) 50%,
+      rgb(20, 20, 27) 100%
+     
+    );
+  }
+  
+  
+  .flipper {
+    position: relative;
+    width: 65px; 
+    height: 100px;
+    transform-style: preserve-3d;  
+    perspective: 1000px; 
+  }
+  .gear {
+    position: absolute;
+    top: calc(var(--clockheight) / 2.5);
+    width: 5px;
+    height: calc(var(--clockheight) / 5);
+    background: linear-gradient(
+      to bottom,
+      #000000 0%,
+      #666666 17%,
+      #7f7f7f 52%,
+      #7f7f7f 52%,
+      #0c0c0c 53%,
+      #595959 87%,
+      #131313 100%
+    );
+    outline: 1px solid #000;
+    z-index: 99;
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+    perspective: 0;
+  }
+  .gear:nth-child(2) {
+    left: calc(100% + -5px);
+  }
+  .top,
+  .bottom {
+    box-shadow: 0 6px 6px 1px rgba(0, 0, 0, 0.5),
+      0 2px 2px 1px rgba(255, 255, 255, 0.15);
+    border-top: 2px solid rgb(102, 103, 110);
+    border-bottom: 2px solid #000;
+      transition: all 1s ease-in-out;
+  }
+  .top {
+    position: relative;
+    width: 65px;
+    height: calc(50% - 5px);
+    background-image: linear-gradient(rgb(48, 49, 53) 0%, rgb(56, 57, 62) 100%);
+    margin-top: 5px; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; 
+  }
+  .bottom {
+    position: relative;
+    width: 65px;
+    height: calc(50% - 10px);
+    background-image: linear-gradient(rgb(57, 58, 63) 0%, rgb(38, 38, 38) 100%);
+    margin-top: 0px; 
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; 
+  }
+  .text {
+    font-size: 45px;
+    font-weight: 400;
+    display: block;
+    position: absolute; 
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    line-height: 85px;
+    text-align: center;
+    color:white;
+    font-family:'Gemunu Libre';
+  }
+  .bottom .text {
+    line-height: 0;
+  }
+  .top.new,
+  .bottom.new {
+    position: absolute;
+    left: 0;
+    z-index: 12;
+  }
+  .top.new {
+    top: 0;
+    z-index: 1;
+    /*   backface-visibility: hidden; */
+  }
+  .top.new .text {
+    backface-visibility: hidden;
+  } 
+  .bottom.new { 
+    position: absolute;
+    top: 0;
+    height: calc(100% - 0px);
+    transform: rotateX(0.5turn); 
+    z-index: 1;
+    opacity: 0;
+  }
+  .flipper.flipping .top.new {
+    transform-origin: bottom center; 
+    animation: rotate 0.88s 1 ease-in-out forwards;
+  }
+  .flipper.flipping .bottom.new {
+    animation: rotatebottom 0.88s 1 ease-in-out forwards;
+  }
+  @keyframes rotatebottom {
+    0% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotateX(0) translateY(0px);
+    }
+    100% {
+      transform: rotateX(-180deg) translateY(-10px);
+    }
+  }
 
 /* flipcard ------------- */
 
@@ -887,8 +1036,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     margin-right: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    position: relative;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative; 
 }
 .fbox>p {
     position: absolute;
@@ -898,26 +1046,25 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     font-size: 18px;
 }
 
-/* logo10 area--------------------------------- */
-.fbox1-1 {
-    margin: 0 auto; 
-    width: 760px;
-    height: 250px;
-    display: flex; 
-}
+/* logo10 area--------------------------------- */ 
 
 /* 전체 물량 대비 현재 작업량 area--------------------------------- */
-.fbox1-1>object {
-    width: 520px;
-    height: 320px;
-    margin-left: 40px;
-    margin-top: 20px;
-}
+ 
 .fcbox1, .fcbox2 {
     display: flex; 
     width: 100px; 
-    align-items: center;
+    align-items: center; 
 }
+.leftbox2 {
+    width:480px;  
+    margin-top: 40px;
+    margin-left: 100px;
+} 
+.rightbox2 {
+    width:480px;  
+    margin-top: 40px;
+    margin-left: 100px;
+} 
 .fcbox1>p, .fcbox2>p {
     font-size: 16px;
     line-height: 22px;
@@ -946,6 +1093,12 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     margin-left: 20px; 
     margin-top: 20px;
 }
+.fbox1-1, .fbox2-1  { 
+    display: flex; 
+    position: absolute;
+    top:0;
+    left:600px; 
+}
 .fbox1-1>ul>li {
     text-align: center; 
     width: 40px;
@@ -961,19 +1114,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
 }
 
 /* logo11 area--------------------------------- */
-
-.fbox2-1 {
-    margin: 0 auto; 
-    width: 760px;
-    height: 250px;
-    display: flex;  
-}
-.fbox2-1>object {
-    width: 520px;
-    height: 320px;
-    margin-left: 40px;
-    margin-top: 20px;
-}
+ 
 .fcbox1, .fcbox2 {
     display: flex; 
     width: 100px; 

@@ -35,12 +35,12 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script> -->
     <!-- css ----------------------------  -->
     <link rel="stylesheet" href="./css/db_main.css">
-    <link rel="stylesheet" href="./css/flipcard_dark.css">
+    <!-- <link rel="stylesheet" href="./css/flipcard_dark.css"> -->
     <!--  js ----------------------------  -->
     <!-- <script src="./js/animation.js"></script> -->
      <script src="./js/jQuery v3.7.1.js"></script>
     <script src="./js/GaugeMeter.js"></script>
-    <script src="./js/GaugeMeter2.js"></script>
+    <script src="./js/gaugeandchart.js"></script>
     <script src="./js/flipcard_dark.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -415,10 +415,13 @@
                 <p>전체 진척도</p> 
                 <p>작업 시간 평균</p> 
                 <div class="radarbox">
+                    <canvas id="radarChart"></canvas>  
+                </div> 
+                <!-- <div class="radarbox">
                     <div class="radarchart">
                         <canvas id="myChart"></canvas>
                     </div>  
-                </div> 
+                </div>  -->
                 <div class="barbox">
                     <canvas id="barChart"></canvas>
                 </div>  
@@ -465,6 +468,9 @@
                         <li id="counter2">200
                         </li>
                     </ul>
+                    <div class="weekbox">
+                        <canvas id="weekChart"></canvas>
+                    </div> 
                     <div class="pagebox">
                         <div class="pages"></div>
                         <div class="pages"></div>
@@ -592,8 +598,12 @@
             <div class="fbox fbox1">
                 <!-- <p>logo10</p> -->
                 <p>전체 물량 대비 현재 작업량</p>
+                <div class="leftbox2">
+                    <canvas id="leftChart"></canvas>
+                </div> 
                 <div class="fbox1-1 fboxx">
                     <!--<object data="./meter/other_data.html" type=""></object>-->
+                    
                     <div class="cbox">
                         <div class="fcbox fcbox1">
                             <div class="fcircle1"></div>
@@ -614,6 +624,9 @@
             <div class="fbox fbox2">
                 <!-- <p>logo11</p> -->
                 <p>전체 물량 대비 현재 작업량</p>
+                <div class="rightbox2">
+                    <canvas id="rightChart"></canvas>
+                </div> 
                 <div class="fbox2-1 fboxx">
                     <!--<object data="./meter/pot_data.html" type=""></object>-->
                     <div class="cbox">
