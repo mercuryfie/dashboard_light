@@ -16,9 +16,7 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 200;
 }
-html { 
-    width: 1920px;
-    height: 1080px;
+html {  
     overflow: hidden;
     /* border: 1px solid teal;  */
 }
@@ -275,6 +273,10 @@ main {
     height: 100px; 
     box-sizing: border-box;
     margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+    /* grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px; */
 }
 
 .wrapper .statusbox { 
@@ -295,14 +297,7 @@ main {
 }
 .offmode {
     background-color: #FD5C5C;
-}
-
-.wrapper {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
-/* grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px; */
-}
+} 
 
 /* 탕전기 동작 현황 */
 .mbox1-2-1 {
@@ -424,7 +419,24 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     margin-left: 20px;
     font-weight: bold;
     font-size: 18px; 
+} 
+
+
+/* 탕전 주문현황 */  
+
+.mbox2-1-2 {
+    position: absolute; 
+    top:0;
+    left:45%;
+    width:55%;
+    overflow: hidden;  
 }
+.mbox2-1-2> p {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}  
 
 /* 탕전주문현황 */
 .leftbox {
@@ -451,7 +463,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
      
   .GaugeMeter7 B  { 
     position: absolute;
-    top:20px;
+    top:25px;
     left:0px;   
     background-color: transparent;
     color:#fff !important;
@@ -504,7 +516,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
      
   .GaugeMeter8 B  { 
     position: absolute;
-    top:20px;
+    top:25px;
     left:0px;   
     background-color: transparent;
     color:#fff;
@@ -523,27 +535,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     overflow: Hidden;
     white-space: NoWrap; 
     z-index: 1; 
-  } 
-
-   
-
-
-
-/* 탕전 주문현황 */  
-
-.mbox2-1-2 {
-    position: absolute; 
-    top:0;
-    left:45%;
-    width:55%;
-    overflow: hidden;  
-}
-.mbox2-1-2> p {
-    margin-top: 20px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 18px;
-}  
+  }  
 
 
  
@@ -1051,45 +1043,44 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
 /* logo10 area--------------------------------- */ 
 
 /* 전체 물량 대비 현재 작업량 area--------------------------------- */
- 
+ .footer {
+    display: flex;
+    justify-content: center;  
+
+ }
 .fcbox1, .fcbox2 {
     display: flex; 
     width: 100px; 
     align-items: center; 
 }
+.fbox1>p:nth-child(2), .fbox2>p:nth-child(2) {
+    margin-top: 15px; 
+    margin-left: 510px;
+    font-weight: 100;
+    font-size: 14px;
+    
+}
 .leftbox2 {
     width:480px;  
-    margin-top: 40px;
-    margin-left: 100px;
+    margin-top: 30px;
+    margin-left: 200px;
 } 
 .rightbox2 {
     width:480px;  
-    margin-top: 40px;
-    margin-left: 100px;
+    margin-top: 30px;
+    margin-left: 200px;
 } 
 .fcbox1>p, .fcbox2>p {
     font-size: 16px;
     line-height: 22px;
-}
-.fcircle1 {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #6AF288;
-    display: inline-block;
-    margin-right: 10px;
-}
-.fcircle2 {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #FF34EB;
-    display: inline-block;
-    margin-right: 10px;
-}
+} 
 
 .cbox {
-    margin-top: 20px;
+    position: absolute;
+    top:60px;
+    left:40px;
+    /* margin-top: 0px; */
+
 } 
 .fboxx>ul {
     margin-left: 20px; 
@@ -1098,8 +1089,9 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
 .fbox1-1, .fbox2-1  { 
     display: flex; 
     position: absolute;
-    top:0;
-    left:600px; 
+    top:40px;
+    left:700px; 
+    
 }
 .fbox1-1>ul>li {
     text-align: center; 
@@ -1129,27 +1121,25 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     margin-bottom: 2px;
     
 }
-.fcircle1, .fcircle2, .fcircle3 {
-    margin-top: 0px;
-}
 
-.fcircle1 {
+
+.fcircle {
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #ececec;
     display: inline-block;
     margin-right: 10px;
+
 }
-.fcircle3 {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #C322FB;
-    display: inline-block;
-    margin-right: 10px;
-    
+.fcircle1 { 
+    background-color: #ececec;  
 }
+.fcircle2 { 
+    background-color: #FF34EB; 
+}
+.fcircle3 { 
+    background-color: #C322FB;  
+} 
 
 .fbox2-1>ul {
     margin-left: 20px;
