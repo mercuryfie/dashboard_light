@@ -16,12 +16,11 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 200;
 }
-html {
-    margin: 0 auto;
-    width: 90vw;
-    height: 100vh;
-    max-height: 1080px;  
+html { 
+    width: 1920px;
+    height: 1080px;
     overflow: hidden;
+    /* border: 1px solid teal;  */
 }
 
 .chakra-petch-bold {
@@ -41,13 +40,13 @@ html {
 
 #wrap {  
     width: 1920px;
-    height: 1080px;
-    margin: 0 auto;  
+    height: 1080px; 
+    /* border: 1px solid teal;  */
 
 }
  
 header {
-    margin-top: 80px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -365,6 +364,7 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     font-family:'Chakra Petch';
     font-size: 18px !important;   
     font-weight: bold;  
+    
   }
      
   .GaugeMeter3 b  { 
@@ -508,8 +508,10 @@ grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     left:0px;   
     background-color: transparent;
     color:#fff;
-    font-size: 13px; 
-    font-weight: normal;  
+    font-size: 16px; 
+    font-weight: normal;
+    margin: 0 auto !important; 
+    width: 100% !important; 
   }
   .GaugeMeter8 SPAN,
   .GaugeMeter8 B {

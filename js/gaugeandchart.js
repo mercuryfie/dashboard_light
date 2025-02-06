@@ -132,263 +132,237 @@ $(document).ready(function () {
           }
         }); 
 
+  // weekbox
+  const ctx3 = document.getElementById('weekChart');  
+  const weekChart = new Chart(ctx3, {
+    type: 'line',
+    data: {
+      labels: ['월', '화', '수', '목', '금', '토'],
+      datasets: [{
+      label: '# of this week',
+      data: [464, 300, 400, 500, 600, 300],
+      tension:0.4,
+      borderWidth: 5,
+      borderColor:'#6AF288',
+      
+      // 기존 데이터셋 설정
+      fill: '-1',
+      backgroundColor: 'rgba(0, 123, 255, 0.2)',
+
+      pointBorderColor: 'white',
+      pointWidth:5,
+      pointRadius: 5,
+      pointBorderWidth: 2,
+      pointBackgroundColor: '#6AF288'
+      },
+      {
+      label: '# of last week',
+      data: [596, 512, 417, 389, 348, 342],
+      tension:0.4,
+      borderWidth: 5,
+      borderColor: '#ccc',
+      pointBorderColor: 'white',
+      pointRadius: 5,
+      pointBorderWidth: 2,
+      pointBackgroundColor: '#ccc'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+              title: {
+                  display: true, 
+                    
+              },
+              legend: {
+                  display:false,
+                  labels: {
+                      color:'red'
+                  },
+                  data: {
+                      color:'white'
+                  }
+              }
+              },
+      
+      scales: {
+        x: { 
+          ticks: {
+            color:'#ececec'
+          },
+          grid: {
+          color: '#5c5c5c', // x축 그리드 색상 변경 
+        }
+        },
+        y: {
+          beginAtZero: false,
+          min:100,
+          max:700,
+          ticks: {
+            color:'#ececec'
+          },
+          grid: {
+          color: '#5c5c5c' // x축 그리드 색상 변경
+        }
+        },
+          
+      },
+      animations: {
+        y: {
+          easing: 'easeInOutElastic',
+          from: (ctx) => {
+            if (ctx.type === 'data') {
+              if (ctx.mode === 'default' && !ctx.dropped) {
+                ctx.dropped = true;
+                return 0;
+              }
+            }
+          }
+        },
+        
+      }, 
+        
+    }
+  }); 
+
 
   //radar chart
-  const ctx2 = document.getElementById('radarChart');
-        function getRandomData() {
-          return Array.from({length: 5}, () => Math.floor(Math.random() * (100 - 50 + 1)) + 50);
-        }
-      
-        const radarChart = new Chart(ctx2, {
-          type: 'radar',
-          data: {
-            labels: ['전체', '조제', '탕전', '마킹','포장'],
-            datasets: [
-              
-            {
-            label: '# of last week',
-            data: [100, 100, 100, 100, 100], 
-            borderWidth: 2,
-            borderColor: '#ececec',  
-            pointBorderColor: 'white',
-            pointRadius: 5,
-            pointBorderWidth: 2,
-            pointBackgroundColor: '#ececec',
-            fill: '1',
-            backgroundColor: 'rgba(236, 236, 236, 0.1)', 
-            
-            },
-            {
-            label: '# of this week',
-            data: [100, 80, 80, 60, 60],  
-            borderWidth: 5,
-            borderColor:'#6AF288', //green 
-
-            pointBorderColor: 'white',
-            pointWidth:5,
-            pointRadius: 5,
-            pointBorderWidth: 2,
-            pointBackgroundColor: '#6AF288',
-
-            fill: '2',
-            backgroundColor: 'rgba(106,242,136, 0.3)', 
-            },
-            {
-            label: '# of last week',
-            data: [80, 60, 60, 50, 30], 
-            borderWidth: 5,
-            borderColor: '#C322FB', //purple
-            pointBorderColor: 'white',
-            pointRadius: 5,
-            pointBorderWidth: 2,
-            pointBackgroundColor: '#C322FB', //purple
-
-            fill: true,
-            backgroundColor: 'rgba(195, 34, 251, 0.3)', 
-            }
-          ]
-          },
-            options: {
-            responsive: true,
-            plugins: {
-                    title: {
-                        display: true, 
-                         
-                    },
-                    legend: {
-                        display:false,
-                        labels: {
-                            color:'red'
-                        },
-                        data: {
-                            color:'white'
-                        }
-                    }
-                    },
-            
-            scales: {
-              r: {
-                ticks: {
-                  color:'#ececec',
-                  backdropColor: 'transparent', 
-                  z:1,
-                  max:400,
-                  // stepSize: 100,
-                  padding:50,  
-                  font: {
-                    size:12
-                  }
-                }, 
-
-                 
-                pointLabels: {
-                padding: 20 // 포인트 레이블을 바깥쪽으로 이동
-              },
-                grid: {
-                color: '#5c5c5c',   
-              },
-                angleLines: {
-                  color:'#5c5c5c'},
-                pointLabels: {
-                  color:'#ececec',
-                  font: {
-                    size:14
-                  }
-                  
-                },
-                suggestedMin: 0,
-                suggestedMax: 120 // y축의 최대값을 100으로 설정
-                },
-                // y: {
-                //   max:500,
-                //   ticks: {
-                //     color:'#ececec'
-                //   }
-                // }
-              // x: { 
-              //   ticks: {
-              //     color:'#ececec'
-              //   },
-              //   grid: {
-              //   color: '#5c5c5c', // x축 그리드 색상 변경 
-                
-              // }
-              // },
-              // y: {
-              //   beginAtZero: false,
-              //   max:100,
-              //   ticks: {
-              //     color:'#ececec'
-              //   },
-              //   grid: {
-              //   color: '#5c5c5c' // x축 그리드 색상 변경
-              // }
-              // }
-            }
-            
-          }
-        }); 
-
-        setInterval(() => {
-        // chart.data.datasets[0].data = getRandomData();
-        chart.data.datasets[1].data = getRandomData();
-        chart.data.datasets[2].data = getRandomData();
-        chart.update();
-      }, 3000);
-
-
-      // weekbox
-      const ctx3 = document.getElementById('weekChart');
-        function getRandomData() {
-          return Array.from({length: 6}, () => Math.floor(Math.random() * (600 - 300 + 1)) + 300);
-        }
-      
-        const weekChart = new Chart(ctx3, {
-          type: 'line',
-          data: {
-            labels: ['월', '화', '수', '목', '금', '토'],
-            datasets: [{
-            label: '# of this week',
-            data: [464, 300, 400, 500, 600, 300],
-            tension:0.4,
-            borderWidth: 5,
-            borderColor:'#6AF288',
-            
-            // 기존 데이터셋 설정
-            fill: '-1',
-            backgroundColor: 'rgba(0, 123, 255, 0.2)',
-
-            pointBorderColor: 'white',
-            pointWidth:5,
-            pointRadius: 5,
-            pointBorderWidth: 2,
-            pointBackgroundColor: '#6AF288'
-            },
-            {
-            label: '# of last week',
-            data: [596, 512, 417, 389, 348, 342],
-            tension:0.4,
-            borderWidth: 5,
-            borderColor: '#ccc',
-            pointBorderColor: 'white',
-            pointRadius: 5,
-            pointBorderWidth: 2,
-            pointBackgroundColor: '#ccc'
-            }]
-          },
-          options: {
-            responsive: true,
-            plugins: {
-                    title: {
-                        display: true, 
-                         
-                    },
-                    legend: {
-                        display:false,
-                        labels: {
-                            color:'red'
-                        },
-                        data: {
-                            color:'white'
-                        }
-                    }
-                    },
-            
-            scales: {
-              x: { 
-                ticks: {
-                  color:'#ececec'
-                },
-                grid: {
-                color: '#5c5c5c', // x축 그리드 색상 변경 
-              }
-              },
-              y: {
-                beginAtZero: false,
-                max:700,
-                ticks: {
-                  color:'#ececec'
-                },
-                grid: {
-                color: '#5c5c5c' // x축 그리드 색상 변경
-              }
-              },
-               
-            },
-            animations: {
-              y: {
-                easing: 'easeInOutElastic',
-                from: (ctx) => {
-                  if (ctx.type === 'data') {
-                    if (ctx.mode === 'default' && !ctx.dropped) {
-                      ctx.dropped = true;
-                      return 0;
-                    }
-                  }
-                }
-              },
-              
-            }, 
-             
-          }
-        });
- 
+    const ctx2 = document.getElementById('radarChart');  
+    const radarChart = new Chart(ctx2, {
+      type: 'radar',
+      data: {
+        labels: ['전체', '조제', '탕전', '마킹','포장'],
+        datasets: [
+          
+        {
+        label: '# of last week',
+        data: [100, 100, 100, 100, 100], 
+        borderWidth: 2,
+        borderColor: '#ececec',  
+        pointBorderColor: 'white',
+        pointRadius: 5,
+        pointBorderWidth: 2,
+        pointBackgroundColor: 'transparent',
+        fill: '1',
+        backgroundColor: 'rgba(236, 236, 236, 0.1)', 
         
-      setInterval(() => {
-        chart.data.datasets[0].data = getRandomData();
-        chart.update();
-      }, 3000);
-
-
-      // leftbox2 leftchart
-
-      const ctx5 = document.getElementById('leftChart');
-
-        function getRandomData() {
-          return Array.from({length: 4}, () => Math.floor(Math.random() * (300 - 100 + 1)) + 100);
+        },
+        {
+        label: '# of this week',
+        data: [100, 80, 80, 60, 60],  
+        borderWidth: 5,
+        borderColor:'#6AF288', //green 
+  
+        pointBorderColor: 'white',
+        pointWidth:5,
+        pointRadius: 5,
+        pointBorderWidth: 2,
+        pointBackgroundColor: '#6AF288',  
+  
+        fill: '2',
+        backgroundColor: 'rgba(106,242,136, 0.3)', 
+        },
+        {
+        label: '# of last week',
+        data: [80, 60, 60, 50, 30], 
+        borderWidth: 5,
+        borderColor: '#C322FB', //purple
+        pointBorderColor: 'white',
+        pointRadius: 5,
+        pointBorderWidth: 2,
+        pointBackgroundColor: '#C322FB', //purple
+  
+        fill: true,
+        backgroundColor: 'rgba(195, 34, 251, 0.3)', 
         }
+      ]
+      },
+        options: {
+        responsive: true,
+        plugins: {
+                title: {
+                    display: true, 
+                      
+                },
+                legend: {
+                    display:false,
+                    labels: {
+                        color:'red'
+                    },
+                    data: {
+                        color:'white'
+                    }
+                }
+                },
+        
+        scales: {
+          r: {
+            ticks: {
+              color:'#ececec',
+              backdropColor: 'transparent', 
+              z:1,
+              max:400,
+              // stepSize: 100,
+              padding:50,  
+              font: {
+                size:12
+              }
+            }, 
+  
+              
+            pointLabels: {
+            padding: 20 // 포인트 레이블을 바깥쪽으로 이동
+          },
+            grid: {
+            color: '#5c5c5c',   
+          },
+            angleLines: {
+              color:'#5c5c5c'},
+            pointLabels: {
+              color:'#ececec',
+              font: {
+                size:14
+              }
+              
+            },
+            suggestedMin: 0,
+            suggestedMax: 120 // y축의 최대값을 100으로 설정
+            },
+            // y: {
+            //   max:500,
+            //   ticks: {
+            //     color:'#ececec'
+            //   }
+            // }
+          // x: { 
+          //   ticks: {
+          //     color:'#ececec'
+          //   },
+          //   grid: {
+          //   color: '#5c5c5c', // x축 그리드 색상 변경 
+            
+          // }
+          // },
+          // y: {
+          //   beginAtZero: false,
+          //   max:100,
+          //   ticks: {
+          //     color:'#ececec'
+          //   },
+          //   grid: {
+          //   color: '#5c5c5c' // x축 그리드 색상 변경
+          // }
+          // }
+        }
+        
+      }
+      });   
+
+
+      // leftbox2 leftchart 
+      const ctx5 = document.getElementById('leftChart'); 
       
-        const chart = new Chart(ctx5, {
+        const leftChart = new Chart(ctx5, {
           type: 'line',
           data: {
             labels: ['대기', '로젠', '한진', '기타'],
@@ -412,7 +386,7 @@ $(document).ready(function () {
             },
             {
             label: '# of last week',
-            data: [400,100,50,50],
+            data: [300,200,150,180],
             borderWidth: 5,
             borderColor: '#FF34EB', //hotpink
             tension:0.4,
@@ -452,6 +426,7 @@ $(document).ready(function () {
               },
               y: {
                 beginAtZero: false,
+                min:100,
                 max:450,
                 ticks: {
                   color:'#ececec'
@@ -463,21 +438,10 @@ $(document).ready(function () {
             }
             
           }
-        }); 
+        });  
 
-        setInterval(() => {
-        // chart.data.datasets[0].data = getRandomData();
-        chart.data.datasets[1].data = getRandomData();
-        chart.update();
-      }, 3000);
-
-      // rightbox2 rightChart
-
-      const ctx6 = document.getElementById('rightChart');
-        // function getRandomData() {
-        //   return Array.from({length: 4}, () => Math.floor(Math.random() * (300 - 100 + 1)) + 100);
-        // }
-      
+      // rightbox2 rightChart 
+      const ctx6 = document.getElementById('rightChart');  
       const rightChart = new Chart(ctx6, {
         type: 'line',
         data: {
@@ -499,7 +463,7 @@ $(document).ready(function () {
           },
           {
           label: '# this week',
-          data: [400,300,300,300],
+          data: [300,200,150,180],
           tension:0.4,
           borderWidth: 5,
           borderColor: '#C322FB', //purple
@@ -540,6 +504,7 @@ $(document).ready(function () {
             },
             y: {
               beginAtZero: false,
+              min:100,
               max:450,
               ticks: {
                 color:'#ececec'
@@ -565,11 +530,5 @@ $(document).ready(function () {
           // }, 
           
         }
-      }); 
-
-      setInterval(() => {
-      // chart.data.datasets[0].data = getRandomData();
-      chart.data.datasets[1].data = getRandomData();
-      chart.update();
-    }, 3000);
+      });  
 });
