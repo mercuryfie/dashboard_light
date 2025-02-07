@@ -194,7 +194,7 @@ main {
 
 .mbox1-2{
     width:400px;
-    height: 250px; 
+    height: 248px; 
     border:1px solid #ececec81;
     border-radius: 5px;
     margin-top: 10px;
@@ -210,7 +210,7 @@ main {
 
 
 /* 탕전기 동작 현황 potnow*/
-.mbox1-2-1 { 
+/* .mbox1-2 { 
     width: 400px;
     height: 200px;  
     margin-bottom: 10px;
@@ -221,44 +221,69 @@ main {
     display: flex;
     justify-content: space-between;
 }  
-.mbox2-1-2> p {
+.mbox1-2> p {
     margin-top: 20px;
     margin-left: 20px;
     font-weight: bold;
     font-size: 18px;
-}  
-.status {
-    width: 80px;
-    height: 100px; 
-    display: flex; 
-    justify-content: center;
-    position: relative;
-    margin-top: 20px;
-    margin-left: 0px;
-    margin-right: 40px; 
+}   */
 
+/* pownow 탕동현의 상태값 */
+.mbox1-2-1 .status {
+  width: 100px;
+  height: 100px; 
+  display: flex; 
+  flex-flow: column; 
+  margin-top: 30px;
+  margin-left: -20px;
+  position: relative;
 }   
-.status-2>li { 
-    font-size: 14px; 
-    margin-top: 2px;
+.status1-1, .status1-2, .status1-3 {
+  width: 60px;
+  height: 22px;
+  display: flex;  
+  justify-content: left;
+  align-items: center;   
 }
+.status1-1>p, .status1-2>p, .status1-3>p {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;  
+} 
+
 .statuscircle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%; 
-    margin:10px 0; 
-    margin-left: 0px;
-    margin-right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; 
+  margin:10px 0;
+  margin-left: 0px;
+  margin-right: 10px; 
 }
- .on {
-    background-color: #6AF288;
+.on {
+  background-color: #6AF288;
 }
 .off{
-    background-color: #FD5C5C;
+  background-color: #FD5C5C;
 }
 .standby {
-    background-color: #ececec;
+  background-color: #ececec;
+}
+
+/* 탕전기 동작현황의 pagebox */ 
+
+.mbox1-2-1 { 
+  display: flex;
+  justify-content: center;
+  position: relative;
+
 } 
+.mbox1-2-1 .pagebox {
+  display: flex;
+  position: absolute;
+  bottom: -50px;  
+  left:50%;
+  transform: translateX(-50%);  
+}
 
 /* 탕전주문현황 */
 .leftbox {
@@ -365,8 +390,8 @@ main {
     width: 200px;   
     height: 100px; 
     box-sizing: border-box;
-    margin-top: 25px;
-    margin-left: 0px;
+    margin-top: 30px;
+    margin-left: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
@@ -393,21 +418,7 @@ main {
     background-color: #FD5C5C;
 }
  
-/* 탕전기 동작현황의 pagebox */ 
-
-.mbox1-2-1 { 
-    display: flex;
-    justify-content: center;
-    position: relative;
  
-} 
-.mbox1-2-1 .pagebox {
-    display: flex;
-    position: absolute;
-    bottom: 30px;  
-    left:50%;
-    transform: translateX(-50%);  
-}
  
 /* main box -area2 --------------------------------- */
 
@@ -533,6 +544,7 @@ main {
 .parul .parul1-1>li { 
     width: 50px;
     height: 30px;
+    line-height: 30px;
     background-color: #ececec21;
     border-radius: 5px; 
     text-align: center;
