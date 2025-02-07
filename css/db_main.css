@@ -459,9 +459,10 @@ main {
     position: relative;
     justify-content: space-evenly;   
     margin-top: 30px;
+    margin-left: -10px;
   }
   .GaugeMeter7 { 
-    margin-right: 10px;    
+    margin-right: -20px;    
     margin-left: 0px; 
     position: Relative;
     text-align: Center;

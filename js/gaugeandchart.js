@@ -2,7 +2,40 @@
 // $(document).ready(function() {
 
   document.addEventListener('DOMContentLoaded', function() {
-  // tempbox
+
+  function setData(){
+    //작업실 온/습도 tempbox
+    $("#GaugeMeter_101").attr("data-percent",36);
+    $("#GaugeMeter_102").attr("data-percent",36);
+
+    //각 공정 현황
+    $("#GaugeMeter_103").attr("data-used",36);
+    $("#GaugeMeter_104").attr("data-used",36);
+    $("#GaugeMeter_105").attr("data-used",36);
+    $("#GaugeMeter_106").attr("data-used",36); 
+
+    //탕전 주문 현황
+    $("#GaugeMeter_107").attr("data-percent",36);
+    $("#GaugeMeter_108").attr("data-percent",36);
+    $("#GaugeMeter_109").attr("data-percent",36);
+    $("#GaugeMeter_110").attr("data-percent",36); 
+
+    //예비 조제 주문 현황
+    $("#GaugeMeter_111").attr("data-percent",36);
+    $("#GaugeMeter_112").attr("data-percent",36);
+    $("#GaugeMeter_113").attr("data-percent",36);
+    $("#GaugeMeter_114").attr("data-percent",36); 
+    $("#GaugeMeter_115").attr("data-percent",36); 
+
+    //택배 발송 현황
+    $("#GaugeMeter_116").attr("data-used",36);
+    $("#GaugeMeter_117").attr("data-used",36);
+    $("#GaugeMeter_118").attr("data-used",36);
+    $("#GaugeMeter_119").attr("data-used",36); 
+  }
+  setData();
+
+  //작업실 온/습도 tempbox
   $(".GaugeMeter").gaugeMeter({
     theme: 'pink',
     color: '#FF5894', 
@@ -12,13 +45,13 @@
     color: '#41F3F5', 
   });  
 
-  // procbox
-  $(".GaugeMeter3").gaugeMeter({
-    theme: 'green',
-    color: '#6AF288',
-    });
+  // 각 공정 현황 procbox
+$(".GaugeMeter3").gaugeMeter({
+  theme: 'green',
+  color: '#6AF288',
+  });  
 
-  // parbox
+  // 택배발송현황 parbox 
   $(".GaugeMeter5").gaugeMeter({
     theme: 'blue',
     color: '#2986cc', 
@@ -28,19 +61,18 @@
     color: '#62E9EB',  
   });  
 
-  // leftbox
+  // 탕전 주문현황 leftbox 
   $(".GaugeMeter7").gaugeMeter({
     theme: 'Purple',
     color: '#C322FB',
   });  
 
-  // rightbox
+  // 예비조제 주문현황 rightbox 
   $(".GaugeMeter8").gaugeMeter({
     theme: 'green',
     color: '#6AF288',
   });   
-
-
+     
   //bar chart 전체진척도
   const ctx = document.getElementById('barChart');    
         new Chart(ctx, {
@@ -131,7 +163,7 @@
           }
         }); 
 
-  // weekbox
+  // 탕전 주문 건수 weekbox
   const ctx3 = document.getElementById('weekChart');  
   const weekChart = new Chart(ctx3, {
     type: 'line',
@@ -142,11 +174,7 @@
       data: [464, 300, 400, 500, 600, 300],
       tension:0.4,
       borderWidth: 5,
-      borderColor:'#6AF288',
-      
-      // 기존 데이터셋 설정
-      fill: '-1',
-      backgroundColor: 'rgba(0, 123, 255, 0.2)',
+      borderColor:'#6AF288', 
 
       pointBorderColor: 'white',
       pointWidth:5,
@@ -225,7 +253,7 @@
   }); 
 
 
-  //radar chart
+  //전체 작업 현황 radar chart
     const ctx2 = document.getElementById('radarChart');  
     const radarChart = new Chart(ctx2, {
       type: 'radar',
@@ -358,7 +386,7 @@
       });   
 
 
-      // leftbox2 leftchart 
+      // 전체 물량 대비 현재 작업량 leftbox2 leftchart 
       const ctx5 = document.getElementById('leftChart'); 
       
         const leftChart = new Chart(ctx5, {
@@ -371,9 +399,7 @@
             borderWidth: 5,
             borderColor:'rgba(236,236,236,0.5)',
             tension:0.4,
-            // 기존 데이터셋 설정
-            fill: '-1',
-            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            // 기존 데이터셋 설정 
 
             pointBorderColor: 'white',
             pointWidth:5,
@@ -393,7 +419,9 @@
             pointBorderColor: 'white',
             pointRadius: 5,
             pointBorderWidth: 2,
-            pointBackgroundColor: '#FF34EB' //hotpink
+            pointBackgroundColor: '#FF34EB', //hotpink
+            fill: 'start',
+            backgroundColor: 'rgba(250, 53, 220, 0.2)',  
             }]
           },
             options: {
@@ -439,7 +467,7 @@
           }
         });  
 
-      // rightbox2 rightChart 
+      // 전체 물량 대비 현재 작업량 rightbox2 rightChart 
       const ctx6 = document.getElementById('rightChart');  
       const rightChart = new Chart(ctx6, {
         type: 'line',
@@ -470,7 +498,7 @@
           pointRadius: 5,
           pointBorderWidth: 2,
           pointBackgroundColor: '#C322FB', //purple
-          fill: '1',
+          fill: 'start',
           backgroundColor: 'rgba(130, 53, 250, 0.2)', 
           }]
         },

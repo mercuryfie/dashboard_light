@@ -2,18 +2,43 @@
 // $(document).ready(function() {
   document.addEventListener('DOMContentLoaded', function() {
 
-    //작업실 온/습도
-    $(".GaugeMeter").gaugeMeter({
-      theme: 'pink',
-      color: '#FF5894', 
-      });    
-    $(".GaugeMeter2").gaugeMeter({
-      theme: 'cyonblue',
-      color: '#41F3F5', 
-    });  
+    function setData(){
+      //작업실 온/습도 tempbox
+      $("#GaugeMeter_101").attr("data-percent",36);
+      $("#GaugeMeter_102").attr("data-percent",36); 
+  
+      //탕전 주문 현황
+      $("#GaugeMeter_107").attr("data-percent",36);
+      $("#GaugeMeter_108").attr("data-percent",36);
+      $("#GaugeMeter_109").attr("data-percent",36);
+      $("#GaugeMeter_110").attr("data-percent",36); 
+  
+      //예비 조제 주문 현황
+      $("#GaugeMeter_111").attr("data-percent",36);
+      $("#GaugeMeter_112").attr("data-percent",36);
+      $("#GaugeMeter_113").attr("data-percent",36);
+      $("#GaugeMeter_114").attr("data-percent",36); 
+      $("#GaugeMeter_115").attr("data-percent",36); 
+  
+      //택배 발송 현황
+      $("#GaugeMeter_116").attr("data-used",36);
+      $("#GaugeMeter_117").attr("data-used",36);
+      $("#GaugeMeter_118").attr("data-used",36);
+      $("#GaugeMeter_119").attr("data-used",36); 
+    }
+    setData();
 
-    // 택배발송현황
-    // parbox
+  //작업실 온/습도 tempbox
+  $(".GaugeMeter").gaugeMeter({
+    theme: 'pink',
+    color: '#FF5894', 
+    });    
+  $(".GaugeMeter2").gaugeMeter({
+    theme: 'cyonblue',
+    color: '#41F3F5', 
+  });  
+
+    // 택배발송현황 parbox 
   $(".GaugeMeter5").gaugeMeter({
     theme: 'blue',
     color: '#2986cc', 
@@ -23,22 +48,19 @@
     color: '#62E9EB',  
   });  
 
-  // 탕전 주문현황
-  // leftbox
+  // 탕전 주문현황 leftbox 
   $(".GaugeMeter7").gaugeMeter({
     theme: 'Purple',
     color: '#C322FB',
   });  
 
-  // 예비조제 주문현황
-  // rightbox
+  // 예비조제 주문현황 rightbox 
   $(".GaugeMeter8").gaugeMeter({
     theme: 'green',
     color: '#6AF288',
   });   
     
-  //탕전 주문 건수 
-  // weekbox
+  //탕전 주문 건수 weekbox 
   const ctx3 = document.getElementById('weekChart');  
   const weekChart = new Chart(ctx3, {
     type: 'line',

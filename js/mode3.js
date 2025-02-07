@@ -2,6 +2,32 @@
 // $(document).ready(function() {
   document.addEventListener('DOMContentLoaded', function() {
 
+  function setData(){
+    //작업실 온/습도 tempbox
+    $("#GaugeMeter_101").attr("data-percent",36);
+    $("#GaugeMeter_102").attr("data-percent",36); 
+
+    //탕전 주문 현황
+    $("#GaugeMeter_107").attr("data-percent",36);
+    $("#GaugeMeter_108").attr("data-percent",36);
+    $("#GaugeMeter_109").attr("data-percent",36);
+    $("#GaugeMeter_110").attr("data-percent",36); 
+
+    //예비 조제 주문 현황
+    $("#GaugeMeter_111").attr("data-percent",36);
+    $("#GaugeMeter_112").attr("data-percent",36);
+    $("#GaugeMeter_113").attr("data-percent",36);
+    $("#GaugeMeter_114").attr("data-percent",36); 
+    $("#GaugeMeter_115").attr("data-percent",36); 
+
+    //택배 발송 현황
+    $("#GaugeMeter_116").attr("data-used",36);
+    $("#GaugeMeter_117").attr("data-used",36);
+    $("#GaugeMeter_118").attr("data-used",36);
+    $("#GaugeMeter_119").attr("data-used",36); 
+  }
+  setData();
+
    //작업실 온/습도
    $(".GaugeMeter").gaugeMeter({
     theme: 'pink',
