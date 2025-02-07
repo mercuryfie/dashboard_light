@@ -23,6 +23,7 @@
         href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@600&family=Saira+Extra+Condensed:wght@500&display=swap"
         rel="stylesheet"> 
     <!-- css ----------------------------  -->
+    <link rel="stylesheet" href="./css/reset.css"> 
     <link rel="stylesheet" href="./css/db_mode1.css">
     <!-- <link rel="stylesheet" href="./css/flipcard_dark.css"> -->
      
@@ -466,7 +467,7 @@
                     <p>전체 주문 대비 현재 작업량</p>
                     <p>(단위:건)</p>
                     <div class="bottombox1-1">
-                        <canvas id="presChart1"></canvas>
+                        <canvas id="leftChart"></canvas>
                     </div>  
                     <div class="cbox">
                         <div class="fcbox fcbox1">
@@ -484,7 +485,7 @@
                     <p>조제대별 소요 시간</p>
                     <p>(단위:min, 조제기 번호)</p>
                     <div class="bottombox1-2">
-                        <canvas id="presChart2"></canvas>
+                        <canvas id="presChart"></canvas>
                     </div>  
                     <div class="cbox">
                         <div class="fcbox fcbox1">
@@ -503,8 +504,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/jQuery v3.7.1.js"></script>
     <script src="./js/GaugeMeter.js"></script>
-    <script src="./js/gaugeandchart.js"></script>
-    <script src="./js/chartdetail.js"></script>
-    <script src="./js/flipcard_dark.js"></script> 
+    <!-- <script src="./js/gaugeandchart.js"></script>
+    <script src="./js/chartdetail.js"></script> -->
+    <script src="./js/flipcard_dark.js"></script>
+    <script src="./js/mode1.js"></script> 
 </body>
 </html>

@@ -240,7 +240,7 @@ main {
 }   
 .status-2>li { 
     font-size: 14px; 
-    margin-top: 5px;
+    margin-top: 2px;
 }
 .statuscircle {
     width: 10px;
@@ -360,7 +360,7 @@ main {
     z-index: 1; 
   }  
 
-/* 탕동현의 potnow */
+/* 탕동현의 potnow */ 
 .mbox1-2-1 .wrapper {
     width: 200px;   
     height: 100px; 
@@ -436,12 +436,12 @@ main {
     overflow: hidden;  
 }
 
-.status-parcel {
+/* .status-parcel {
     position: absolute;
     top:20px;
     right: 40px;
     display: flex;
-} 
+}  */
 .status-2-2>li {
     margin-top: 2px;
     font-size: 14px;
@@ -952,8 +952,7 @@ main {
     width: 480px;
     position: absolute;
     top:60px;
-    left:230px;   
-    border:1px solid red;
+    left:230px;    
 } 
  
 /* .pagebox_200 {
