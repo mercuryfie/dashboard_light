@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     color:white;
+    font-family: inherit;
+    box-sizing: border-box;
 }
 ul {
     list-style-type: none;
@@ -11,10 +13,7 @@ a {
     text-decoration: none;
 }
 #wrap { 
-    width: 1920px;
-    height: 1080px;  
-    font-family: "Noto Sans kr";
-    font-weight: 100;
+    width: 1920px;  
     
     /* border: 1px solid teal;  */
 }
@@ -87,9 +86,7 @@ header {
 /* main box  --------------------------------- */
 
 
-main {
-    width: 1920px;  
-    height: auto;
+main { 
     display: flex;
     justify-content: center;  
 }
@@ -926,9 +923,10 @@ main {
 
    
 .cbox {
+    width: 180px;
     margin-top: 70px;
-    margin-left: 30px;
-}
+    margin-left: 30px;  
+  }
 .cbox p { 
     font-size: 16px;  
     font-weight: 300;
