@@ -2,6 +2,7 @@
 // $(document).ready(function() {
   document.addEventListener('DOMContentLoaded', function() {
 
+    //작업실 온/습도
     $(".GaugeMeter").gaugeMeter({
       theme: 'pink',
       color: '#FF5894', 
@@ -11,6 +12,7 @@
       color: '#41F3F5', 
     });  
 
+    // 택배발송현황
     // parbox
   $(".GaugeMeter5").gaugeMeter({
     theme: 'blue',
@@ -19,20 +21,23 @@
   $(".GaugeMeter6").gaugeMeter({ 
     theme: 'cyonblue',
     color: '#62E9EB',  
-  });
+  });  
 
+  // 탕전 주문현황
   // leftbox
   $(".GaugeMeter7").gaugeMeter({
     theme: 'Purple',
     color: '#C322FB',
   });  
 
+  // 예비조제 주문현황
   // rightbox
   $(".GaugeMeter8").gaugeMeter({
     theme: 'green',
     color: '#6AF288',
   });   
     
+  //탕전 주문 건수 
   // weekbox
   const ctx3 = document.getElementById('weekChart');  
   const weekChart = new Chart(ctx3, {
@@ -126,6 +131,7 @@
     }
   }); 
 
+  // 전체 주문 대비 현재 작업량
    // leftbox2 leftchart 
    const ctx5 = document.getElementById('leftChart'); 
       
@@ -161,7 +167,9 @@
        pointBorderColor: 'white',
        pointRadius: 5,
        pointBorderWidth: 2,
-       pointBackgroundColor: '#FF34EB' //hotpink
+       pointBackgroundColor: '#FF34EB', //hotpink
+       fill: 'start',
+       backgroundColor: 'rgba(250, 53, 220, 0.2)', 
        }]
      },
        options: {
@@ -207,45 +215,43 @@
      }
    });  
 
-   //markChart 마킹기별 소요 시간
+   //포장대별 소요 시간  packChart
    const ctx6 = document.getElementById('packChart'); 
       
         const packChart = new Chart(ctx6, {
           type: 'line',
           data: {
             labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'],
-            datasets: [{
-            label: '# of last week',
-            data: [3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, ],
-            tension:0.4,
-            borderWidth: 5,
-            borderColor:'rgba(174,174,174,0.99)',
-            
-            // 기존 데이터셋 설정
-            fill: '2',
-            backgroundColor: 'rgba(0, 123, 255, 0.5)',
-
-            pointBorderColor: 'white',
-            pointWidth:5,
-            pointRadius: 5,
-            pointBorderWidth: 2,
-            pointBackgroundColor: 'rgba(174,174,174,1)',
-            fill: 'start',
-            backgroundColor: 'rgba(236, 236, 236, 0.1)', 
-            },
+            datasets: [
             {
             label: '# this week',
             data: [2.5, 3.5, 4.5, 4.5, 2.5, 3.5, 3.5, 3.5, 4.5, 4.5, 4.5, 4.5, 3.5, 3.5, 3.5, ],
             tension:0.4,
             borderWidth: 5,
             borderColor: '#C322FB', //purple
-            pointBorderColor: 'pink',
+            pointBorderColor: 'white',
             pointRadius: 5,
             pointBorderWidth: 2,
             pointBackgroundColor: '#C322FB', //purple
             fill: '1',
             backgroundColor: 'rgba(130, 53, 250, 0.2)', 
-            }]
+            }  ,
+            {
+            label: '# of last week',
+            data: [3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, ],
+            tension:0.4,
+            borderWidth: 3,
+            borderColor:'rgba(174,174,174,0.99)', 
+
+            pointBorderColor: 'white',
+            pointWidth:1,
+            pointRadius: 1,
+            pointBorderWidth: '0',
+            pointBackgroundColor: 'rgba(174,174,174,1)',
+            fill: 'start',
+            backgroundColor: 'rgba(236, 236, 236, 0.1)', 
+            },
+             ]
           },
             options: {
             responsive: true,
@@ -268,7 +274,7 @@
             scales: {
               x: { 
                 ticks: {
-                  color:'#5c5c5c'
+                  color:'#ececec'
                 },
                 grid: {
                 color: '#5c5c5c', // x축 그리드 색상 변경 
@@ -278,7 +284,7 @@
                 beginAtZero: false,
                 max:5,
                 ticks: {
-                  color:'#5c5c5c',
+                  color:'#ececec',
                   stepSize: 1 // 간격을 1로 설정
                 },
                 grid: {

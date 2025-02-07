@@ -37,8 +37,10 @@ html {
 }
 
 #wrap {  
-    width: 1920px;
-    height: 1080px; 
+    width: 100vw;
+    height: 100vh; 
+    /* width: 1920px;
+    height: 1080px;  */
     /* border: 1px solid teal;  */
 
 }
@@ -93,11 +95,11 @@ header {
 }
 /* main box  --------------------------------- */
 
-body {
+/* body {
     max-height: 1080px;
-}
+} */
 main {
-    width: 1920px; 
+    /* width: 1920px;  */
      
     height: auto;
     display: flex;

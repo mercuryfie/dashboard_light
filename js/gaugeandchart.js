@@ -390,7 +390,7 @@
             borderColor: '#FF34EB', //hotpink
             tension:0.4,
             
-            pointBorderColor: 'pink',
+            pointBorderColor: 'white',
             pointRadius: 5,
             pointBorderWidth: 2,
             pointBackgroundColor: '#FF34EB' //hotpink

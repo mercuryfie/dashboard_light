@@ -2,16 +2,18 @@
 // $(document).ready(function() {
   document.addEventListener('DOMContentLoaded', function() {
 
-    $(".GaugeMeter").gaugeMeter({
-      theme: 'pink',
-      color: '#FF5894', 
-      });    
-    $(".GaugeMeter2").gaugeMeter({
-      theme: 'cyonblue',
-      color: '#41F3F5', 
-    });  
+   //작업실 온/습도
+   $(".GaugeMeter").gaugeMeter({
+    theme: 'pink',
+    color: '#FF5894', 
+    });    
+  $(".GaugeMeter2").gaugeMeter({
+    theme: 'cyonblue',
+    color: '#41F3F5', 
+  });  
 
-    // parbox
+  // 택배발송현황
+  // parbox
   $(".GaugeMeter5").gaugeMeter({
     theme: 'blue',
     color: '#2986cc', 
@@ -19,20 +21,23 @@
   $(".GaugeMeter6").gaugeMeter({ 
     theme: 'cyonblue',
     color: '#62E9EB',  
-  });
+  });  
 
+  // 탕전 주문현황
   // leftbox
   $(".GaugeMeter7").gaugeMeter({
     theme: 'Purple',
     color: '#C322FB',
   });  
 
+  // 예비조제 주문현황
   // rightbox
   $(".GaugeMeter8").gaugeMeter({
     theme: 'green',
     color: '#6AF288',
   });   
-    
+  
+// 탕전 주문 건수 
   // weekbox
   const ctx3 = document.getElementById('weekChart');  
   const weekChart = new Chart(ctx3, {
@@ -126,6 +131,7 @@
     }
   }); 
 
+  //전체 주문 대비 현재 작업량
    // leftbox2 leftchart 
    const ctx5 = document.getElementById('leftChart'); 
       
@@ -139,9 +145,7 @@
        borderWidth: 5,
        borderColor:'rgba(236,236,236,0.5)',
        tension:0.4,
-       // 기존 데이터셋 설정
-       fill: '-1',
-       backgroundColor: 'rgba(0, 123, 255, 0.2)',
+       // 기존 데이터셋 설정 
 
        pointBorderColor: 'white',
        pointWidth:5,
@@ -161,7 +165,9 @@
        pointBorderColor: 'white',
        pointRadius: 5,
        pointBorderWidth: 2,
-       pointBackgroundColor: '#FF34EB' //hotpink
+       pointBackgroundColor: '#FF34EB', //hotpink 
+       fill: 'start',
+       backgroundColor: 'rgba(250, 53, 220, 0.2)', 
        }]
      },
        options: {
@@ -207,7 +213,7 @@
      }
    });  
 
-   //markChart 마킹기별 소요 시간
+   //마킹기별 소요 시간 markChart 
    const ctx6 = document.getElementById('markChart'); 
  
    const markChart = new Chart(ctx6, {
@@ -218,7 +224,7 @@
        label: '# of last week',
        data: [3.5,3.5,3.5,3.5,3.5,],
        tension:0.4,
-       borderWidth: 2,
+       borderWidth: 3,
        borderColor:'rgba(174,174,174,0.99)',
        
        // 기존 데이터셋 설정 

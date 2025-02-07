@@ -913,8 +913,8 @@ main {
 } 
 .fbox>p:nth-child(2) {
     position: absolute;
-    top:60px;
-    left:570px;
+    top:70px;
+    left:540px;
     font-weight: 200;
     font-size: 14px;
 
@@ -938,8 +938,7 @@ main {
     justify-content: left;
     width: 150px; 
     height: 30px;
-    align-items: center;  
-
+    align-items: center;   
 } 
 .fcircle {
     width: 10px;
@@ -966,24 +965,17 @@ main {
     top:60px;
     left:230px;    
 } 
+/* .fbox2 { 
+  border:1px solid teal;
+}  */
  
-/* .pagebox_200 {
+.fbox2 .pagebox {
     display: flex;
     justify-content: center;
     position: absolute;
     bottom:20px;
-    left:50%;
-    transform: translateX(-50%);
-}
-.pageb {
-    width: 10px;
-    height: 10px;
-    border:1px solid #ccc;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.pageb:nth-child(1) {
-    background-color: #ccc;
-} */
+    left:65%;
+    transform: translateX(-65%);
+} 
 
  
