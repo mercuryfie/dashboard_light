@@ -644,8 +644,7 @@ main {
     position: absolute;
     top:0px;
     left:20px;
-    overflow: hidden;
-
+    overflow: hidden; 
 }
 .weeklyul>li {
     text-align: left;  
@@ -658,8 +657,8 @@ main {
 }
 .weeklyul>li:nth-child(2) {
     position: absolute;
-    top:50px;
-    left:-10px;
+    top:55px;
+    left:-10px; 
 }
 .counterul {
     width: 100px;
