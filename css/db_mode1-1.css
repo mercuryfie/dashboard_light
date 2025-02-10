@@ -12,8 +12,11 @@ a {
     color:inherit;
     text-decoration: none;
 }
-/* #wrap {   
-} */
+#wrap { 
+    width: 1920px;  
+    
+    /* border: 1px solid teal;  */
+}
 body {
     background-color: #110D22;
     color:white; 
@@ -37,7 +40,7 @@ body {
 
 
 header {
-    margin-top: 45px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -89,7 +92,7 @@ main {
 }
 .mbox {   
     width:400px;
-    height: 600px; 
+    height: 550px; 
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 5px;   
@@ -187,7 +190,7 @@ main {
 
 .mbox1-2{
     width:400px;
-    height: 400px; 
+    height: 350px; 
     border:1px solid #ececec81;
     border-radius: 5px;
     margin-top: 10px;
@@ -222,21 +225,14 @@ main {
 }   */
 
 /* pownow 탕동현의 상태값 */
-
-.mbox1-2-1 { 
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-
-} 
 .mbox1-2-1 .status {
   width: 100px;
   height: 100px; 
   display: flex; 
   flex-flow: column; 
   margin-top: 30px;
-  margin-left: 0px;
-  position: relative; 
+  margin-left: -20px;
+  position: relative;
 }   
 .status1-1, .status1-2, .status1-3 {
   width: 60px;
@@ -270,7 +266,13 @@ main {
 }
 
 /* 탕전기 동작현황의 pagebox */ 
- 
+
+.mbox1-2-1 { 
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+} 
 .mbox1-2-1 .pagebox {
   display: flex;
   position: absolute;
@@ -380,24 +382,21 @@ main {
   }  
 
 /* 탕동현의 potnow */ 
-.mbox1-2-1 .wrapper { 
+.mbox1-2-1 .wrapper {
     width: 200px;   
-    height: 200px; 
+    height: 100px; 
     box-sizing: border-box;
-    margin-top: 30px; 
+    margin-top: 30px;
+    margin-left: 20px;
     display: grid;
-    grid-template-columns: 5fr 5fr 5fr 5fr 5fr ;
-    /* grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
-    
-    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px; */
-    grid-template-rows: 50px 50px 50px 50px 50px ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+    /* grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px; */
 }
 
 .wrapper .statusbox { 
-    width: 20px; 
-    height: 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    width: 8px; 
+    height: 8px; 
     border-radius: 50%;
     border: 1px solid transparent;
 } 
@@ -421,7 +420,7 @@ main {
 
 .mbox2  {
     width: 800px;
-    height: 600px;
+    height: 550px;
     display: flex;
     flex-flow: column;
     position: relative;   
@@ -441,11 +440,24 @@ main {
     overflow: hidden;  
 }
 .mbox2-2 {
-  height: 400px; 
-  position: relative;
+  height: 350px; 
+  position: absolute;
   top:200px;
-  left:0; 
-} 
+  left:0;
+}
+/* .mbox2-2 {
+
+  display: flex;
+  width: 800px;
+  height: 500px; 
+} */
+
+/* .status-parcel {
+    position: absolute;
+    top:20px;
+    right: 40px;
+    display: flex;
+}  */
 .status-2-2>li {
     margin-top: 2px;
     font-size: 14px;
@@ -516,27 +528,12 @@ main {
     left:280px;
 
 }
-/* 작업시간 평균 */
-.mbox2-2>p:nth-child(3) {  
-  font-size: 18px;
-  position: absolute;
-  top:0px;
-  left:420px; 
-}
-/* 작업 건수 */
-.mbox2-2>p:nth-child(4) {  
-  font-size: 18px;
-  position: absolute;
-  top:120px;
-  left:420px;
-
-}
 
 /* 택배 발송 현황의 숫자유엘 */ 
 .parul { 
     font-weight: 200;
     position: absolute;
-    top:180px;
+    top:40px;
     left:440px;
     display: flex;
     font-weight: 300;
@@ -564,9 +561,9 @@ main {
 }
 .parbox {
     margin-top: 40px;
-    margin-left: 20px; 
-    width: 300px;
-    height: 100px;
+    margin-left: 20px;
+    width: 360px;
+    height: 80px;
     display: flex;
     position: relative;
     justify-content: space-evenly;  
@@ -615,47 +612,6 @@ main {
     z-index: 1; 
   } 
 
-  .timecard {
-    position: absolute;
-    top:70px;
-    left:440px; 
-  }
-.timecard>p { 
-    text-align: center;  
-    line-height: 25px; 
-    font-size: 22px; 
-    display: inline-block; 
-    height: 30px;
-  }
-.timecard>p:nth-child(1) {
-  width: 50px;   
-  text-align: center; 
-  font-size: 16px; 
-  line-height: 16px;
-  font-weight: 100;
-  padding: 10px 0; 
-  background-color: #ececec21;
-  border-radius: 5px;  
-  position: absolute;
-  top:0;
-  left:0;
-}
-.timecard>p:nth-child(2) {
-  width: 100px;  
-  line-height: 30px; 
-  vertical-align:middle;
- 
-  background-color: #ececec21;
-  font-family: 'chakra petch';
-  border-radius: 5px;
-  margin-left: 80px;
-}
-.timecard>span {
-    margin-left: 40px;
-    font-size: 14px;
-    font-family: 'chakra petch';
-}  
-
 
 /* 주간그래프 */  
 .mbox3-1, .mbox3-2 {
@@ -670,7 +626,7 @@ main {
 
 } 
 .mbox3-2 { 
-    height: 400px; 
+    height: 350px; 
 }
 
 .weekbox {
@@ -727,7 +683,7 @@ main {
 }
 .mbox3-2 .pagebox {
     position: absolute;
-    bottom:20px;
+    bottom:30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -752,9 +708,8 @@ main {
     font-weight: bold;
     font-size: 18px;
 }
-
 .clock {
-    margin-top: 10px;
+    margin-top: 40px;
     margin-left: 40px; 
     display: grid;
     width:220px; 
@@ -911,25 +866,21 @@ main {
   } 
 .mbox3-2 .flipul {
     position: absolute;
-    top:20px;
-    right:20px;  
-
-  }
-.mbox3-2 .flipul>li { 
-    width: 80px;
-    height: 30px;  
-    background-color: #ececec21;
-
-    font-size: 22px;
-    margin-top: 20px;
-    padding: 30px 0;
-    margin: 45px 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top:40px;
+    right:30px;  
+}
+.mbox3-2 .flipul>li {
+    text-align: center;
+    width: 40px;
+    height: 30px;
+    line-height: 30px; 
+    padding: 0 5px;
+} 
+.mbox3-2 .flipul>li:first-child {
+    font-weight: bold;  
+     background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248)); 
     border-radius: 5px; 
-  } 
+} 
 
 /* footer box --------------------------------- */
 .footer {
@@ -942,7 +893,7 @@ main {
     border: 1px solid #ececec81;  
     color:white;
     width:805px;
-    height: 290px;
+    height: 350px;
     margin-right: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -957,7 +908,7 @@ main {
 } 
 .fbox>p:nth-child(2) {
     position: absolute;
-    top:50px;
+    top:70px;
     left:540px;
     font-weight: 200;
     font-size: 14px;
@@ -1005,17 +956,14 @@ main {
 
 
 .bottombox1-1, .bottombox1-2 {
-    width: 450px;
-    height: 230px; 
+    width: 480px;
     position: absolute;
-    top:40px;
+    top:60px;
     left:230px;    
 } 
-.bottombox1-1>p, .bottombox1-2>p {
-  position: absolute;
-  top:0px;
-  right:0px;    
-} 
+/* .fbox2 { 
+  border:1px solid teal;
+}  */
  
 .fbox2 .pagebox {
     display: flex;

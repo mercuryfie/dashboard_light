@@ -26,6 +26,16 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/db_mode1.css">
     <!-- <link rel="stylesheet" href="./css/flipcard_dark.css"> -->
+
+    <!--  js ----------------------------  -->
+    <!-- <script src="./js/animation.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/jQuery v3.7.1.js"></script>
+    <script src="./js/GaugeMeter.js"></script>
+    <!-- <script src="./js/gaugeandchart.js"></script>
+    <script src="./js/chartdetail.js"></script> -->
+    <script src="./js/flipcard_dark.js"></script> 
+    <script src="./js/mode2.js"></script>
      
 
 </head>
@@ -333,9 +343,9 @@
                         id="GaugeMeter_116" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="전체"
-                        data-size="70"
+                        data-size="100"
                         data-style="Arch"
-                        data-width="10"
+                        data-width="15"
                         data-showvalue="true"
                         data-min="0"
                         data-total="100"
@@ -349,23 +359,25 @@
                         id="GaugeMeter_117" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="로젠"
-                        data-size="70"
+                        data-size="100"
                         data-style="Arch"
-                        data-width="10"
+                        data-width="15"
                         data-showvalue="true"
                         data-min="0"
                         data-total="100"
                         data-stripe="3"
                         data-used="75"
                       ></div>
-                      <div
+                    </div>
+                    <div class="parbox">
+                        <div
                         class="GaugeMeter6"
                         id="GaugeMeter_118" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="한진"
-                        data-size="70"
+                        data-size="100"
                         data-style="Arch"
-                        data-width="10"
+                        data-width="15"
                         data-showvalue="true"
                         data-min="0"
                         data-total="100"
@@ -377,9 +389,9 @@
                         id="GaugeMeter_119" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="기타"
-                        data-size="70"
+                        data-size="100"
                         data-style="Arch"
-                        data-width="10"
+                        data-width="15"
                         data-showvalue="true"
                         data-min="0"
                         data-total="100"
@@ -482,8 +494,9 @@
                 <div class="fbox fbox1">
                     <!-- <p>logo10</p> -->
                     <p>전체 주문 대비 현재 작업량</p>
-                    <p>(단위:건)</p>
+                    <!-- <p>(단위:건)</p> -->
                     <div class="bottombox1-1">
+                        <p>(단위:건)</p>
                         <canvas id="leftChart"></canvas>
                     </div>  
                     <div class="cbox">
@@ -500,8 +513,9 @@
                 <div class="fbox fbox2">
                     <!-- <p>logo11</p> -->
                     <p>탕전기별 소요 시간</p>
-                    <p>(단위:min, 탕전기 번호)</p>
+                    <!-- <p>(단위:min, 탕전기 번호)</p> -->
                     <div class="bottombox1-2">
+                        <p>(단위:min, 탕전기 번호)</p>
                         <canvas id="decChart"></canvas>
                     </div>  
                     <div class="cbox">
@@ -528,16 +542,6 @@
                 </div> 
         </section>
         </div> 
-    </div>   
-
-    <!--  js ----------------------------  -->
-    <!-- <script src="./js/animation.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./js/jQuery v3.7.1.js"></script>
-    <script src="./js/GaugeMeter.js"></script>
-    <!-- <script src="./js/gaugeandchart.js"></script>
-    <script src="./js/chartdetail.js"></script> -->
-    <script src="./js/flipcard_dark.js"></script> 
-    <script src="./js/mode2.js"></script>
+    </div>    
 </body>
 </html>

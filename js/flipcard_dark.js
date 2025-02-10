@@ -67,15 +67,15 @@ function flipAnimation(flipper) {
   const duration = 880; // 0.88s in milliseconds
   const startTime = performance.now();
 
-  function animate(currentTime) {
-    const elapsedTime = currentTime - startTime;
-    progress = Math.min(elapsedTime / duration, 1);
+function animate(currentTime) {
+  const elapsedTime = currentTime - startTime;
+  progress = Math.min(elapsedTime / duration, 1);
 
-    // Top element animation
-    const rotateX = -180 * progress;
-    const translateY = -10 * progress;
-    top.style.transform = `rotateX(${rotateX}deg) translateY(${translateY}px)`;
-    top.style.transformOrigin = 'bottom center';
+  // Top element animation
+  const rotateX = -180 * progress;
+  const translateY = -10 * progress;
+  top.style.transform = `rotateX(${rotateX}deg) translateY(${translateY}px)`;
+  top.style.transformOrigin = 'bottom center';
 
     // Bottom element animation (opacity)
     if (progress < 0.5) {

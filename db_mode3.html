@@ -25,7 +25,17 @@
     <!-- css ----------------------------  -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/db_mode1.css">
+
     <!-- <link rel="stylesheet" href="./css/flipcard_dark.css"> -->
+    <!--  js ----------------------------  -->
+    <!-- <script src="./js/animation.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/jQuery v3.7.1.js"></script>
+    <script src="./js/GaugeMeter.js"></script>
+    <!-- <script src="./js/gaugeandchart.js"></script>
+    <script src="./js/chartdetail.js"></script> -->
+    <script src="./js/flipcard_dark.js"></script>
+    <script src="./js/mode3.js"></script> 
      
 
 </head>
@@ -324,15 +334,17 @@
                 <div class="boxtwo mbox2-2"> 
                     <p>택배 발송 현황</p>
                     <p>(단위 : %)</p>
+                    <p>작업시간 평균</p>
+                    <p>택배 작업 건수</p>
                     <div class="parbox">
                         <div
                         class="GaugeMeter5"
-                        id="GaugeMeter_116"
+                        id="GaugeMeter_116" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="전체"
-                        data-size="70"
+                        data-size="100"
                         data-style="Arch"
-                        data-width="10"
+                        data-width="15"
                         data-showvalue="true"
                         data-min="0"
                         data-total="100"
@@ -343,26 +355,28 @@
                       ></div>
                         <div
                         class="GaugeMeter6"
-                        id="GaugeMeter_117"
+                        id="GaugeMeter_117" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="로젠"
-                        data-size="70"
+                        data-size="100"
                         data-style="Arch"
-                        data-width="10"
+                        data-width="15"
                         data-showvalue="true"
                         data-min="0"
                         data-total="100"
                         data-stripe="3"
                         data-used="75"
                       ></div>
-                      <div
+                    </div>
+                    <div class="parbox">
+                        <div
                         class="GaugeMeter6"
-                        id="GaugeMeter_118"
+                        id="GaugeMeter_118" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="한진"
-                        data-size="70"
+                        data-size="100"
                         data-style="Arch"
-                        data-width="10"
+                        data-width="15"
                         data-showvalue="true"
                         data-min="0"
                         data-total="100"
@@ -371,18 +385,21 @@
                       ></div>
                       <div
                         class="GaugeMeter6"
-                        id="GaugeMeter_119"
+                        id="GaugeMeter_119" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="기타"
-                        data-size="70"
+                        data-size="100"
                         data-style="Arch"
-                        data-width="10"
+                        data-width="15"
                         data-showvalue="true"
                         data-min="0"
                         data-total="100"
                         data-stripe="3"
                         data-used="60"
                       ></div>
+                    </div>
+                    <div class="timecard">  
+                        <p>마킹</p><p>180</p><span>(min)</span> 
                     </div>
                     <div class="parul">
                         <ul class="parul1-1">
@@ -425,7 +442,7 @@
                     <p>택배 마감 시간</p> 
                         <!-- <object data="./meter/flipcard_dark.html" type="text/html"></object>   -->
                     <ul class="flipul">
-                        <li>전체</li>
+                        <!-- <li>전체</li> -->
                         <li>로젠</li>
                         <li>한진</li>
                         <li>기타</li>
@@ -436,6 +453,70 @@
                         <div class="pages"></div>
                         <div class="pages"></div>
                     </div>
+                    <div class="clock">  
+                        <div class="flipper">
+                            <div class="gear"></div>
+                            <div class="gear"></div>
+                            <div class="top">
+                            <div class="text">00</div>
+                            </div>
+                            <div class="bottom">
+                            <div class="text">00</div>
+                            </div>
+                        </div> 
+                        <div class="flipper">
+                            <div class="gear"></div>
+                            <div class="gear"></div>
+                            <div class="top">
+                                <div class="text">00</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="text">00</div>
+                            </div>
+                        </div> 
+                        <div class="flipper">
+                            <div class="gear"></div>
+                            <div class="gear"></div>
+                            <div class="top">
+                            <div class="text">00</div>
+                            </div>
+                            <div class="bottom">
+                            <div class="text">00</div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="clock">
+                        <div class="flipper">
+                            <div class="gear"></div>
+                            <div class="gear"></div>
+                            <div class="top">
+                                <div class="text">00</div>
+                            </div>
+                                <div class="bottom">
+                                <div class="text">00</div>
+                            </div>
+                        </div> 
+                        <div class="flipper">
+                            <div class="gear"></div>
+                            <div class="gear"></div>
+                            <div class="top">
+                                <div class="text">00</div>
+                            </div>
+                            <div class="bottom">
+                                <div class="text">00</div>
+                            </div>
+                        </div> 
+                        <div class="flipper">
+                            <div class="gear"></div>
+                            <div class="gear"></div>
+                            <div class="top">
+                            <div class="text">00</div>
+                            </div>
+                            <div class="bottom">
+                            <div class="text">00</div>
+                            </div>
+                        </div>
+                    </div>    
                     <div class="clock">
                     <div class="flipper">
                         <div class="gear"></div>
@@ -446,9 +527,7 @@
                         <div class="bottom">
                         <div class="text">00</div>
                         </div>
-                    </div>
-
-
+                    </div> 
                     <div class="flipper">
                         <div class="gear"></div>
                         <div class="gear"></div>
@@ -458,9 +537,7 @@
                         <div class="bottom">
                             <div class="text">00</div>
                         </div>
-                    </div>
-
-
+                    </div> 
                     <div class="flipper">
                         <div class="gear"></div>
                         <div class="gear"></div>
@@ -478,9 +555,9 @@
         <section class="footer"> 
                 <div class="fbox fbox1">
                     <!-- <p>logo10</p> -->
-                    <p>전체 주문 대비 현재 작업량</p>
-                    <p>(단위:건)</p>
+                    <p>전체 주문 대비 현재 작업량</p> 
                     <div class="bottombox1-1">
+                    <p>(단위:건)</p>
                         <canvas id="leftChart"></canvas>
                     </div>  
                     <div class="cbox">
@@ -496,9 +573,9 @@
                 </div>
                 <div class="fbox fbox2">
                     <!-- <p>logo11</p> -->
-                    <p>마킹기별 소요 시간</p>
-                    <p>(단위:min, 마킹기 번호)</p>
+                    <p>마킹기별 소요 시간</p> 
                     <div class="bottombox1-2">
+                        <p>(단위:min, 마킹기 번호)</p>
                         <canvas id="markChart"></canvas>
                     </div>  
                     <div class="cbox">
@@ -512,15 +589,6 @@
                 </div> 
         </section>
         </div> 
-    </div>   
-    <!--  js ----------------------------  -->
-    <!-- <script src="./js/animation.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./js/jQuery v3.7.1.js"></script>
-    <script src="./js/GaugeMeter.js"></script>
-    <!-- <script src="./js/gaugeandchart.js"></script>
-    <script src="./js/chartdetail.js"></script> -->
-    <script src="./js/flipcard_dark.js"></script>
-    <script src="./js/mode3.js"></script> 
+    </div>    
 </body>
 </html>
