@@ -44,14 +44,14 @@ html {
 }
  
 header {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
 .hbox { 
     border: 1px solid #ececec81; 
     color:white;
-    width:400px;
+    width:460px;
     height: 80px; 
     margin-right: 10px;
     margin-bottom: 10px;
@@ -67,7 +67,7 @@ header {
 
 }
 .hbox2 {
-    width:800px;
+    width:920px;
     align-items: center;
     justify-content: center; 
 }
@@ -75,7 +75,7 @@ header {
     background-color: #110D22; 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 .hbox3>p { 
     margin-top: 10px;
@@ -98,29 +98,33 @@ header {
 } */
 main { 
     display: flex;
+    /* display: grid; */
     justify-content: center;  
 }
 
 /* hbox, fbox 를 제외한 가운데 mbox 가로로 세개 flex 되어 있음 */
-.mbox { 
-    color:white; 
-    width:400px;
+.mbox {  
     height: 600px; 
     margin-right: 10px;
     margin-bottom: 10px;
     /*border-radius: 5px; */
     display: flex;
-    flex-flow: column;
+    flex-flow: column; 
+}
+.mbox1 {
+    width:460px; 
+    height: 600px; 
+    margin-right: 10px;
 }
 
 /* mbox1-1: 첫번째 작업실 온습도 상자 */
 .mbox1-1{
-    width:400px;
+    width:460px;
     height: 190px; 
+    margin-bottom: 10px;
     border:1px solid #ececec81;
     display: inline-block;
-    border-radius: 5px;
-    margin-top: 0px;
+    border-radius: 5px; 
     overflow: hidden;
     position: relative;  
 }
@@ -158,7 +162,7 @@ main {
     position: relative;
     justify-content: center;   
     margin-top: 10px;
-    margin-left: 80px;
+    margin-left: 140px;
   }
   .GaugeMeter, .GaugeMeter2 { 
     margin-right: 40px;
@@ -205,11 +209,10 @@ main {
 
 /* mbox1-2: 두번째 탕동현 상자 */
 .mbox1-2{
-    width:400px;
+    width:460px;
     height: 200px; 
     border:1px solid #ececec81; 
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 5px; 
     margin-bottom: 10px;
     position: relative; 
 }
@@ -276,7 +279,7 @@ main {
 
 
 /* 탕동현의 potnow */
-.mbox1-2-1 .wrapper {
+.mbox1-2-1 .wrapper { 
     width: 200px;   
     height: 100px; 
     box-sizing: border-box;
@@ -321,7 +324,7 @@ main {
 /* 각 공정현황 */ 
 /* mbox1-3: 세번째 각공정 상자 */
 .mbox1-3 { 
-    width: 400px;
+    width: 460px;
     height: 190px;
     border-radius: 5px;
     border:1px solid #ececec81;
@@ -345,7 +348,7 @@ main {
  
 .procbox {
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 40px;
     width: 380px;
     height: 80px;
     display: flex;
@@ -393,20 +396,19 @@ main {
 /* main box -area2 --------------------------------- */
 
 .mbox2  {
-    width: 800px;
+    width: 920px;
     display: flex;
     flex-flow: column;
     position: relative;   
 } 
 .mbox2-1, .mbox2-2 {
-    width:790px;
+    width:920px;
     border:1px solid #ececec81;
     border-radius: 5px;
 }
-.mbox2-1 {
-
-    display: flex;
-    width: 800px;
+.mbox2-1 { 
+    display: flex; 
+    width: 920px;
     height: 190px;
     justify-content: space-evenly;
     position: absolute;
@@ -553,7 +555,7 @@ main {
     position: absolute;
     top:200px;
     left:0;
-    width: 800px;
+    width: 920px;
     height: 400px; 
     overflow: hidden;  
     display: flex;  
@@ -606,7 +608,7 @@ main {
 }
 .mbox2-2>p:nth-child(1) {
     margin-top: 20px;
-    margin-left: 380px;  
+    margin-left: 430px;  
 }
 .mbox2-2 .radarchart {  
     margin: 0;padding: 0;
@@ -623,17 +625,16 @@ main {
 .radarbox { 
     position: absolute;
     top:50px;
-    left:400px;
+    left:480px;
 
 }
 
 /* 전체 진척도 */  
 .barbox { 
-    margin-left: 20px;  
     width: 300px;
     height: 180px; 
     margin-top: 0px;
-
+    margin-left: 60px;  
 }  
 /* 작업시간평균 */ 
 .cardbox {  
@@ -641,7 +642,7 @@ main {
     height: 150px; 
     position: absolute;
     top:240px;
-    left:20px;
+    left:60px;
 }
 .cardbox>ul {
     margin-top: 20px;
@@ -681,7 +682,7 @@ main {
 
 /* main box -area3 --------------------------------- */
 .mbox3 {
-    width:400px;
+    width:460px;
     margin-bottom:10px;
     border-radius: 5px;
     position: relative;
@@ -692,11 +693,13 @@ main {
     border-radius: 5px;
 }
 .mbox3-1 {
-    height: 195px;
+    width:460px;
+    height: 190px;
     border:1px solid #ececec81;
     margin-bottom: 10px;
 }
 .mbox3-2 {
+    width:460px;
     height: 200px;
     border:1px solid #ececec81;
     margin-bottom: 10px;
@@ -708,7 +711,8 @@ main {
     margin-left: 20px;
 }
 .mbox3-3 {
-    height: 200px;
+    width:460px;
+    height: 190px;
     border:1px solid #ececec81;
 }
 
@@ -750,7 +754,7 @@ main {
 }
 .weekbox {
     margin-top: 40px;
-    margin-left: 40px;
+    margin-left: 80px;
     width:260px;  
 
 } 
@@ -788,7 +792,7 @@ main {
  
 .clock {
     margin-top: 20px;
-    margin-left: 40px; 
+    margin-left: 100px; 
     display: grid;
     width:220px; 
     height: var(--clockheight);
@@ -974,7 +978,7 @@ main {
 }
 .parbox {
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 40px;
     width: 360px;
     height: 80px;
     display: flex;
@@ -1034,8 +1038,8 @@ main {
 .fbox {
     border: 1px solid #ececec81;
     color:white;
-    width:805px;
-    height: 290px;
+    width:925px;
+    height: 310px;
     margin-right: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -1099,7 +1103,8 @@ main {
     display: flex; 
     position: absolute;
     top:40px;
-    left:700px; 
+    right: 40px;
+    /* left:700px;  */
     
 }
 .fbox1-1>ul>li {

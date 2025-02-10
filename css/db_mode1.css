@@ -44,7 +44,7 @@ header {
 .hbox {
     border: 1px solid #ececec81;
     color:white;
-    width:400px;
+    width:460px;
     height: 80px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -56,12 +56,11 @@ header {
     justify-content: center;  
 }
 .hbox2 {
-    width:800px;
+    width:920px;
     align-items: center;
     justify-content: center; 
 }
-.hbox3 { 
-    background-color: #110D22; 
+.hbox3 {  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +87,7 @@ main {
     justify-content: center;  
 }
 .mbox {   
-    width:400px;
+    width:460px;
     height: 600px; 
     margin-right: 10px;
     margin-bottom: 10px;
@@ -100,7 +99,7 @@ main {
 } */
 
 .mbox1-1{
-    width:400px;
+    width:460px;
     height: 190px; 
     border:1px solid #ececec81;
     border-radius: 5px;
@@ -141,7 +140,7 @@ main {
     position: relative;
     justify-content: center;   
     margin-top: 40px;
-    margin-left: 100px;
+    margin-left: 140px;
   }
   .GaugeMeter, .GaugeMeter2 { 
     margin-right: 40px;
@@ -186,7 +185,7 @@ main {
 /* main box -area1-2 --------------------------------- */
 
 .mbox1-2{
-    width:400px;
+    width:460px;
     height: 400px; 
     border:1px solid #ececec81;
     border-radius: 5px;
@@ -229,13 +228,18 @@ main {
   position: relative;
 
 } 
+
+.decarray {
+  display: flex;
+  justify-content: center;
+}
 .mbox1-2-1 .status {
   width: 100px;
   height: 100px; 
   display: flex; 
   flex-flow: column; 
   margin-top: 30px;
-  margin-left: 0px;
+  margin-left: 10px;
   position: relative; 
 }   
 .status1-1, .status1-2, .status1-3 {
@@ -274,9 +278,9 @@ main {
 .mbox1-2-1 .pagebox {
   display: flex;
   position: absolute;
-  bottom: -50px;  
-  left:50%;
-  transform: translateX(-50%);  
+  bottom: -60px;  
+  left:63%;
+  transform: translateX(-63%);  
 }
 
 /* 탕전주문현황 */
@@ -326,10 +330,10 @@ main {
   } 
 
   /*예비조제주문현황*/
-  .rightbox {
+  .rightbox { 
     margin-top: 30px;
-    margin-left: 20px;
-    width: 400px;
+    margin-left: 10px;
+    width: 100%;
     height: 100px;
     display: flex;
     position: relative;
@@ -382,17 +386,30 @@ main {
 /* 탕동현의 potnow */ 
 .mbox1-2-1 .wrapper { 
     width: 200px;   
-    height: 200px; 
-    box-sizing: border-box;
+    height: 200px;  
     margin-top: 30px; 
     display: grid;
-    grid-template-columns: 5fr 5fr 5fr 5fr 5fr ;
-    /* grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
-    
-    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px; */
+    grid-template-columns: 5fr 5fr 5fr 5fr 5fr ; 
     grid-template-rows: 50px 50px 50px 50px 50px ;
 }
+.mbox1-2-1 .decwrap { 
 
+    width: 300px;   
+    height: 250px;  
+    margin-top: 30px; 
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 20px 20px 20px 20px 40px 20px 20px 20px 20px 20px;
+}
+.wrapper .decstatus {
+    width: 10px; 
+    height: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
 .wrapper .statusbox { 
     width: 20px; 
     height: 20px;
@@ -401,9 +418,9 @@ main {
     border-radius: 50%;
     border: 1px solid transparent;
 } 
-.wrapper .fifthbox {
+/* .wrapper .fifthbox {
     margin-right: 20px;
-}
+} */
 .standbymode {
     background-color: #ececec;
 } 
@@ -420,14 +437,14 @@ main {
 /* main box -area2 --------------------------------- */
 
 .mbox2  {
-    width: 800px;
+    width: 920px;
     height: 600px;
     display: flex;
     flex-flow: column;
     position: relative;   
 } 
 .mbox2-1, .mbox2-2 {
-    width: 800px;
+    width: 920px;
     border:1px solid #ececec81;  
     border-radius: 5px;
 }
@@ -482,10 +499,10 @@ main {
     margin-left: 20px;
 }  
 /* doc_right 예비조제 주문 현황 */ 
-.mbox2-1-2 {
+.mbox2-1-2 { 
     position: absolute; 
     top:0;
-    left:360px;
+    left:440px;
     width:420px;
     height: 180px; 
     overflow: hidden; 
@@ -494,7 +511,7 @@ main {
 }
 .mbox2-1-2> p {
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 0px;
     font-weight: bold;
     font-size: 18px;
 } 
@@ -537,7 +554,7 @@ main {
     font-weight: 200;
     position: absolute;
     top:180px;
-    left:440px;
+    left:480px;
     display: flex;
     font-weight: 300;
 } 
@@ -564,7 +581,7 @@ main {
 }
 .parbox {
     margin-top: 40px;
-    margin-left: 20px; 
+    margin-left: 60px; 
     width: 300px;
     height: 100px;
     display: flex;
@@ -618,7 +635,7 @@ main {
   .timecard {
     position: absolute;
     top:70px;
-    left:440px; 
+    left:480px; 
   }
 .timecard>p { 
     text-align: center;  
@@ -660,7 +677,7 @@ main {
 /* 주간그래프 */  
 .mbox3-1, .mbox3-2 {
     border-radius: 5px;
-    width: 400px;
+    width: 460px;
     position: relative; 
     border:1px solid #ececec81;
 }
@@ -675,7 +692,7 @@ main {
 
 .weekbox {
     margin-top: 40px;
-    margin-left: 40px;
+    margin-left: 80px;
     width:260px;  
 
 } 
@@ -912,7 +929,7 @@ main {
 .mbox3-2 .flipul {
     position: absolute;
     top:20px;
-    right:20px;  
+    right:60px;  
 
   }
 .mbox3-2 .flipul>li { 
@@ -941,8 +958,8 @@ main {
 .fbox {
     border: 1px solid #ececec81;  
     color:white;
-    width:805px;
-    height: 290px;
+    width:925px;
+    height: 310px;
     margin-right: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -1022,8 +1039,8 @@ main {
     justify-content: center;
     position: absolute;
     bottom:20px;
-    left:65%;
-    transform: translateX(-65%);
+    left:53%;
+    transform: translateX(-53%);
 } 
 
  
