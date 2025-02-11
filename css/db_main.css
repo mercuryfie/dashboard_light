@@ -52,8 +52,7 @@ header {
     border: 1px solid #ececec81; 
     color:white;
     width:460px;
-    height: 80px; 
-    margin-right: 10px;
+    height: 80px;  
     margin-bottom: 10px;
     border-radius: 5px;
     display: flex; 
@@ -64,18 +63,21 @@ header {
     color:white;
     align-items: center;
     justify-content: center; 
+    margin-right: 10px;
 
 }
 .hbox2 {
     width:920px;
     align-items: center;
     justify-content: center; 
+    margin-right: 10px;
 }
 .hbox3 { 
     background-color: #110D22; 
     display: flex;
     justify-content: center;
     align-items: center; 
+    margin-right: 0;
 }
 .hbox3>p { 
     margin-top: 10px;
@@ -104,17 +106,19 @@ main {
 
 /* hbox, fbox 를 제외한 가운데 mbox 가로로 세개 flex 되어 있음 */
 .mbox {  
-    height: 600px; 
-    margin-right: 10px;
+    height: 600px;  
     margin-bottom: 10px;
     /*border-radius: 5px; */
     display: flex;
     flex-flow: column; 
+    margin-right: 0;
+}
+.mbox1, .mbox2 { 
+    margin-right: 10px;
 }
 .mbox1 {
     width:460px; 
-    height: 600px; 
-    margin-right: 10px;
+    height: 600px;  
 }
 
 /* mbox1-1: 첫번째 작업실 온습도 상자 */
@@ -656,7 +660,7 @@ main {
 .timecard {
     position: absolute;
     top:20px;
-    left:100px;
+    left:100px; 
 }
 .timecard>p {
     width: 80px;
@@ -1039,11 +1043,12 @@ main {
     border: 1px solid #ececec81;
     color:white;
     width:925px;
-    height: 310px;
-    margin-right: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    height: 320px; 
+    border-radius: 5px; 
     position: relative; 
+}
+.fbox1 {
+    margin-right: 10px;
 }
 .fbox>p {
     position: absolute;
