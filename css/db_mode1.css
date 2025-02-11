@@ -527,51 +527,6 @@ left:0;
   font-weight: bold;
   font-size: 18px;
 } 
-
-
-/* main box -area3 --------------------------------- */  
-/* 택배 발송 현황 */  
-
-.mbox2-2 {
-
-  display: flex;
-}
-.mbox2-2 .everleft{
-  width: 420px; 
-}
-
-.mbox2-2 .everright {
-  width: 500px; 
-}
-.mbox2-2 .everleft>p,
-.mbox2-2 .everrt>p, .mbox2-2 .everrb>p {
-  margin-top: 20px;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: bold;
-}
-.mbox2-2 .everleft>p:nth-child(2) { 
-  font-size: 16px;
-  margin-top: 0;
-  margin-left: 300px;
-}
-
-.everright {
-  display: flex;
-  flex-flow: column;
-}
-.everrt {
-  width: 460px;
-  height: 150px; 
-
-}
-.everrb {
-  width: 460px;
-  height: 240px;
-  margin-top: 10px;
-  margin-left: 0; 
-}  
- 
 .parbox {
   margin-top: 40px;
   margin-left: 60px; 
@@ -625,54 +580,158 @@ left:0;
   z-index: 1; 
 } 
 
-.everrt .timecard {
-  width: 300px; 
-  margin-top: 20px;
-  margin-left: 30px;
+
+/* main box -area3 --------------------------------- */  
+/* 택배 발송 현황 */   
+.mbox2-2 { 
   display: flex;
-  align-items: center;
-  /* position: absolute;
-  top:70px;
-  left:460px;  */
 }
-.everrt .timecard>p { 
-  text-align: center;  
-  font-size: 18px; 
-  line-height: 18px;
+.mbox2-2 .everleft{
+  width: 420px; 
+}
+
+.mbox2-2 .everright {
+  width: 500px;  
+}
+.mbox2-2 .everleft>p,
+.mbox2-2 .ever1-1>p, 
+.mbox2-2 .ever1-2>p {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.mbox2-2 .ever1-3>p {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: bold; 
+}
+.mbox2-2 .everleft>p:nth-child(2) { 
+  font-size: 16px;
+  margin-top: 0;
+  margin-left: 300px;
+}
+
+/* 작업시간 평균 */
+.everright {
+  display: flex;
+  flex-flow: column;
+}
+.ever1-1, .ever1-2, .ever1-3 {
+  width: 500px;
+}
+.ever1-1, .ever1-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.ever1-1 { 
+  height: 100px; 
+  margin-bottom: 10px; 
 
 }
-.everrt .timecard>p:nth-child(1) {
-  width: 50px;
-  height: 30px;
-  font-size: 16px;
+.ever1-2 { 
+  height: 100px; 
+  margin-bottom: 10px;  
+} 
+.ever1-3 { 
+  height: 200px;   
+  margin-top: 10px; 
+}   
+
+.timecard1-1, .timecard1-2 { 
+  width: 300px; 
+  display: flex;
+  align-items: center;   
+}
+
+.timecard1-1>p:nth-child(1), 
+.timecard1-2>p:nth-child(1) {
+  width: 100px;
+  height: 50px;  
   line-height: 30px;
   background-color: #ececec21;
   border-radius: 5px; 
   text-align: center;
-  margin: 10px 0;
+  padding: 10px 0;
+  margin: 0 10px;
 }
-.everrt .timecard>p:nth-child(2) {
-width: 100px; 
-align-items: center; 
-font-size: 22px;
-line-height: 22px; 
-vertical-align:middle;
-
-background-color: #ececec21;
-font-family: 'chakra petch';
-border-radius: 5px;
-margin-left: 80px;
-padding: 5px 0;
+.timecard1-1>p:nth-child(2), 
+.timecard1-2>p:nth-child(2) {
+  width: 100px;
+  height: 50px; 
+  line-height: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'chakra petch'; 
+  background-color: #ececec21;
+  border-radius: 5px; 
+  text-align: center; 
+  padding: 10px 0;
+  margin: 0 10px;
+} 
+.timecard1-1>span, 
+.timecard1-2>span {
+  width: 30px;
+  height: 50px; 
+  line-height: 30px;
+  font-size: 16px; 
+  background-color: #ececec21;
+  border-radius: 5px; 
+  text-align: center; 
+  padding: 10px 0;
+  margin: 0 10px;
 }
-.everrt .timecard>span {
-  margin-left: 40px;
-  font-size: 14px;
-  font-family: 'chakra petch';
-}  
 /* 택배 작업 건수 */ 
-.parul {  
+
+.parcon { 
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.parcon1-1, .parcon1-2 { 
+  width: 225px;
+  margin-left: 10px;
+  display: flex;
+  flex-flow: column;
+}
+.par1-1, .par1-2, 
+.par1-3, .par1-4 { 
+  display: flex;
+} 
+.par1-1>p:nth-child(1), 
+.par1-2>p:nth-child(1), 
+.par1-3>p:nth-child(1), 
+.par1-4>p:nth-child(1)  {
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px; 
+  background-color: #ececec21;
+  text-align: center; 
+  padding: 0 10px ;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.par1-1>p:nth-child(2), 
+.par1-2>p:nth-child(2), 
+.par1-3>p:nth-child(2), 
+.par1-4>p:nth-child(2)  {
+  width: 180px;
+  height: 40px; 
+  line-height: 40px;
+  font-size: 22px;
+  font-family: 'chakra petch'; 
+  background-color: #ececec21;
+  text-align: center;
+  padding: 0 5px ;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+/* .parul {  
   display: flex; 
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 30px; 
 } 
 .parul .parul1-1>li { 
@@ -696,7 +755,7 @@ padding: 5px 0;
   font-family: 'chakra petch';
   text-align: right;
   font-weight: 400;
-}
+} */
 
 /* 주간그래프 */  
 .mbox3-1, .mbox3-2 {
