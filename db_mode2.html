@@ -112,7 +112,13 @@
                                 <div class="statuscircle standby"></div>
                                 <p>대기</p>
                             </div> 
+                            
                         </div>  
+                        <div class="pagebox">
+                            <div class="pages"></div>
+                            <div class="pages"></div>
+                        </div>
+                        
                         <!-- <object data="./meter/pot_now_mode1.html" type=""></object> -->
                         <div class="decwrap">
                             <div class="decstatus onmode"></div>
@@ -389,89 +395,98 @@
                     </div>
                 </div>
                 <div class="boxtwo mbox2-2"> 
-                    <p>택배 발송 현황</p>
-                    <p>(단위 : %)</p>
-                    <p>작업 시간 평균</p>
-                    <p>택배 작업 건수</p>
-                    <div class="parbox">
-                        <div
-                        class="GaugeMeter5"
-                        id="GaugeMeter_116" 
-                        data-back="rgba(174,174,174,0.5)"
-                        data-label="전체"
-                        data-size="100"
-                        data-style="Arch"
-                        data-width="15"
-                        data-showvalue="true"
-                        data-min="0"
-                        data-total="100"
-                        data-stripe="3"
-                        data-used="80"
-                        data-theme="purple"
-                        data-append=""
-                      ></div>
-                        <div
-                        class="GaugeMeter6"
-                        id="GaugeMeter_117" 
-                        data-back="rgba(174,174,174,0.5)"
-                        data-label="로젠"
-                        data-size="100"
-                        data-style="Arch"
-                        data-width="15"
-                        data-showvalue="true"
-                        data-min="0"
-                        data-total="100"
-                        data-stripe="3"
-                        data-used="75"
-                      ></div>
+                    <div class="everleft">
+                        <p>택배 발송 현황</p>
+                        <p>(단위 : %)</p>
+                        <div class="parbox">
+                            <div
+                            class="GaugeMeter5"
+                            id="GaugeMeter_116" 
+                            data-back="rgba(174,174,174,0.5)"
+                            data-label="전체"
+                            data-size="100"
+                            data-style="Arch"
+                            data-width="15"
+                            data-showvalue="true"
+                            data-min="0"
+                            data-total="100"
+                            data-stripe="3"
+                            data-used="80"
+                            data-theme="purple"
+                            data-append=""
+                          ></div>
+                            <div
+                            class="GaugeMeter6"
+                            id="GaugeMeter_117" 
+                            data-back="rgba(174,174,174,0.5)"
+                            data-label="로젠"
+                            data-size="100"
+                            data-style="Arch"
+                            data-width="15"
+                            data-showvalue="true"
+                            data-min="0"
+                            data-total="100"
+                            data-stripe="3"
+                            data-used="75"
+                          ></div>
+                        </div>
+                        <div class="parbox">
+                            <div
+                            class="GaugeMeter6"
+                            id="GaugeMeter_118" 
+                            data-back="rgba(174,174,174,0.5)"
+
+                            data-label="한진"
+                            data-size="100"
+                            data-style="Arch"
+                            data-width="15"
+                            data-showvalue="true"
+                            data-min="0"
+                            data-total="100"
+                            data-stripe="3"
+                            data-used="80"
+                          ></div>
+                          <div
+                            class="GaugeMeter6"
+                            id="GaugeMeter_119" 
+                            data-back="rgba(174,174,174,0.5)"
+                            data-label="기타"
+                            data-size="100"
+                            data-style="Arch"
+                            data-width="15"
+                            data-showvalue="true"
+                            data-min="0"
+                            data-total="100"
+                            data-stripe="3"
+                            data-used="60"
+                          ></div>
+                        </div>
                     </div>
-                    <div class="parbox">
-                        <div
-                        class="GaugeMeter6"
-                        id="GaugeMeter_118" 
-                        data-back="rgba(174,174,174,0.5)"
-                        data-label="한진"
-                        data-size="100"
-                        data-style="Arch"
-                        data-width="15"
-                        data-showvalue="true"
-                        data-min="0"
-                        data-total="100"
-                        data-stripe="3"
-                        data-used="80"
-                      ></div>
-                      <div
-                        class="GaugeMeter6"
-                        id="GaugeMeter_119" 
-                        data-back="rgba(174,174,174,0.5)"
-                        data-label="기타"
-                        data-size="100"
-                        data-style="Arch"
-                        data-width="15"
-                        data-showvalue="true"
-                        data-min="0"
-                        data-total="100"
-                        data-stripe="3"
-                        data-used="60"
-                      ></div>
-                    </div>
-                    <div class="timecard">  
-                        <p>탕전</p><p>180</p><span>(min)</span> 
-                    </div>
-                    <div class="parul">
-                        <ul class="parul1-1">
-                            <li>전체</li>
-                            <li>로젠</li>
-                            <li>한진</li>
-                            <li>기타</li> 
-                        </ul>
-                        <ul class="parul1-2">
-                            <li>400 / 400</li>
-                            <li>200 / 400</li>
-                            <li>100 / 400</li>
-                            <li>100 / 400</li>
-                        </ul>
-                    </div> 
+                    <div class="everright">
+                        <div class="everrt">
+                            <p>작업 시간 평균</p>
+                            <div class="timecard">  
+                                <p>탕전</p><p>180</p><span>(min)</span> 
+                            </div> 
+                        </div>
+                        <div class="everrb">
+                            <p>택배 작업 건수</p>
+                            <div class="parul">
+                                <ul class="parul1-1">
+                                    <li>전체</li>
+                                    <li>로젠</li>
+                                    <li>한진</li>
+                                    <li>기타</li> 
+                                </ul>
+                                <ul class="parul1-2">
+                                    <li>400 / 400</li>
+                                    <li>200 / 400</li>
+                                    <li>100 / 400</li>
+                                    <li>100 / 400</li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>  
                 </div>
             </div>
             <div class="mbox mbox3">
@@ -496,51 +511,77 @@
                 </div> 
                 <div class="mbox3-2">
                     <!-- <p>logo8</p> -->
-                    <p>택배 마감 시간</p> 
-                        <!-- <object data="./meter/flipcard_dark.html" type="text/html"></object>   -->
-                    <ul class="flipul"> 
-                        <li>로젠</li>
-                        <li>한진</li>
-                        <li>기타</li>
-                    </ul>
-                    <div class="pagebox">
-                        <div class="pages"></div>
-                        <div class="pages"></div>
-                        <div class="pages"></div> 
-                    </div>
+                    <p>택배 마감 시간</p>  
                     <div class="clockbox">
-                        <div class="clock">
-                            <div class="flipper">
-                                <div class="gear"></div>
-                                <div class="gear"></div>
-                                <div class="top">
-                                <div class="text">00</div>
-                                </div>
-                                <div class="bottom">
-                                <div class="text">00</div>
-                                </div>
-                            </div> 
-                            <div class="flipper">
-                                <div class="gear"></div>
-                                <div class="gear"></div>
-                                <div class="top">
+                        <div class="clockbox1-1"> <p>로젠</p>
+                            <div class="clock">  
+                                <div class="flipper"> 
+                                    <div class="gear"></div>
+                                    <div class="gear"></div>
+                                    <div class="top">
                                     <div class="text">00</div>
-                                </div>
-                                <div class="bottom">
+                                    </div>
+                                    <div class="bottom">
                                     <div class="text">00</div>
+                                    </div>
+                                </div> 
+                                <div class="flipper">
+                                    <div class="gear"></div>
+                                    <div class="gear"></div>
+                                    <div class="top">
+                                        <div class="text">00</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="text">00</div>
+                                    </div>
+                                </div> 
+                                <div class="flipper">
+                                    <div class="gear"></div>
+                                    <div class="gear"></div>
+                                    <div class="top">
+                                    <div class="text">00</div>
+                                    </div>
+                                    <div class="bottom">
+                                    <div class="text">00</div>
+                                    </div>
                                 </div>
-                            </div> 
-                            <div class="flipper">
-                                <div class="gear"></div>
-                                <div class="gear"></div>
-                                <div class="top">
-                                <div class="text">00</div>
-                                </div>
-                                <div class="bottom">
-                                <div class="text">00</div>
-                                </div>
-                            </div>
                             </div>    
+                        </div>
+                        <div class="clockbox1-2"> <p>한진</p>
+                            <div class="clock">
+                                <div class="flipper">
+                                    <div class="gear"></div>
+                                    <div class="gear"></div>
+                                    <div class="top">
+                                        <div class="text">00</div>
+                                    </div>
+                                        <div class="bottom">
+                                        <div class="text">00</div>
+                                    </div>
+                                </div> 
+                                <div class="flipper">
+                                    <div class="gear"></div>
+                                    <div class="gear"></div>
+                                    <div class="top">
+                                        <div class="text">00</div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="text">00</div>
+                                    </div>
+                                </div> 
+                                <div class="flipper">
+                                    <div class="gear"></div>
+                                    <div class="gear"></div>
+                                    <div class="top">
+                                    <div class="text">00</div>
+                                    </div>
+                                    <div class="bottom">
+                                    <div class="text">00</div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="clockbox1-3">  <p>기타</p>
                             <div class="clock">
                                 <div class="flipper">
                                     <div class="gear"></div>
@@ -572,39 +613,8 @@
                                     <div class="text">00</div>
                                     </div>
                                 </div>
-                                </div>    
-                                <div class="clock">
-                                    <div class="flipper">
-                                        <div class="gear"></div>
-                                        <div class="gear"></div>
-                                        <div class="top">
-                                        <div class="text">00</div>
-                                        </div>
-                                        <div class="bottom">
-                                        <div class="text">00</div>
-                                        </div>
-                                    </div> 
-                                    <div class="flipper">
-                                        <div class="gear"></div>
-                                        <div class="gear"></div>
-                                        <div class="top">
-                                            <div class="text">00</div>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="text">00</div>
-                                        </div>
-                                    </div> 
-                                    <div class="flipper">
-                                        <div class="gear"></div>
-                                        <div class="gear"></div>
-                                        <div class="top">
-                                        <div class="text">00</div>
-                                        </div>
-                                        <div class="bottom">
-                                        <div class="text">00</div>
-                                        </div>
-                                    </div>
-                                    </div>    
+                            </div>    
+                        </div>
                     </div>
                 </div>
             </div>  

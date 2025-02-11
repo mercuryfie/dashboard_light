@@ -75,12 +75,7 @@
       data: [464, 300, 400, 500, 600, 300],
       tension:0.4,
       borderWidth: 5,
-      borderColor:'#6AF288',
-      
-      // 기존 데이터셋 설정
-      fill: '-1',
-      backgroundColor: 'rgba(0, 123, 255, 0.2)',
-
+      borderColor:'#6AF288',  
       pointBorderColor: 'white',
       pointWidth:5,
       pointRadius: 5,

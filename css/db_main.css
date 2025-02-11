@@ -57,7 +57,8 @@ header {
     border-radius: 5px;
     display: flex; 
     justify-content: center;
-    font-family:'noto sans';
+    font-family:'noto sans kr';
+    font-weight: 100;
 }
 .hbox1 { 
     color:white;
@@ -72,8 +73,7 @@ header {
     justify-content: center; 
     margin-right: 10px;
 }
-.hbox3 { 
-    background-color: #110D22; 
+.hbox3 {  
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -102,6 +102,7 @@ main {
     display: flex;
     /* display: grid; */
     justify-content: center;  
+    font-family:'noto sans kr';
 }
 
 /* hbox, fbox 를 제외한 가운데 mbox 가로로 세개 flex 되어 있음 */
