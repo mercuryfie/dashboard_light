@@ -574,9 +574,11 @@ height: 400px;
   font-weight: bold; 
 }
 .mbox2-2 .everleft>p:nth-child(2) { 
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 0;
   margin-left: 300px;
+  font-family: 'noto sans kr';
+  font-weight: 300;
 }
 
 /* 작업시간 평균 */
