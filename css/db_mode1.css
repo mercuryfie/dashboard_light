@@ -31,9 +31,7 @@ body {
   font-family: "Noto Sans", serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-style: normal; 
 }
 
 
@@ -50,9 +48,7 @@ header {
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  display: flex; 
-  font-family:'noto sans kr';
-  font-weight: 100;
+  display: flex;  
 }
 .hbox1 {  
   align-items: center;
@@ -124,7 +120,7 @@ margin-right: 0;
 } 
 .mbox1-1 .tempul {
   position: absolute;
-  top:40px;
+  top:20px;
   right:20px; 
 
 } 
@@ -134,12 +130,15 @@ margin-right: 0;
   height: 30px;
   line-height: 30px;
   padding: 0 5px;
+  font-family: 'noto sans kr';
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 5px; 
 }
 .tempul>li:first-child {
   font-weight: bold;
   text-align: center; 
-   background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248)); 
-  border-radius: 5px; 
+   background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248));  
 } 
 /* 작업실 온습도 */ 
 .tempbox {
@@ -191,7 +190,8 @@ margin-right: 0;
   z-index: 1; 
 }  
 
-/* main box -area1-2 --------------------------------- */
+/* main box -area1-2 --------------------------------- */ 
+/* 탕전기 동작 현황 potnow*/ 
 
 .mbox1-2{
   width:460px;
@@ -207,27 +207,7 @@ margin-right: 0;
   margin-left: 20px;
   font-weight: bold;
   font-size: 18px;
-}  
-
-
-/* 탕전기 동작 현황 potnow*/
-/* .mbox1-2 { 
-  width: 400px;
-  height: 200px;  
-  margin-bottom: 10px;
-  position: absolute;
-  top:0px;
-  left:0;
-  border-radius: 5px; 
-  display: flex;
-  justify-content: space-between;
-}  
-.mbox1-2> p {
-  margin-top: 20px;
-  margin-left: 20px;
-  font-weight: bold;
-  font-size: 18px;
-}   */
+}   
 
 /* pownow 탕동현의 상태값 */
 
@@ -301,8 +281,9 @@ transform: translateX(-50%);
   position: relative;
   justify-content: space-evenly;   
   margin-top: 30px;
-  margin-left: -10px;
+  margin-left: 0px;
 }
+  
 .GaugeMeter7 { 
   margin-right: -20px;    
   margin-left: 0px; 
@@ -339,15 +320,15 @@ transform: translateX(-50%);
   z-index: 1; 
 } 
 
-/*예비조제주문현황*/
+/*예비조제주문현황*/ 
 .rightbox { 
-  margin-top: 30px;
-  margin-left: 10px;
-  width: 100%;
-  height: 100px;
+  width: 420px;
+  height: 80px;
   display: flex;
   position: relative;
   justify-content: space-evenly;   
+  margin-top: 30px;
+  margin-left: 30px;
 
 }
 .GaugeMeter8 { 
@@ -464,16 +445,13 @@ transform: translateX(-50%);
 /*탕전주문현황, 예비조제 주문현황 box*/
 .mbox2-1 { 
   height: 190px;
-  justify-content: space-evenly;
-  position: absolute;
-  top:0; 
-  overflow: hidden;  
+  display: flex;
+  justify-content: space-evenly; 
+  overflow: hidden; 
+  margin-bottom: 10px; 
 }
 .mbox2-2 {
-height: 400px;  
-position: relative;
-top:200px;
-left:0; 
+height: 400px;   
 } 
 .status-2-2>li {
   margin-top: 2px;
@@ -496,37 +474,26 @@ left:0;
 
 
 /* doc_left 탕전 주문 현황 */ 
-.mbox2-1-1 {
-  position: absolute; 
-  top:0;
-  left:0;
-  width:350px;
-  height: 180px;
+.mbox2-1-1 {  
+  width:420px;
+  height: 180px;  
   overflow: hidden;  
-} 
-.mbox2-1-1>p {
-  font-weight: bold;
-  font-size: 18px;
-  margin-top: 20px;
-  margin-left: 20px;
 }  
 /* doc_right 예비조제 주문 현황 */ 
-.mbox2-1-2 { 
-  position: absolute; 
-  top:0;
-  left:440px;
-  width:420px;
-  height: 180px; 
+.mbox2-1-2 {   
+  width:500px;
+  height: 180px;  
   overflow: hidden; 
   
    
 }
-.mbox2-1-2> p {
+.mbox2-1-1>p, .mbox2-1-2> p {
   margin-top: 20px;
-  margin-left: 0px;
+  margin-left: 20px;
   font-weight: bold;
   font-size: 18px;
 } 
+ 
 .parbox {
   margin-top: 40px;
   margin-left: 60px; 
@@ -551,8 +518,8 @@ left:0;
 .GaugeMeter5 span, 
 .GaugeMeter6 span { 
   background-color: transparent;
-  font-size: 18px !important;  
-  font-weight: bold;  
+  font-size: 32px !important;  
+  font-weight: 500;  
 }
    
 .GaugeMeter5 B, 
@@ -661,7 +628,7 @@ left:0;
   height: 50px; 
   line-height: 30px;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 500;
   font-family: 'chakra petch'; 
   background-color: #ececec21;
   border-radius: 5px; 
@@ -728,34 +695,7 @@ left:0;
   margin: 10px 0;
   margin-right: 10px;
   border-radius: 5px;
-}
-/* .parul {  
-  display: flex; 
-  margin-top: 20px;
-  margin-left: 30px; 
 } 
-.parul .parul1-1>li { 
-  width: 50px;
-  height: 30px;
-  line-height: 30px;
-  background-color: #ececec21;
-  border-radius: 5px; 
-  text-align: center;
-  margin: 10px 0;
-}
-.parul .parul1-2 {
-  margin-left: 20px;
-}
-.parul .parul1-2>li { 
-  width: 150px;
-  height: 30px;
-  line-height: 30px; 
-  margin: 10px;
-  font-size: 22px;
-  font-family: 'chakra petch';
-  text-align: right;
-  font-weight: 400;
-} */
 
 /* 주간그래프 */  
 .mbox3-1, .mbox3-2 {
@@ -773,15 +713,10 @@ left:0;
   height: 400px; 
 }
 
-.weekbox {
-  /* margin-top: 40px; */
-  position: absolute;
-  top:30px;
-  left:50%;
-  transform: translateX(-50%);
-  width:240px;
-  height: 120px; 
-
+.weekbox { 
+  margin-top: 40px;
+  margin-left: 80px;
+  width:260px;   
 } 
   
 /* 탕전 주문 건수 */
@@ -811,7 +746,7 @@ left:0;
   width: 100px;
   height: 45px;
   position: absolute;
-  top:10px;
+  top:20px;
   right: 20px;
   overflow: hidden; 
 }
@@ -1034,35 +969,7 @@ left:0;
   100% {
     transform: rotateX(-180deg) translateY(-10px);
   }
-}
-
-/* flipcard ------------- */
-
-/* .mbox3-2 {
-  position: relative;
-  --clockheight: 90px;
-  --radius: 5px;
-  --rotationtime: 0.88s;
-  --avobg: rgb(227, 246, 104);
-  
 } 
-.mbox3-2 .flipul {
-  position: absolute;
-  top:80px;
-  right:60px;  
-
-}
-.mbox3-2 .flipul>li { 
-  width: 70px;
-  background-color: #ececec21; 
-
-  font-size: 22px; 
-  text-align: center;
-  padding: 20px 0; 
-  margin-bottom: 40px; 
-  border-radius: 5px; 
-}  */
-
 /* footer box --------------------------------- */
 .footer {
   display: flex;
@@ -1095,8 +1002,7 @@ margin-right: 10px;
   top:50px;
   left:540px;
   font-weight: 200;
-  font-size: 14px;
-
+  font-size: 14px; 
 }  
 .fbox1>p:nth-child(2) { 
   position: absolute; 
@@ -1106,19 +1012,20 @@ margin-right: 10px;
  
 .cbox {
   width: 180px;
-  margin-top: 70px;
-  margin-left: 30px;  
+  margin-top: 60px;
+  margin-left: 40px;  
 }
 .cbox p { 
-  font-size: 16px;  
+  font-size: 14px; 
+  font-family: 'noto sans kr';
   font-weight: 300;
 }
 .fcbox1, .fcbox2 {
   display: flex; 
   justify-content: left;
   width: 150px; 
-  height: 30px;
-  align-items: center;   
+  height: 20px;
+  align-items: center;    
 }  
 .fcircle {
   width: 10px;
@@ -1140,18 +1047,22 @@ margin-right: 10px;
 
 
 .bottombox1-1, .bottombox1-2 {
-  width: 450px;
-  height: 230px; 
+  width: 440px; 
   position: absolute;
   top:40px;
-  left:230px;    
+  left:50%;
+  transform: translateX(-50%);   
 
 } 
 
 .bottombox1-1>p, .bottombox1-2>p {
-position: absolute;
-top:0px;
-right:0px;    
+  width: 200px;
+  height: 20px;
+  text-align: right;
+  font-size: 14px; 
+  font-family: 'noto sans kr'; 
+  margin-left: 240px;
+  font-weight: 300;
 } 
 
 .fbox2 .pagebox {

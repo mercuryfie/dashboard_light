@@ -1,129 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="./js/jQuery v3.7.1.js"></script>
-    <script src="./js/GaugeMeter.js"></script>
-    <style>
-      * {
-        background-color: #000;
-        color: #fff;
-        font-family: "chakra petch";
-        text-decoration: none;
-      }
-      .npbox {
-        display: flex;
-        justify-content: center;
-        width: 400px;
-        height: 100px;
-        border: 1px solid yellowgreen;
-        margin-top: 10px;
-        margin-left: 40px;
-      }
-      .GaugeMeterproc {
-        position: Relative;
-        text-align: Center;
-        overflow: Hidden;
-        cursor: Default;
-        margin-right: 10px;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .box {
+    display: flex;
+    flex-flow: column;
+    width: 200px;
+    height: 200px;
 
-      /* .GaugeMeterproc span {
-        font-size: 18px !important;
-      } */
-      .GaugeMeterproc b {
-        width: 40px;
-        height: 30px;
-        border:1px solid red;
-        position: absolute;
-        bottom:30px;
-        left: 0px;
-        overflow: hidden;
-        font-size: 18px;
-        font-family: "noto sans kr" !important;
-      }
-      .GaugeMeter span,
-      .GaugeMeter B {
-        margin: 0 22%;
-        width: 54%;
-        font-family: "Chakra Petch" !important;
-        font-weight: bold;
-
-        position: Absolute;
-        text-align: Center;
-        color: RGBa(0, 0, 0, 0.8);
-        overflow: Hidden;
-        white-space: NoWrap;
-        z-index: 1;
-      }
-    </style>
-  </head>
-  <body> 
-    <div class="Preview npbox">
-      <div
-        class="GaugeMeterproc"
-        data-label="조제"
-        data-size="70"
-        data-style="Arch"
-        data-width="8"
-        data-showvalue="true"
-        data-min="0"
-        data-total="100"
-        data-stripe="3"
-        data-used="80"
-        data-theme="White"
-        data-append=""
-      ></div>
-      <div
-      class="GaugeMeterproc"
-        data-label="탕전"
-        data-size="70"
-        data-style="Arch"
-        data-width="8"
-        data-showvalue="true"
-        data-min="0"
-        data-total="100"
-        data-stripe="3"
-        data-used="75"
-        data-append=""
-      ></div>
-      <div
-      class="GaugeMeterproc"
-        data-label="마킹"
-        data-size="70"
-        data-style="Arch"
-        data-width="8"
-        data-showvalue="true"
-        data-min="0"
-        data-total="100"
-        data-stripe="3"
-        data-used="60"
-        data-append=""
-      ></div>
-      <div
-      class="GaugeMeterproc"
-        data-label="포장"
-        data-size="70"
-        data-style="Arch"
-        data-width="8"
-        data-showvalue="true"
-        data-min="0"
-        data-total="100"
-        data-stripe="3"
-        data-used="50"
-        data-append=""
-      ></div>
-    </div>
-
-    <script>
-      $(document).ready(function () {
-        $(".GaugeMeterproc").gaugeMeter({
-          theme: "green",
-          color: "#6AF288",
-        });
-      });
-    </script>
-  </body>
+  }
+  .box>div {
+    border:1px solid red;
+    height: 100px;
+  }
+</style>
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+  </div>
+</body>
 </html>

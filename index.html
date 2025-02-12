@@ -26,18 +26,16 @@
     <!-- css ----------------------------  -->
     <link rel="stylesheet" href="./css/db_main.css">
     <!-- <link rel="stylesheet" href="./css/flipcard_dark.css"> --> 
-    <!--  js ----------------------------  -->
-    <!-- <script src="./js/animation.js"></script> -->
+    <!--  js ----------------------------  --> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/jQuery v3.7.1.js"></script>
     <script src="./js/GaugeMeter.js"></script>
-    <script src="./js/gaugeandchart.js"></script>
-    <!-- <script src="./js/chartdetail.js"></script> -->
+    <script src="./js/gaugeandchart.js"></script> 
     <script src="./js/flipcard_dark.js"></script>  
 </head>
 
 <body> 
-    <div id="wrap"> 
+    <div id="wrap">  
         <header>
             <div class="hbox hbox1">
                 <p>logo</p>
@@ -55,7 +53,7 @@
             <div class="mbox mbox1">
                 <!-- <p>logo5</p> -->
                 <div class="mbox1-1"> 
-                    <p>작업실 온 / 습도</p> <br> 
+                    <p>작업실 온 / 습도</p> 
                     <ul class="tempul">
                         <li class="active">조제</li>
                         <li>탕전</li>
@@ -64,7 +62,7 @@
                     </ul>
                     <div class="Preview tempbox">  
                         <div
-                          class="GaugeMeter no-scroll gmtemp"  
+                          class="GaugeMeter no-scroll"  
                           id="GaugeMeter_101" 
                           data-percent="26" 
                           data-size="60" 
@@ -78,7 +76,7 @@
                           data-append="" 
                           ></div>
                         <div
-                          class="GaugeMeter2 gmhum"
+                          class="GaugeMeter2"
                           id="GaugeMeter_102"
                           data-percent="58" 
                           data-size="60"
@@ -192,6 +190,7 @@
                         id="GaugeMeter_103" 
                         data-back="rgba(174,174,174,0.5)"
                         data-label="조제"
+                        data-label_color="#FFF"
                         data-size="70"
                         data-style="Arch"
                         data-width="8"
@@ -208,6 +207,7 @@
                         id="GaugeMeter_104"
                         data-back="rgba(174,174,174,0.5)"
                         data-label="탕전"
+                        data-label_color="#FFF"
                         data-size="70"
                         data-style="Arch"
                         data-width="8"
@@ -222,6 +222,7 @@
                         id="GaugeMeter_105"
                         data-back="rgba(174,174,174,0.5)"
                         data-label="마킹"
+                        data-label_color="#FFF"
                         data-size="70"
                         data-style="Arch"
                         data-width="8" 
@@ -236,6 +237,7 @@
                         id="GaugeMeter_106"
                         data-back="rgba(174,174,174,0.5)"
                         data-label="포장"
+                        data-label_color="#FFF"
                         data-size="70"
                         data-style="Arch"
                         data-width="8"
@@ -248,10 +250,9 @@
                     </div>  
                 </div>
             </div>
-            <div class="mbox mbox2">
-                <!-- <p>logo6</p> -->
+            <div class="mbox mbox2"> 
                 <!-- 탕전주문현황, 예비조제 주문현황  -->
-                <div class="mbox mbox2-1"> 
+                <div class="boxtwo mbox2-1"> 
                     <div class="mbox2-1-1">
                         <p>탕전 주문 현황</p> 
                         <div class="leftbox">  
@@ -399,52 +400,50 @@
                         </div> 
                     </div>
                 </div>
-                <div class="mbox mbox2-2">
-                    <!-- <p>logo 2-2  </p> -->
-                    <!--<object data="./meter/how-long.html" type=""></object>-->
-                    <!--<object data="./meter/rader-chart.html" type=""></object>-->
-                    
-                    <p>전체 작업 현황</p>
-                    <p>전체 진척도</p> 
-                    <p>작업 시간 평균</p> 
-                    <div class="radarbox">
-                        <canvas id="radarChart"></canvas>  
-                    </div> 
-                    <!-- <div class="radarbox">
-                        <div class="radarchart">
-                            <canvas id="myChart"></canvas>
-                        </div>  
-                    </div>  -->
-                    <div class="barbox">
-                        <canvas id="barChart"></canvas>
-                    </div>  
-
-                    <div class="cardbox"> 
-                        <ul>
-                            <li>조제</li>
-                            <li>탕전</li>
-                            <li>마킹</li>
-                            <li>포장</li>
-                        </ul>
-                        <div class="timecard">
-                            <p>5</p><span>min</span><br>
-                            <p>150</p><span>min</span><br>
-                            <p>5</p><span>min</span><br>
-                            <p>5</p><span>min</span><br>
+                <div class="boxtwo mbox2-2"> 
+                    <div class="moonleft">
+                        <div class="moon1-1">
+                            <p>전체 진척도</p> 
+                            <div class="barbox">
+                                <canvas id="barChart"></canvas>
+                            </div>   
                         </div>
-                    </div> 
-                    <div class="status-parcel">
-                        <div class="status-2-1">
-                            <div class="statuscircle parcel1"></div>
-                            <div class="statuscircle parcel2"></div>
-                            <div class="statuscircle parcel3"></div>
+                        <div class="moon1-2">
+                            <p>작업 시간 평균</p> 
+                            <div class="cardbox"> 
+                                <div class="cardbox1-1">
+                                    <p>조제</p><p>5</p><span>분</span>
+                                </div>
+                                <div class="cardbox1-2">
+                                    <p>탕전</p><p>180</p><span>분</span>
+                                </div>
+                                <div class="cardbox1-3">
+                                    <p>마킹</p><p>5</p><span>분</span>
+                                </div>
+                                <div class="cardbox1-4">
+                                    <p>포장</p><p>5</p><span>분</span>
+                                </div> 
+                            </div>  
                         </div>
-                        <ul class="status-2-2">
-                            <li>전체</li>
-                            <li>로젠</li>
-                            <li>기타</li>
-                        </ul>
                     </div>
+                    <div class="moonright">  
+                        <p>전체 작업 현황</p>
+                        <div class="radarbox">
+                            <canvas id="radarChart"></canvas>  
+                        </div>  
+                        <div class="radar-status">
+                            <div class="status1-1"> 
+                                <div class="statuscircle parcel1"></div><p>전체</p> 
+                            </div>
+                            <div class="status1-2"> 
+                                <div class="statuscircle parcel2"></div><p>로젠</p> 
+                            </div>
+                            <div class="status1-3"> 
+                                <div class="statuscircle parcel3"></div><p>기타</p> 
+                            </div> 
+                        </div>
+
+                    </div>  
                 </div>
             </div>
             <div class="mbox mbox3">
@@ -470,12 +469,8 @@
                         </div>
                 </div>
                 <div class="mboxb mbox3-2">
-                    <!-- <p>logo8</p> -->
-                    <p>택배 마감 시간</p>
-                    <!--<object data="./meter/flipcard_dark.html" type="text/html"></object>-->
-
-                    <ul class="flipul">
-                        <li>전체</li>
+                    <p>택배 마감까지 남은 시간</p>  
+                    <ul class="flipul"> 
                         <li>로젠</li>
                         <li>한진</li>
                         <li>기타</li>
@@ -483,8 +478,7 @@
                     <div class="pagebox">
                         <div class="pages"></div>
                         <div class="pages"></div>
-                        <div class="pages"></div>
-                        <div class="pages"></div>
+                        <div class="pages"></div> 
                     </div>
                     <div class="clock">
                         <div class="flipper">
@@ -591,53 +585,48 @@
             </div>
         </main>
         <section class="footer"> 
-            <div class="fbox fbox1">
-                <!-- <p>logo10</p> -->
-                <p>전체 물량 대비 현재 작업량</p>
-                <p>(단위:min, 조제기 번호)</p>
-                <div class="leftbox2">
-                    <canvas id="leftChart"></canvas>
-                </div> 
-                <div class="cbox">
+            <div class="fbox fbox1"> 
+                <p>전체 주문 대비 현재 작업량</p> 
+                <div class="fbox1-1">
                     <div class="fcbox fcbox1">
                         <div class="fcircle fcircle1"></div>
-                        <p>전체 물량</p>
+                        <p>전체 주문</p>
                     </div>
                     <div class="fcbox fcbox2">
                         <div class="fcircle fcircle2"></div>
                         <p>현재 작업량</p>
                     </div>
                 </div>
-                <div class="fbox1-1 fboxx"> 
-                    <ul>
-                        <li>조제</li>
-                        <li>마킹</li>
-                        <li>포장</li>
-                    </ul>
+                <div class="fbox1-2">
+                    <p>(단위:min, 조제기 번호)</p>
+                    <canvas id="leftChart"></canvas>
+                </div>  
+                <div class="fbox1-3"> 
+                    <p>조제</p>
+                    <p>마킹</p>
+                    <p>포장</p> 
                 </div>
             </div>
-            <div class="fbox fbox2">
-                <!-- <p>logo11</p> -->
-                <p>전체 물량 대비 현재 작업량</p>
-                <p>(단위:min, 조제기 번호)</p>
-                <div class="cbox">
+
+            <div class="fbox fbox2"> 
+                <p>전체 주문 대비 현재 작업량</p>  
+                <div class="fbox2-1">
                     <div class="fcbox fcbox1">
                         <div class="fcircle fcircle1"></div>
-                        <p>전체 물량</p>
+                        <p>전체 주문</p>
                     </div>
                     <div class="fcbox fcbox2">
                         <div class="fcircle fcircle3"></div>
                         <p>현재 작업량</p>
                     </div>
-                </div>
-                <div class="rightbox2">
-                    <canvas id="rightChart"></canvas>
                 </div> 
-                <div class="fbox2-1 fboxx"> 
-                    <ul>
-                        <li>탕전</li>
-                    </ul>
-                </div>
+                <div class="fbox2-2">
+                    <p>(단위:min, 조제기 번호)</p>
+                    <canvas id="rightChart"></canvas>
+                </div>   
+                <div class="fbox2-3"> 
+                    <p>탕전</p> 
+                </div> 
             </div> 
     </section>
     </div> 
