@@ -66,18 +66,20 @@
     type: 'line',
     data: {
       labels: ['월', '화', '수', '목', '금', '토'],
-      datasets: [{
+      datasets: [
+        
+        {
       label: '# of this week',
       data: [464, 300, 400, 500, 600, 300],
       tension:0.4,
       borderWidth: 5,
       borderColor:'#6AF288', 
 
-      pointBorderColor: 'white',
+      pointBorderColor: '#6AF288',
       pointWidth:5,
       pointRadius: 5,
       pointBorderWidth: 2,
-      pointBackgroundColor: '#6AF288'
+      pointBackgroundColor: '#fff'
       },
       {
       label: '# of last week',
@@ -85,10 +87,10 @@
       tension:0.4,
       borderWidth: 5,
       borderColor: '#ccc',
-      pointBorderColor: 'white',
+      pointBorderColor: '#ccc',
       pointRadius: 5,
       pointBorderWidth: 2,
-      pointBackgroundColor: '#ccc'
+      pointBackgroundColor: '#fff'
       }]
     },
     options: {
@@ -112,10 +114,10 @@
       scales: {
         x: { 
           ticks: {
-            color:'#ececec'
+            color:'#000'
           },
           grid: {
-          color: '#5c5c5c', // x축 그리드 색상 변경 
+          color: '#ccc', // x축 그리드 색상 변경 
         }
         },
         y: {
@@ -123,10 +125,10 @@
           min:100,
           max:700,
           ticks: {
-            color:'#ececec'
+            color:'#000'
           },
           grid: {
-          color: '#5c5c5c' // x축 그리드 색상 변경
+          color: '#ccc' // x축 그리드 색상 변경
         }
         },
           
@@ -158,36 +160,33 @@
      data: {
        labels: ['대기', '로젠', '한진', '기타'],
        datasets: [{
-       label: '# of this week',
+       label: '# of all',
        data: [400,300,350,300],
        borderWidth: 5,
-       borderColor:'rgba(236,236,236,0.5)',
-       tension:0.4,
-       // 기존 데이터셋 설정
-       fill: '-1',
-       backgroundColor: 'rgba(0, 123, 255, 0.2)',
+       borderColor:'#ccc',
+       tension:0.4, 
 
-       pointBorderColor: 'white',
+       pointBorderColor: '#ccc',
        pointWidth:5,
        pointRadius: 5,
        pointBorderWidth: 2,
-       pointBackgroundColor: 'rgba(236,236,236,0.5)',
+       pointBackgroundColor: '#fff',
        fill: '1',
-       backgroundColor: 'rgba(236, 236, 236, 0.1)', 
+       backgroundColor: 'rgba(236, 236, 236, 0.3)', 
        },
        {
-       label: '# of last week',
+       label: '# of now',
        data: [300,200,150,180],
-       borderWidth: 5,
-       borderColor: '#FF34EB', //hotpink
+       borderWidth: 5, 
        tension:0.4,
-       
-       pointBorderColor: 'white',
-       pointRadius: 5,
-       pointBorderWidth: 2,
-       pointBackgroundColor: '#FF34EB', //hotpink
-       fill: 'start',
-       backgroundColor: 'rgba(250, 53, 220, 0.2)', 
+      borderWidth: 5,
+      borderColor: '#FF34EB', //hotpink
+      pointBorderColor: 'white',
+      pointRadius: 5,
+      pointBorderWidth: 2,
+      pointBackgroundColor: '#FF34EB', //hotpink
+      fill: 'start',
+      backgroundColor: 'rgba(250, 53, 220, 0.2)', 
        }]
      },
        options: {
@@ -211,10 +210,10 @@
        scales: {
          x: { 
            ticks: {
-             color:'#ececec'
+             color:'#000'
            },
            grid: {
-           color: '#5c5c5c', // x축 그리드 색상 변경 
+           color: '#ccc', // x축 그리드 색상 변경 
          }
          },
          y: {
@@ -222,10 +221,10 @@
            min:100,
            max:450,
            ticks: {
-             color:'#ececec'
+             color:'#000'
            },
            grid: {
-           color: '#5c5c5c' // x축 그리드 색상 변경
+           color: '#ccc' // x축 그리드 색상 변경
          }
          }
        }
@@ -247,11 +246,11 @@
             tension:0.4,
             borderWidth: 5,
             borderColor: '#C322FB', //purple
-            pointBorderColor: 'white',
+            pointBorderColor: '#C322FB',
             pointRadius: 5,
             pointBorderWidth: 2,
-            pointBackgroundColor: '#C322FB', //purple
-            fill: '1',
+            pointBackgroundColor: '#fff', //purple
+            fill: 'start',
             backgroundColor: 'rgba(130, 53, 250, 0.2)', 
             }  ,
             {
@@ -292,21 +291,21 @@
             scales: {
               x: { 
                 ticks: {
-                  color:'#ececec'
+                  color:'#000'
                 },
                 grid: {
-                color: '#5c5c5c', // x축 그리드 색상 변경 
+                color: '#ccc', // x축 그리드 색상 변경 
               }
               },
               y: {
                 beginAtZero: false,
                 max:5,
                 ticks: {
-                  color:'#ececec',
+                  color:'#000',
                   stepSize: 1 // 간격을 1로 설정
                 },
                 grid: {
-                color: '#5c5c5c' // x축 그리드 색상 변경
+                color: '#ccc' // x축 그리드 색상 변경
               }
               }
             },

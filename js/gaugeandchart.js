@@ -86,10 +86,7 @@ $(".GaugeMeter3").gaugeMeter({
             borderColor:'#ececec',
             fill:true,
             backgroundColor: [
-              'rgba(236,236,236,0.3)',
-              'rgba(236,236,236,0.3)',
-              'rgba(236,236,236,0.3)',
-              'rgba(236,236,236,0.3)', 
+              'rgba(174,174,174,0.7)', 
             ],   }, 
             {
             label: '진척도',
@@ -98,10 +95,7 @@ $(".GaugeMeter3").gaugeMeter({
             borderColor:'#ececec',
             fill:true,
             backgroundColor: [
-              'rgba(106,242,136,0.7)',
-              'rgba(106,242,136,0.8)',
-              'rgba(106,242,136,0.8)',
-              'rgba(106,242,136,0.8)',  
+              'rgba(106,242,136,0.7)', 
             ],   }, 
           ]
           },
@@ -141,21 +135,21 @@ $(".GaugeMeter3").gaugeMeter({
             scales: {
               x: { 
                 ticks: {
-                  color:'#ececec',
+                  color:'#5c5c5c',
                   
                 }, 
                 grid: {
-                  color: '#5c5c5c',   
+                  color: '#ccc',   
                 },
               },
               y: {
                 beginAtZero: false,
                 max:450,
                 ticks: {
-                  color:'#ececec'
+                  color:'#5c5c5c'
                 }, 
                 grid: {
-                  color: '#5c5c5c',   
+                  color: '#ccc',   
                 },
               }
             }
@@ -176,11 +170,11 @@ $(".GaugeMeter3").gaugeMeter({
       borderWidth: 5,
       borderColor:'#6AF288', 
 
-      pointBorderColor: 'white',
+      pointBorderColor: '#6AF288',
       pointWidth:5,
       pointRadius: 5,
       pointBorderWidth: 2,
-      pointBackgroundColor: '#6AF288'
+      pointBackgroundColor: '#fff'
       },
       {
       label: '# of last week',
@@ -188,10 +182,10 @@ $(".GaugeMeter3").gaugeMeter({
       tension:0.4,
       borderWidth: 5,
       borderColor: '#ccc',
-      pointBorderColor: 'white',
+      pointBorderColor: '#ccc',
       pointRadius: 5,
       pointBorderWidth: 2,
-      pointBackgroundColor: '#ccc'
+      pointBackgroundColor: '#fff'
       }]
     },
     options: {
@@ -215,10 +209,10 @@ $(".GaugeMeter3").gaugeMeter({
       scales: {
         x: { 
           ticks: {
-            color:'#ececec'
+            color:'#333'
           },
           grid: {
-          color: '#5c5c5c', // x축 그리드 색상 변경 
+          color: '#ccc', // x축 그리드 색상 변경 
         }
         },
         y: {
@@ -226,10 +220,10 @@ $(".GaugeMeter3").gaugeMeter({
           min:100,
           max:700,
           ticks: {
-            color:'#ececec'
+            color:'#333'
           },
           grid: {
-          color: '#5c5c5c' // x축 그리드 색상 변경
+          color: '#ccc' // x축 그리드 색상 변경
         }
         },
           
@@ -259,45 +253,40 @@ $(".GaugeMeter3").gaugeMeter({
       type: 'radar',
       data: {
         labels: ['전체', '조제', '탕전', '마킹','포장'],
-        datasets: [
-          
-        {
+        datasets: [{
         label: '# of last week',
         data: [100, 100, 100, 100, 100], 
-        borderWidth: 2,
-        borderColor: '#ececec',  
-        pointBorderColor: 'white',
+        borderWidth: 5,
+        borderColor: '#ccc',  
+        pointBorderColor: '#ccc',
         pointRadius: 5,
         pointBorderWidth: 2,
-        pointBackgroundColor: 'transparent',
+        pointBackgroundColor: '#fff',
         fill: '1',
-        backgroundColor: 'rgba(236, 236, 236, 0.1)', 
-        
+        backgroundColor: 'rgba(236, 236, 236, 0.2)',  
         },
         {
         label: '# of this week',
         data: [100, 80, 80, 60, 60],  
         borderWidth: 5,
-        borderColor:'#6AF288', //green 
-  
-        pointBorderColor: 'white',
-        pointWidth:5,
+        borderColor:'#6AF288', //green  
+        pointBorderColor: '#6AF288',
+        // pointWidth:5,
         pointRadius: 5,
         pointBorderWidth: 2,
-        pointBackgroundColor: '#6AF288',  
-  
+        pointBackgroundColor: '#fff',
         fill: '2',
         backgroundColor: 'rgba(106,242,136, 0.3)', 
-        },
+        }, 
         {
         label: '# of last week',
         data: [80, 60, 60, 50, 30], 
         borderWidth: 5,
         borderColor: '#C322FB', //purple
-        pointBorderColor: 'white',
+        pointBorderColor: '#C322FB',
         pointRadius: 5,
         pointBorderWidth: 2,
-        pointBackgroundColor: '#C322FB', //purple
+        pointBackgroundColor: '#fff', //purple
   
         fill: true,
         backgroundColor: 'rgba(195, 34, 251, 0.3)', 
@@ -325,7 +314,7 @@ $(".GaugeMeter3").gaugeMeter({
         scales: {
           r: {
             ticks: {
-              color:'#ececec',
+              color:'#5c5c5c',
               backdropColor: 'transparent', 
               z:1,
               max:400,
@@ -334,19 +323,17 @@ $(".GaugeMeter3").gaugeMeter({
               font: {
                 size:12
               }
-            }, 
-  
-              
+            },  
             pointLabels: {
             padding: 20 // 포인트 레이블을 바깥쪽으로 이동
           },
             grid: {
-            color: '#5c5c5c',   
+            color: '#ccc',   
           },
             angleLines: {
               color:'#5c5c5c'},
             pointLabels: {
-              color:'#ececec',
+              color:'#000',
               font: {
                 size:14
               }
@@ -387,8 +374,7 @@ $(".GaugeMeter3").gaugeMeter({
 
 
       // 전체 물량 대비 현재 작업량 leftbox2 leftchart 
-      const ctx5 = document.getElementById('leftChart'); 
-      
+      const ctx5 = document.getElementById('leftChart');  
         const leftChart = new Chart(ctx5, {
           type: 'line',
           data: {
@@ -397,17 +383,16 @@ $(".GaugeMeter3").gaugeMeter({
             label: '# of this week',
             data: [400,300,350,300],
             borderWidth: 5,
-            borderColor:'rgba(236,236,236,0.5)',
-            tension:0.4,
-            // 기존 데이터셋 설정 
+            borderColor:'#ccc',
+            tension:0.4, 
 
-            pointBorderColor: 'white',
+            pointBorderColor: '#ccc',
             pointWidth:5,
             pointRadius: 5,
             pointBorderWidth: 2,
-            pointBackgroundColor: 'rgba(236,236,236,0.5)',
+            pointBackgroundColor: '#fff', 
             fill: '1',
-            backgroundColor: 'rgba(236, 236, 236, 0.1)', 
+            backgroundColor: 'rgba(236, 236, 236, 0.3)', 
             },
             {
             label: '# of last week',
@@ -416,10 +401,10 @@ $(".GaugeMeter3").gaugeMeter({
             borderColor: '#FF34EB', //hotpink
             tension:0.4,
             
-            pointBorderColor: 'white',
+            pointBorderColor: '#FF34EB',
             pointRadius: 5,
             pointBorderWidth: 2,
-            pointBackgroundColor: '#FF34EB', //hotpink
+            pointBackgroundColor: '#fff', //hotpink
             fill: 'start',
             backgroundColor: 'rgba(250, 53, 220, 0.2)',  
             }]
@@ -445,10 +430,10 @@ $(".GaugeMeter3").gaugeMeter({
             scales: {
               x: { 
                 ticks: {
-                  color:'#ececec'
+                  color:'#000'
                 },
                 grid: {
-                color: '#5c5c5c', // x축 그리드 색상 변경 
+                color: '#ccc', // x축 그리드 색상 변경 
               }
               },
               y: {
@@ -456,10 +441,10 @@ $(".GaugeMeter3").gaugeMeter({
                 min:100,
                 max:450,
                 ticks: {
-                  color:'#ececec'
+                  color:'#000'
                 },
                 grid: {
-                color: '#5c5c5c' // x축 그리드 색상 변경
+                color: '#ccc' // x축 그리드 색상 변경
               }
               }
             }
@@ -478,15 +463,14 @@ $(".GaugeMeter3").gaugeMeter({
           data: [400,300,300,300],
           tension:0.4,
           borderWidth: 5,
-          borderColor:'rgba(236,236,236,0.5)',
-
-          pointBorderColor: 'white',
+          borderColor:'#ccc', 
+          pointBorderColor: '#ccc',
           pointWidth:5,
           pointRadius: 5,
           pointBorderWidth: 2,
-          pointBackgroundColor: 'rgba(174,174,174,1)',
+          pointBackgroundColor: '#fff',
           fill: '1',
-          backgroundColor: 'rgba(236, 236, 236, 0.1)', 
+          backgroundColor: 'rgba(236, 236, 236, 0.3)'
           },
           {
           label: '# this week',
@@ -494,10 +478,10 @@ $(".GaugeMeter3").gaugeMeter({
           tension:0.4,
           borderWidth: 5,
           borderColor: '#C322FB', //purple
-          pointBorderColor: 'white',
+          pointBorderColor: '#C322FB',
           pointRadius: 5,
           pointBorderWidth: 2,
-          pointBackgroundColor: '#C322FB', //purple
+          pointBackgroundColor: '#fff', //purple
           fill: 'start',
           backgroundColor: 'rgba(130, 53, 250, 0.2)', 
           }]
@@ -523,10 +507,10 @@ $(".GaugeMeter3").gaugeMeter({
           scales: {
             x: { 
               ticks: {
-                color:'#ececec'
+                color:'#000'
               },
               grid: {
-              color: '#5c5c5c', // x축 그리드 색상 변경 
+              color: '#ccc', // x축 그리드 색상 변경 
             }
             },
             y: {
@@ -534,10 +518,10 @@ $(".GaugeMeter3").gaugeMeter({
               min:100,
               max:450,
               ticks: {
-                color:'#ececec'
+                color:'#000'
               },
               grid: {
-              color: '#5c5c5c' // x축 그리드 색상 변경
+              color: '#ccc' // x축 그리드 색상 변경
             }
             }
           },

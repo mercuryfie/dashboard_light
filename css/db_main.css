@@ -3,20 +3,20 @@
 * {
     margin: 0;
     padding: 0;
-    color:white; 
-    text-decoration: none;  
+    text-decoration: none;
     box-sizing: border-box;
+    color:#000;
+    font-weight: 400;
 }
 ul {
     list-style-type: none;
-} 
+}
 body {
-    background-color: #110D22;  
     font-weight: 200;
 }
-html {  
-    overflow: hidden; 
-} 
+html {
+    overflow: hidden;
+}
 .chakra-petch-bold {
     font-family: "Chakra Petch", serif;
     font-weight: 700;
@@ -27,89 +27,88 @@ html {
     font-family: "Noto Sans", serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    font-style: normal; 
+    font-style: normal;
 }
 
-#wrap {  
+#wrap {
     width: 1920px; 
-    /* border: 1px solid teal;  */
-
 }
- 
+
 header {
     margin-top: 30px;
     display: flex;
     justify-content: center;
 }
-.hbox { 
-    border: 1px solid #ececec81; 
+.hbox {
+    border: 1px solid #7c7c7c;
     color:white;
     width:460px;
-    height: 80px;  
+    height: 80px;
     margin-bottom: 10px;
     border-radius: 5px;
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
 }
-.hbox1 { 
+.hbox1 {
     color:white;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     margin-right: 10px;
 
 }
 .hbox2 {
     width:920px;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     margin-right: 10px;
 }
-.hbox3 {  
+.hbox3 {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     margin-right: 0;
 }
-.hbox3>p { 
+.hbox3>p {
     margin-top: 10px;
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 .hbox3>p:nth-child(2)
  {
-    font-size:32px; 
+    font-size:32px;
     font-family: "Chakra Petch";
 }
 .hbox3>p:nth-child(3)
  {
-    font-size:32px;  
+    font-size:32px;
 }
 /* main box  --------------------------------- */
 
 /* body {
     max-height: 1080px;
 } */
-main { 
+main {
     display: flex;
     /* display: grid; */
-    justify-content: center;  
+    justify-content: center;
     font-family:'noto sans kr';
 }
 
 /* hbox, fbox 를 제외한 가운데 mbox 가로로 세개 flex 되어 있음 */
-.mbox {  
-    height: 600px;  
-    margin-bottom: 10px; 
+.mbox {
+    height: 600px;
+    margin-bottom: 10px;
     display: flex;
-    margin-right: 0; 
-     
+    margin-right: 0;
+
 }
-.mbox1, .mbox2 { 
+.mbox1, .mbox2 {
     margin-right: 10px;
 }
 .mbox1 {
-    width:460px; 
-    height: 600px;  
+    width:460px;
+    height: 600px;
     display: flex;
     flex-flow: column;
 }
@@ -117,13 +116,12 @@ main {
 /* mbox1-1: 첫번째 작업실 온습도 상자 */
 .mbox1-1{
     width:460px;
-    height: 190px; 
-    margin-bottom: 10px;
-    border:1px solid #ececec81; 
+    height: 190px;
+    margin-bottom: 10px;    border: 1px solid #7c7c7c;
     display: inline-block;
-    border-radius: 5px; 
+    border-radius: 5px;
     overflow: hidden;
-    position: relative;  
+    position: relative;
 }
 .mbox1-1>p, .mbox1-2>p, .mbox1-3>p {
     margin-top: 15px;
@@ -134,9 +132,9 @@ main {
 .mbox1-1 .tempul {
     position: absolute;
     top:20px;
-    right:20px; 
+    right:20px;
 
-} 
+}
 .tempul>li {
     text-align: center;
     width: 40px;
@@ -144,126 +142,165 @@ main {
     line-height: 30px;
     padding: 0 5px;
     font-family: 'noto sans kr';
-    font-weight: 300;
+    font-weight: 400;
+    color:#000;
     font-size: 14px;
-    background-color: #ececec21;
+    background-color: #5c5c5c21;
     margin-bottom: 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 .tempul>li:first-child {
     font-weight: 500;
-    text-align: center; 
-     background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248));  
-} 
+    text-align: center;
+    background:linear-gradient(to left,rgb(219, 192, 245), rgb(192, 209, 238));
+}
 
-/* 작업실 온습도 */  
+/* 작업실 온습도 */
 .tempbox {
     width: 200px;
     height: 80px;
     display: flex;
     position: relative;
-    justify-content: center;   
+    justify-content: center;
     margin-top: 35px;
     margin-left: 140px;
   }
-  .GaugeMeter, .GaugeMeter2 { 
+.mbox1-1 .pagebox {
+  display: flex;
+  position: absolute;
+  bottom:20px;
+  left:50%;
+  transform: translateX(-50%);
+}
+.pagebox>div:nth-child(1) {
+  background-color: #666;
+}
+  .GaugeMeter, .GaugeMeter2 {
     margin-right: 40px;
     margin-left: 0px;
     position: Relative;
     text-align: Center;
-    overflow: Hidden;  
-  }  
-
-  .GaugeMeter SPAN, .GaugeMeter2 SPAN { 
-    background-color: transparent;
-    font-size: 18px !important;   
-    font-family: 'chakra petch';  
+    overflow: Hidden;
   }
-     
-  .GaugeMeter B, .GaugeMeter2 B {   
+
+  .GaugeMeter SPAN, .GaugeMeter2 SPAN {
+    background-color: transparent;
+    font-size: 18px !important;
+    font-family: 'chakra petch';
+  }
+
+  .GaugeMeter B, .GaugeMeter2 B {
     position: absolute;
     top:20px;
-    left:0px;   
-    background-color: transparent;  
-    font-size: 16px !important;  
+    left:0px;
+    background-color: transparent;
+    font-size: 16px !important;
+    font-weight: 400 !important;
   }
   .GaugeMeter SPAN,
   .GaugeMeter B,
   .GaugeMeter2 SPAN,
-  .GaugeMeter2 B  {  
-    margin: 0 23%; 
-    width: 54%;     
-    font-weight: bold;  
+  .GaugeMeter2 B  {
+    margin: 0 23%;
+    width: 54%;
+    font-weight: bold;
     position: Absolute;
     text-align: Center;
-    display: Inline-Block; 
+    display: Inline-Block;
     overflow: Hidden;
-    white-space: NoWrap; 
-    z-index: 1; 
-  }  
- 
+    white-space: NoWrap;
+    z-index: 1;
+  }
 
-/* main box -area1-2 --------------------------------- */ 
+
+/* main box -area1-2 --------------------------------- */
 /* mbox1-2: 두번째 탕동현 상자 */
 .mbox1-2{
     width:460px;
-    height: 200px; 
-    border:1px solid #ececec81; 
-    border-radius: 5px; 
+    height: 200px;     border: 1px solid #7c7c7c;
+    border-radius: 5px;
     margin-bottom: 10px;
-    position: relative; 
+    position: relative;
 } 
- 
- 
+.mbox1-4{
+  width:460px;
+  height: 400px; 
+  border:1px solid #7c7c7c; 
+  border-radius: 5px;  
+  position: relative; 
+} 
+.mbox1-4>p {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+} 
 /* 탕전기 동작현황의 pagebox */
 /* 탕전기 동작 현황 */
 .mbox1-2-1 {
     width: 400px;
-    height: 200px;  
-    margin-bottom: 10px; 
-    border-radius: 5px; 
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
-}  
+}
 .mbox1-2 .pagebox {
-    position: absolute;  
+    position: absolute;
     bottom:20px;
     left:50%;
-    transform: translateX(-50%);    
+    transform: translateX(-50%);
     display: flex;
 }
- 
+.mbox1-4 .pagebox { 
+  position: absolute;  
+  bottom:20px;
+  left:50%;
+  transform: translateX(-50%);    
+  display: flex;
+}
+
 /* pownow 탕동현의 상태값 */
 /* &&& radarchart 의 전체 작업 현황의 상태값 */
 .mbox1-2-1 .status {
     width: 100px;
-    height: 100px; 
-    display: flex; 
-    flex-flow: column; 
+    height: 100px;
+    display: flex;
+    flex-flow: column;
     margin-top: 20px;
-    position: relative; 
+    position: relative;
+}
+.mbox1-4-1 .status { 
+  width: 100px;
+  height: 100px; 
+  display: flex; 
+  flex-flow: column; 
+  margin-top: 20px; 
+  position: absolute;
+  top:60px;
+  left:40px;
 }   
 .status1-1, .status1-2, .status1-3 {
     width: 60px;
     height: 20px;
-    display: flex;  
+    display: flex;
     justify-content: left;
-    align-items: center;   
+    align-items: center;
 }
 .status1-1>p, .status1-2>p, .status1-3>p {
     font-size: 14px;
     line-height: 14px;
-    text-align: left;  
-    font-family: 'noto sans kr'; 
-} 
+    text-align: left;
+    font-family: 'noto sans kr';
+}
 
 .statuscircle {
     width: 10px;
     height: 10px;
-    border-radius: 50%; 
+    border-radius: 50%;
     margin:10px 0;
     margin-left: 0px;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
  .on {
     background-color: #6AF288;
@@ -272,14 +309,14 @@ main {
     background-color: #FD5C5C;
 }
 .standby {
-    background-color: #ececec;
+  background-color: #ccc;
 }
 
 
 /* 탕동현의 potnow */
-.mbox1-2-1 .wrapper { 
-    width: 200px;   
-    height: 100px; 
+.mbox1-2-1 .wrapper {
+    width: 200px;
+    height: 100px;
     box-sizing: border-box;
     margin-top:20px;
     display: grid;
@@ -288,44 +325,83 @@ main {
     /* grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px; */
 }
 
-.wrapper .statusbox { 
-    width: 8px; 
-    height: 8px; 
+.babywrap {
+  width: 300px;   
+  height: 250px;   
+  position: absolute;
+  top:80px;
+  left:140px;
+  display: grid;
+  grid-template-columns: 5fr 5fr 5fr 5fr 5fr ; 
+  grid-template-rows: 50px 50px 50px 50px 50px ;
+}
+.mbox1-4-1 .decwrap { 
+  width: 300px;   
+  height: 250px;  
+  position: absolute;
+  top:80px;
+  left:140px; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 20px 20px 20px 20px 40px 20px 20px 20px 20px 20px;
+}
+.decwrap .decstatus {
+  width: 10px; 
+  height: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}  
+.wrapper .statusbox {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     border: 1px solid transparent;
+}
+.babywrap .statusbox { 
+  width: 20px; 
+  height: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 1px solid transparent; 
 } 
 .wrapper .fifthbox {
     margin-right: 20px;
 }
+.babywrap .fifthbox { 
+  margin-right: 20px;
+} 
 .standbymode {
-    background-color: #ececec;
-}  
+  background-color: #ccc;
+}
 .onmode {
     background-color: #6AF288;
 }
 .offmode {
     background-color: #FD5C5C;
-} 
- 
+}
 
-/* 각 공정현황 */ 
+
+/* 각 공정현황 */
 /* mbox1-3: 세번째 각공정 상자 */
-.mbox1-3 { 
+.mbox1-3 {
     width: 460px;
     height: 190px;
     border-radius: 5px;
-    border:1px solid #ececec81;
-    display: inline-block; 
+    border: 1px solid #7c7c7c;
+    display: inline-block;
     position: relative;
-} 
-.mbox1-3>p:nth-child(2) { 
+}
+.mbox1-3>p:nth-child(2) {
     font-weight: normal;
     font-size: 14px;
     position: absolute;
     top:20px;
-    right: 40px; 
-} 
- 
+    right: 40px;
+}
+
 .procbox {
     margin-top: 30px;
     margin-left: 40px;
@@ -333,162 +409,160 @@ main {
     height: 80px;
     display: flex;
     position: relative;
-    justify-content: center;  
+    justify-content: center;
 
   }
-  .GaugeMeter3 { 
-    margin-right: 10px;    
-    margin-left: 10px; 
+  .GaugeMeter3 {
+    margin-right: 10px;
+    margin-left: 10px;
     position: Relative;
     text-align: Center;
-    overflow: Hidden; 
+    overflow: Hidden;
 
-  }  
-
-  .GaugeMeter3 span  { 
-    background-color: transparent; 
-    font-family:'Chakra Petch' !important;
-    font-size: 22px !important;   
-    font-weight: 500;  
-    
   }
-     
-  .GaugeMeter3 b  { 
+
+  .GaugeMeter3 span  {
+    background-color: transparent;
+    font-family:'Chakra Petch' !important;
+    font-size: 22px !important;
+    font-weight: 500;
+
+  }
+
+  .GaugeMeter3 b  {
     position: absolute;
     top:20px;
-    left:0px;   
-    background-color: transparent; 
-    font-size: 16px; 
-    font-weight: normal;  
+    left:0px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: normal;
   }
   .GaugeMeter3 SPAN,
   .GaugeMeter3 B  {
-    margin: 0 23%; 
-    width: 54%;     
+    margin: 0 23%;
+    width: 54%;
     position: Absolute;
     text-align: Center;
-    display: Inline-Block; 
+    display: Inline-Block;
     overflow: Hidden;
-    white-space: NoWrap; 
-    z-index: 1; 
-  } 
+    white-space: NoWrap;
+    z-index: 1;
+  }
 /* main box -area2 --------------------------------- */
 
-.mbox2  { 
+.mbox2  {
     width: 920px;
     display: flex;
     flex-flow: column;
-    position: relative;   
-} 
+    position: relative;
+}
 .mbox2-1, .mbox2-2 {
     width:920px;
-    border:1px solid #ececec81; 
+    border: 1px solid #7c7c7c;
     border-radius: 5px;
 }
-.mbox2-1 { 
-    display: flex; 
+.mbox2-1 {
+    display: flex;
     width: 920px;
     height: 190px;
-    justify-content: space-evenly; 
-    overflow: hidden;   
-    display: flex; 
+    justify-content: space-evenly;
+    overflow: hidden;
+    display: flex;
     margin-bottom: 10px;
 }
 .mbox2-2 {
     width: 920px;
-    height: 400px; 
+    height: 400px;
     display: flex;
 }
 
-/* 탕전 주문현황 */  
-.mbox2-1-1 {  
+/* 탕전 주문현황 */
+.mbox2-1-1 {
     width: 420px;
     height: 190px;
-    overflow: hidden;   
+    overflow: hidden;
     margin-bottom: 10px;
-    
+
 }
-/* 예비조제 주문현황 */   
-.mbox2-1-2 { 
+/* 예비조제 주문현황 */
+.mbox2-1-2 {
     width: 500px;
     height: 190px;
-    overflow: hidden;   
-} 
+    overflow: hidden;
+}
 .mbox2-1-1> p, .mbox2-1-2> p {
     margin-top: 15px;
-    margin-left: 20px; 
-    font-size: 18px; 
+    margin-left: 20px;
+    font-size: 18px;
     font-weight: bold;
-}   
- 
-.leftbox { 
+}
+
+.leftbox {
     width: 360px;
     height: 80px;
     display: flex;
     position: relative;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
     margin-top: 30px;
     margin-left: 10px;
   }
-  .GaugeMeter7 { 
-    margin-right: 0px;    
-    margin-left: 0px; 
+  .GaugeMeter7 {
+    margin-right: 0px;
+    margin-left: 0px;
     position: Relative;
     text-align: Center;
-    overflow: Hidden;  
-  }  
-
-  .GaugeMeter7 span  { 
-    background-color: transparent;
-    font-size: 18px !important;  
-    font-weight: bold;  
+    overflow: Hidden;
   }
-     
-  .GaugeMeter7 B  { 
+
+  .GaugeMeter7 span  {
+    background-color: transparent;
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+
+  .GaugeMeter7 B  {
     position: absolute;
     top:25px;
-    left:0px;   
+    left:0px;
     background-color: transparent;
-    color:#fff !important;
-    font-size: 16px; 
-    font-weight: normal;
+    font-size: 16px;
   }
   .GaugeMeter7 SPAN,
   .GaugeMeter7 B {
-    margin: 0 23%; 
-    width: 54%;    
-    font-family:'Chakra Petch'; 
+    margin: 0 23%;
+    width: 54%;
+    font-family:'Chakra Petch';
     position: Absolute;
     text-align: Center;
-    display: Inline-Block; 
+    display: Inline-Block;
     overflow: Hidden;
-    white-space: NoWrap; 
-    z-index: 1; 
-  } 
+    white-space: NoWrap;
+    z-index: 1;
+  }
 
   /*예비조제주문현황*/
-  .rightbox { 
+  .rightbox {
     width: 420px;
     height: 80px;
     display: flex;
     position: relative;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
     margin-top: 30px;
     margin-left: 30px;
 
   }
-  .GaugeMeter8 { 
-    margin-right: 10px;    
-    margin-left: 0px; 
+  .GaugeMeter8 {
+    margin-right: 10px;
+    margin-left: 0px;
     position: Relative;
     text-align: Center;
-    overflow: Hidden;   
-  }  
+    overflow: Hidden;
+  }
 
-  .GaugeMeter8 span  { 
+  .GaugeMeter8 span  {
     background-color: transparent;
-    font-size: 18px !important; 
-    font-weight: bold;  
+    font-size: 18px !important;
+    font-weight: bold;
 
   }
   .GaugeMeter8 label {
@@ -496,135 +570,284 @@ main {
     text-align: center;
     display: inline-block;
   }
-     
-  .GaugeMeter8 B  { 
+
+  .GaugeMeter8 B  {
     position: absolute;
     top:25px;
-    left:0px;   
-    background-color: transparent;
-    color:#fff;
-    font-size: 16px; 
+    left:0px;
+    background-color: transparent; 
+    font-size: 16px;
     font-weight: normal;
-    margin: 0 auto !important; 
-    width: 100% !important; 
+    margin: 0 auto !important;
+    width: 100% !important;
   }
   .GaugeMeter8 SPAN,
   .GaugeMeter8 B {
-    margin: 0 23%; 
-    width: 54%;    
-    font-family:'Chakra Petch'; 
-    position: Absolute; 
-    display: Inline-Block; 
+    margin: 0 23%;
+    width: 54%;
+    font-family:'Chakra Petch';
+    position: Absolute;
+    display: Inline-Block;
     overflow: Hidden;
-    white-space: NoWrap; 
-    z-index: 1; 
-  }  
+    white-space: NoWrap;
+    z-index: 1;
+  }
 
   /* 전체 진척도 */
 .moonleft {
     display: flex;
     flex-flow: column;
 }
-.moon1-1 { 
+.moon1-1 {
     width: 420px;
     height: 200px;
     margin-bottom: 10px;
 }
-.moon1-2 { 
+.moon1-2 {
     width: 420px;
-    height: 200px; 
-}  
-.barbox { 
+    height: 200px;
+}
+.barbox {
     width: 300px;
-    height: 180px; 
+    height: 180px;
     margin-top: 0px;
-    margin-left: 40px;  
-}  
-/* 작업시간평균 */ 
-.cardbox {   
+    margin-left: 40px;
+}
+/* 작업시간평균 */
+.cardbox {
     width: 360px;
     height: 120px;
-    margin-top: 10px; 
+    margin-top: 10px;
     margin-left: 20px;
     display: flex;
-    flex-flow: column; 
+    flex-flow: column;
 }
-.cardbox1-1, 
-.cardbox1-2, 
-.cardbox1-3, 
-.cardbox1-4 { 
+.cardbox1-1,
+.cardbox1-2,
+.cardbox1-3,
+.cardbox1-4 {
     display: flex;
     margin-bottom: 5px;
     margin-left: 20px;
 }
-.cardbox1-1>p:nth-child(1), 
-.cardbox1-2>p:nth-child(1), 
-.cardbox1-3>p:nth-child(1), 
+.cardbox1-1>p:nth-child(1),
+.cardbox1-2>p:nth-child(1),
+.cardbox1-3>p:nth-child(1),
 .cardbox1-4>p:nth-child(1) {
     font-size: 14px;
-    padding: 0 10px; 
-    background-color: #ececec21;
+    padding: 0 10px;
+    background-color: #5c5c5c21;
     margin-right: 20px;
     border-radius: 5px;
 }
-.cardbox1-1>p:nth-child(2), 
-.cardbox1-2>p:nth-child(2), 
-.cardbox1-3>p:nth-child(2), 
+.cardbox1-1>p:nth-child(2),
+.cardbox1-2>p:nth-child(2),
+.cardbox1-3>p:nth-child(2),
 .cardbox1-4>p:nth-child(2) {
     width: 180px;
     text-align: center;
     font-size: 16px;
-    font-weight:5400;
     font-family: 'chakra petch';
-    padding: 0 10px; 
-    background-color: #ececec21;
+    background-color: #5c5c5c21;
     margin-right: 20px;
     border-radius: 5px;
-}  
+    font-weight: 500;
+}
+.cardbox1-1 span,
+.cardbox1-2 span,
+.cardbox1-3 span,
+.cardbox1-4 span {
+  color:#5c5c5c;
+}
 
 /* main box -radar chart --------------------------------- */
-/* 전체작업현황 */  
-.moonright {  
+/* 전체작업현황 */
+.moonright {
     width: 500px;
     height: 400px;
     position: relative;
 }
-.moon1-1>p, 
-.moon1-2>p, 
+.moon1-1>p,
+.moon1-2>p,
 .moonright>p {
     margin-top: 15px;
     margin-left: 20px;
     font-size: 18px;
     font-family: 'noto sans kr';
     font-weight: bold;
-}  
-.radarbox {  
+}
+.radarbox {
     width: 320px;
     position: absolute;
     top:40px;
     left:80px;
 }
 
-.radar-status { 
+.radar-status {
     display: flex;
     flex-flow: column;
     position: absolute;
     top:60px;
     right:80px;
-}  
+}
 
 .parcel1 {
-    background-color: #ececec;
+    background-color: #7c7c7c;
 }
 .parcel2 {
     background-color: #6AF288;
 }
 .parcel3 {
     background-color: #C322FB;
-}  
+}
 
- 
 
+/* everseries */
+.mbox2-2 .everleft{
+  width: 420px; 
+}
+
+.mbox2-2 .everright {
+  width: 500px;  
+}
+.mbox2-2 .everleft>p,
+.mbox2-2 .ever1-1>p, 
+.mbox2-2 .ever1-2>p {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.mbox2-2 .ever1-3>p {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: bold; 
+}
+.mbox2-2 .everleft>p:nth-child(2) { 
+  font-size: 14px;
+  margin-top: 0;
+  margin-left: 300px;
+  font-family: 'noto sans kr';
+  font-weight: 400;
+}
+
+/* 작업시간 평균 */
+.everright {
+  display: flex;
+  flex-flow: column;
+}
+.ever1-1, .ever1-2, .ever1-3 {
+  width: 500px;
+}
+.ever1-1, .ever1-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.ever1-1 { 
+  height: 100px; 
+  margin-bottom: 10px; 
+
+}
+.ever1-2 { 
+  height: 100px; 
+  margin-bottom: 10px;  
+} 
+.ever1-3 { 
+  height: 200px;   
+  margin-top: 10px; 
+}   
+
+.timecard1-1, .timecard1-2 { 
+  width: 300px; 
+  display: flex;
+  align-items: center;   
+}
+
+.timecard1-1>p:nth-child(1), 
+.timecard1-2>p:nth-child(1) {
+  width: 100px;
+  height: 50px;  
+  line-height: 30px;
+  background-color: #2c2c2c21;
+  border-radius: 5px; 
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 10px;
+}
+.timecard1-1>p:nth-child(2), 
+.timecard1-2>p:nth-child(2) {
+  width: 100px;
+  height: 50px; 
+  line-height: 30px;
+  font-size: 32px;
+  font-weight: 500;
+  font-family: 'chakra petch'; 
+  background-color: #2c2c2c21;
+  border-radius: 5px; 
+  text-align: center; 
+  padding: 10px 0;
+  margin: 0 10px;
+} 
+.timecard1-1>span, 
+.timecard1-2>span {
+  width: 30px;
+  height: 50px; 
+  line-height: 30px;
+  font-size: 16px; 
+  background-color: #2c2c2c21;
+  border-radius: 5px; 
+  text-align: center; 
+  padding: 10px 0;
+  margin: 0 10px;
+}
+/* 택배 작업 건수 */ 
+
+.parcon { 
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.parcon1-1, .parcon1-2 { 
+  width: 225px;
+  margin-left: 10px;
+  display: flex;
+  flex-flow: column;
+}
+.par1-1, .par1-2, 
+.par1-3, .par1-4 { 
+  display: flex;
+} 
+.par1-1>p:nth-child(1), 
+.par1-2>p:nth-child(1), 
+.par1-3>p:nth-child(1), 
+.par1-4>p:nth-child(1)  {
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px; 
+  background-color: #2c2c2c21;
+  text-align: center; 
+  padding: 0 10px ;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.par1-1>p:nth-child(2), 
+.par1-2>p:nth-child(2), 
+.par1-3>p:nth-child(2), 
+.par1-4>p:nth-child(2)  {
+  width: 180px;
+  height: 40px; 
+  line-height: 40px;
+  font-size: 22px;
+  font-family: 'chakra petch'; 
+  background-color: #2c2c2c21;
+  text-align: center;
+  padding: 0 5px ;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 5px;
+} 
 
 /* main box -area3 --------------------------------- */
 .mbox3 {
@@ -633,7 +856,7 @@ main {
     border-radius: 5px;
     position: relative;
     display: flex;
-    flex-flow: column; 
+    flex-flow: column;
 }
 .mbox3 .mboxb {
     border-radius: 5px;
@@ -641,13 +864,14 @@ main {
 .mbox3-1 {
     width:460px;
     height: 190px;
-    border:1px solid #ececec81;
+    border: 1px solid #7c7c7c;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 .mbox3-2 {
     width:460px;
     height: 200px;
-    border:1px solid #ececec81;
+    border: 1px solid #7c7c7c;
     margin-bottom: 10px;
 }
 .mbox3-2>p, .mbox3-3>p {
@@ -659,22 +883,33 @@ main {
 .mbox3-3 {
     width:460px;
     height: 190px;
-    border:1px solid #ececec81;
+    border: 1px solid #7c7c7c;
 }
+
+.mbox3-4 {
+  height: 400px;
+  border: 1px solid #7c7c7c;
+  border-radius: 5px;
+}
+.mbox3-4>p { 
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 20px;
+} 
 
 /* 탕전 주문 건수, 예비조제 주문건수 */
 .weeklyul {
     width: 200px;
-    height: 50px; 
+    height: 50px;
     position: absolute;
     top:15px;
     left:20px;
-    overflow: hidden; 
+    overflow: hidden;
 }
-.weeklyul>li { 
+.weeklyul>li {
     font-weight: bold;
-    font-size: 18px; 
-    display: block; 
+    font-size: 18px;
+    display: block;
 }
 .weeklyul>li:nth-child(2) {
     position: absolute;
@@ -685,11 +920,8 @@ main {
     width: 100px;
     height: 45px;
     margin-top: 12px;
-    margin-left: 340px;
-    /* position: absolute;
-    top:12px;
-    right: 20px; */
-    overflow: hidden; 
+    margin-left: 340px; 
+    overflow: hidden;
 }
 .counterul>li {
     font-family: 'chakra petch';
@@ -701,11 +933,11 @@ main {
     position: relative;
 }
 .weekbox {
-    margin-top: -15px;
+    margin-top: -20px;
     margin-left: 80px;
-    width:260px;  
+    width:260px;
 
-} 
+}
 /* weekly의 pagebox */
 .mbox3-1 .pagebox {
     position: absolute;
@@ -728,59 +960,115 @@ main {
     width: 10px;
     height: 5px;
     border-radius: 3px;
-    border: 1px solid #ececec; 
+    border: 1px solid #7c7c7c;
     margin-right: 10px;
-}
-.pages:nth-child(1) {
-    background-color: #fff;
 }
 
 /* 주간그래프 */
 /* 택배 마감 시간, flipcard*/ 
-.clock {
-    margin-top: 20px;
-    margin-left: 100px; 
+.clockbox {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 420px;
+  height: 300px; 
+}
+.clockbox1-1, 
+.clockbox1-2, 
+.clockbox1-3 {
+  width: 420px;
+  height: 100px;
+  overflow: hidden;  
+}
+.clockbox1-1>p, .clockbox1-2>p, .clockbox1-3>p {
+  /* display: inline-block; */
+  width: 70px;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  border-radius: 5px;
+  margin-top: 1cqi;
+  margin-left: 300px;
+  background-color: #2c2c2c21; 
+}
+.clockbox1-1 .clock, 
+.clockbox1-2 .clock, 
+.clockbox1-3 .clock {
+  margin-top: -70px;
+  margin-left: 40px;
+}
+.mbox3-2 .clock {  
+  margin-top: 20px;
+  position: absolute;
+  left:40%;
+  transform: translateX(-40%);
+}
+.mbox3-2 .flipul {
+  position: absolute;
+  top:20px;
+  right:30px;  
+}
+.mbox3-2 .flipul>li {
+  text-align: center;
+  width: 40px;
+  height: 30px;
+  line-height: 30px; 
+  padding: 0 5px;
+  font-family: 'noto sans kr';
+  font-weight: 400; 
+  font-size: 14px;
+  background-color: #2c2c2c21;
+  margin-bottom: 10px;
+  border-radius: 5px; 
+} 
+.mbox3-2 .flipul>li:first-child {
+  font-weight: 500;  
+  background:linear-gradient(to left,rgb(219, 192, 245), rgb(192, 209, 238));
+} 
+
+.clock { 
     display: grid;
-    width:220px; 
+    width:230px;
     height: var(--clockheight);
-    border-radius: 5px; 
+    border-radius: 5px;
     padding: 0 5px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 12px;
-    min-width: 100px;  
-    border-radius: var(--radius); 
+    min-width: 100px;
+    border-radius: var(--radius);
     background-image: linear-gradient(
-      rgb(14, 14, 15) 0%,
-      rgb(26, 25, 28) 20%,
-      rgb(44, 44, 52) 50%,
-      rgb(20, 20, 27) 100%
-     
+      rgb(255, 255, 255) 0%,
+      rgb(255, 255, 255) 20%,
+      rgb(255, 255, 255) 50%,
+      rgb(255, 255, 255) 100%
     );
-  } 
-  
+    /*   border-top: 6px solid rgb(56, 56, 61); */
+    /*   border-bottom: 6px solid rgb(59, 59, 65); */
+    box-shadow:
+      inset 0 -3px 6px 3px rgba(255, 255, 255, 0.2),
+      inset 0 4px 8px 3px rgba(240, 240, 240, 0.4),
+      0 1px 1px 1px rgba(199, 199, 199, 0.3),
+      0 -2px 1px 1px rgba(235, 235, 235, 0.5);
+  }
+
   .flipper {
     position: relative;
-    width: 65px; 
+    width: 65px;
     height: 100px;
-    transform-style: preserve-3d;  
-    perspective: 1000px; 
+    transform-style: preserve-3d;
+    perspective: 1000px;
   }
   .gear {
     position: absolute;
     top: calc(var(--clockheight) / 2.5);
     width: 5px;
     height: calc(var(--clockheight) / 5);
-    background: linear-gradient(
-      to bottom,
-      #000000 0%,
-      #666666 17%,
-      #7f7f7f 52%,
-      #7f7f7f 52%,
-      #0c0c0c 53%,
-      #595959 87%,
-      #131313 100%
+    background-image: linear-gradient(
+      rgb(255, 255, 255) 0%,
+      rgb(255, 255, 255) 20%,
+      rgb(255, 255, 255) 50%,
+      rgb(255, 255, 255) 100%
     );
-    outline: 1px solid #000;
+    outline: 1px solid #ccc;
     z-index: 99;
     transform-style: preserve-3d;
     transform: translateZ(10px);
@@ -791,41 +1079,40 @@ main {
   }
   .top,
   .bottom {
-    box-shadow: 0 6px 6px 1px rgba(0, 0, 0, 0.5),
-      0 2px 2px 1px rgba(255, 255, 255, 0.15);
-    border-top: 2px solid rgb(102, 103, 110);
-    border-bottom: 2px solid #000;
-      transition: all 1s ease-in-out;
+    box-shadow: 0 6px 6px 1px rgba(204, 204, 204, 0.2),
+      0 2px 2px 1px rgba(183, 183, 183, 0.15);
+    border-top: 1px solid rgb(186, 186, 186);
+    border-bottom: 1px solid #b7b7b7;
   }
   .top {
     position: relative;
     width: 65px;
     height: calc(50% - 5px);
-    background-image: linear-gradient(rgb(48, 49, 53) 0%, rgb(56, 57, 62) 100%);
-    margin-top: 5px; 
+    background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(227, 227, 227) 100%);
+    margin-top: 5px;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px; 
+    border-top-right-radius: 5px;
   }
   .bottom {
     position: relative;
     width: 65px;
     height: calc(50% - 10px);
-    background-image: linear-gradient(rgb(57, 58, 63) 0%, rgb(38, 38, 38) 100%);
-    margin-top: 0px; 
+    background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(227, 227, 227) 100%);
+    margin-top: 0px;
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px; 
+    border-bottom-right-radius: 5px;
   }
   .text {
     font-size: 45px;
     font-weight: 400;
     display: block;
-    position: absolute; 
+    position: absolute;
     overflow: hidden;
     width: 100%;
     height: 100%;
     line-height: 85px;
     text-align: center;
-    color:white;
+    color:#000;
     font-family:'Gemunu Libre';
   }
   .bottom .text {
@@ -844,17 +1131,17 @@ main {
   }
   .top.new .text {
     backface-visibility: hidden;
-  } 
-  .bottom.new { 
+  }
+  .bottom.new {
     position: absolute;
     top: 0;
     height: calc(100% - 0px);
-    transform: rotateX(0.5turn); 
+    transform: rotateX(0.5turn);
     z-index: 1;
     opacity: 0;
   }
   .flipper.flipping .top.new {
-    transform-origin: bottom center; 
+    transform-origin: bottom center;
     animation: rotate 0.88s 1 ease-in-out forwards;
   }
   .flipper.flipping .bottom.new {
@@ -892,108 +1179,85 @@ main {
     --rotationtime: 0.88s;
     --avobg: rgb(227, 246, 104);
   } 
-.mbox3-2 .flipul {
-    position: absolute;
-    top:20px;
-    right:30px;  
-}
-.mbox3-2 .flipul>li {
-    text-align: center;
-    width: 40px;
-    height: 30px;
-    line-height: 30px; 
-    padding: 0 5px;
-    font-family: 'noto sans kr';
-    font-weight: 300;
-    font-size: 14px;
-    background-color: #ececec21;
-    margin-bottom: 10px;
-    border-radius: 5px; 
-} 
-.mbox3-2 .flipul>li:first-child {
-    font-weight: 500;  
-     background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248));  
-} 
 
 /* 택배발송현황 */
 .mbox3-3 {
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
-}
+    border: 1px solid #7c7c7c;
+}  
 .mbox3-3>p:nth-child(2) {
     font-weight: normal;
     font-size: 14px;
     position: absolute;
     top:20px;
-    right: 20px;
+    right: 40px;
 }
 .parbox {
     margin-top: 40px;
     margin-left: 40px;
     width: 360px;
-    height: 80px;
+    height: 120px;
     display: flex;
     position: relative;
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
     overflow: hidden;
   }
 
-  .GaugeMeter5, 
-  .GaugeMeter6 { 
-    margin-right: 10px;    
-    margin-left: 0px; 
+  .GaugeMeter5,
+  .GaugeMeter6 {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 0px;
     position: Relative;
-    text-align: Center;
-    overflow: Hidden;  
+    text-align: Center; 
 
-  }  
-
-  .GaugeMeter5 span, 
-  .GaugeMeter6 span { 
-    background-color: transparent; 
-    font-family:'Chakra Petch' !important;
-    font-size: 22px !important;   
-    font-weight: 500;  
   }
-     
-  .GaugeMeter5 B, 
+
+  .GaugeMeter5 span,
+  .GaugeMeter6 span {
+    background-color: transparent;
+    font-family:'Chakra Petch' !important;
+    font-size: 28px !important;
+    font-weight: 500;
+  }
+
+  .GaugeMeter5 B,
   .GaugeMeter6 B { 
     position: absolute;
     top:20px;
-    left:0px;   
+    left:0px;
     background-color: transparent;
-    color:#fff !important;
     font-size: 16px; 
-    font-weight: normal;
   }
   .GaugeMeter5 SPAN,
   .GaugeMeter5 B,
   .GaugeMeter6 SPAN,
   .GaugeMeter6 B  {
-    margin: 0 23%; 
-    width: 54%;    
-    font-family:'Chakra Petch'; 
+    margin: 0 23%;
+    width: 54%;
+    font-family:'Chakra Petch';
     position: Absolute;
     text-align: Center;
-    display: Inline-Block; 
+    display: Inline-Block;
     overflow: Hidden;
-    white-space: NoWrap; 
-    z-index: 1; 
-  } 
+    white-space: NoWrap;
+    z-index: 1;
+  }
 
 /* footer box --------------------------------- */
 .fbox-con {
     display: flex;
     justify-content: center;
-} 
- 
+}
+
 .fbox {
-    border: 1px solid #ececec81;
+  border: 1px solid #7c7c7c;
     color:white;
     width:925px;
-    height: 320px; 
-    border-radius: 5px; 
-    position: relative; 
+    height: 320px;
+    border-radius: 5px;
+    position: relative;
 }
 .fbox1 {
     margin-right: 10px;
@@ -1006,32 +1270,33 @@ main {
     font-size: 18px;
 }
 
-/* logo10 area--------------------------------- */  
+/* logo10 area--------------------------------- */
 /* 전체 주문 대비 현재 작업량 area--------------------------------- */
  .footer {
     display: flex;
-    justify-content: center;   
- }    
-.fbox1-1, .fbox2-1 { 
-    width: 100px;
-    height: 40px; 
+    justify-content: center;
+ }
+.fbox1-1, .fbox2-1 {
+    width: 200px;
+    height: 40px;
     display: flex;
     flex-flow: column;
     position: absolute;
     top:60px;
     left:40px;
 }
-.fcbox { 
-    width: 100px;
+.fcbox {
+    width: 200px;
     height: 20px;
     display: flex;
     align-items: center;
 }
 .fcbox p {
-    font-size: 14px; 
-    font-family: 'noto sans kr'; 
-    font-weight: 300;
-}  
+    font-size: 14px;
+    font-family: 'noto sans kr';
+    font-weight: 400;
+    color:#000;
+}
 .fcircle {
     width: 10px;
     height: 10px;
@@ -1040,67 +1305,78 @@ main {
     margin-right: 10px;
 
 }
-.fcircle1 { 
-    background-color: #ececec;  
+.fcircle1 {
+    background-color: #ccc;
 }
-.fcircle2 { 
-    background-color: #FF34EB; 
+.fcircle2 {
+    background-color: #FF34EB;
 }
-.fcircle3 { 
-    background-color: #C322FB;  
-} 
+.fcircle3 {
+    background-color: #C322FB;
+}
 
 /* leftchart2, rightchart2 */
-.fbox1-2, 
-.fbox2-2 { 
+.fbox1-2,
+.fbox2-2 {
     width: 440px;
     position: absolute;
     top:40px;
     left:50%;
     transform: translateX(-50%);
-} 
-.fbox1-2 p, 
-.fbox2-2 p {  
+}
+.fbox1-2 p,
+.fbox2-2 p {
     width: 200px;
     height: 20px;
     text-align: right;
-    font-size: 14px; 
-    font-family: 'noto sans kr'; 
+    font-size: 14px;
+    font-family: 'noto sans kr';
     margin-left: 240px;
-    font-weight: 300;
-} 
- 
+    font-weight: 400;
+    color:#000;
+}
+
 /* mode 1,2,3,4 */
 .fbox1-3, .fbox2-3 {
-    width: 100px; 
+    width: 100px;
     position: absolute;
     top:40px;
     right: 40px;
 }
-.fbox1-3>p, 
+.fbox1-3>p,
 .fbox2-3>p {
-    background-color: #ececec21; 
+    background-color: #5c5c5c21;
     width: 80px;
     height: 30px;
-    line-height: 30px;  
+    line-height: 30px;
     margin-bottom: 10px;
     border-radius: 5px;
     text-align: center;
-    font-size: 14px; 
-    font-family: 'noto sans kr'; 
-}    
+    font-size: 14px;
+    font-family: 'noto sans kr';
+    font-weight: 400;
+    color:#000;
+}
 .fbox1-3>p:nth-child(1),
 .fbox2-3>p:nth-child(1) {
     font-weight: 500;
-    background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248)); 
+    background:linear-gradient(to left,rgb(219, 192, 245), rgb(192, 209, 238));
 }
 
-.fbox1 .pagebox {  
+.fbox1 .pagebox {
   display: flex;
   justify-content: center;
   position: absolute;
   bottom:20px;
   left:53%;
   transform: translateX(-53%);
-} 
- 
+}
+
+.fbox2 .pagebox {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom:20px;
+  left:53%;
+  transform: translateX(-53%);
+}
