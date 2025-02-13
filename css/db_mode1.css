@@ -987,7 +987,7 @@ height: 400px;
   height: 320px; 
   border-radius: 5px; 
   position: relative;
-} 
+}  
 .fbox:nth-child(1) {
 margin-right: 10px;
 
@@ -1067,7 +1067,7 @@ margin-right: 10px;
   font-weight: 300;
 } 
 
-.fbox2 .pagebox {
+.fbox2 .pagebox { 
   display: flex;
   justify-content: center;
   position: absolute;

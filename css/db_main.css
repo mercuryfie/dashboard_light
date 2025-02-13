@@ -1094,4 +1094,13 @@ main {
     font-weight: 500;
     background:linear-gradient(to left,rgb(249, 74, 249), rgb(80, 42, 248)); 
 }
+
+.fbox1 .pagebox {  
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom:20px;
+  left:53%;
+  transform: translateX(-53%);
+} 
  
