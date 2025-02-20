@@ -615,49 +615,68 @@ main {
 }
 /* 작업시간평균 */
 .cardbox {
-    width: 360px;
-    height: 120px;
-    margin-top: 10px;
-    margin-left: 20px;
-    display: flex;
-    flex-flow: column;
+  width: 360px;
+  height: 120px;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  flex-flow: column;
+}
+
+.cardbox1, .cardbox2 {
+  display: flex;
+  align-items: center;
+  width: 420px;
+  height: 60px; 
+  background-color: #ccc; 
+  border-radius: 5px; 
+  margin-bottom: 10px;
 }
 .cardbox1-1,
 .cardbox1-2,
 .cardbox1-3,
 .cardbox1-4 {
-    display: flex;
-    margin-bottom: 5px;
-    margin-left: 20px;
+  display: flex; 
+  margin-left: 20px;
 }
 .cardbox1-1>p:nth-child(1),
 .cardbox1-2>p:nth-child(1),
 .cardbox1-3>p:nth-child(1),
 .cardbox1-4>p:nth-child(1) {
-    font-size: 14px;
-    padding: 0 10px;
-    background-color: #5c5c5c21;
-    margin-right: 20px;
-    border-radius: 5px;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;  
+  margin-right: 10px; 
+  border-radius: 5px;   
 }
 .cardbox1-1>p:nth-child(2),
 .cardbox1-2>p:nth-child(2),
 .cardbox1-3>p:nth-child(2),
 .cardbox1-4>p:nth-child(2) {
-    width: 180px;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'chakra petch';
-    background-color: #5c5c5c21;
-    margin-right: 20px;
-    border-radius: 5px;
-    font-weight: 500;
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px; 
+  font-family: 'chakra petch';  
+  margin-right: 10px; 
+  border-radius: 5px;
+  font-weight: 500; 
 }
 .cardbox1-1 span,
 .cardbox1-2 span,
 .cardbox1-3 span,
-.cardbox1-4 span {
-  color:#5c5c5c;
+.cardbox1-4 span { 
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;  
+  font-family: 'chakra petch'; 
+  /* background-color: #ccc; */
+  border-radius: 5px;
 }
 
 /* main box -radar chart --------------------------------- */
